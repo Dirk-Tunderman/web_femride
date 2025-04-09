@@ -595,6 +595,58 @@ export const translations: Translations = {
     de: 'Dank eines fairen Preismodells zahlen Flottenpartner weniger als üblich, um eine langfristige Partnerschaft zu fördern.',
     en: 'Thanks to a fair pricing model, fleet partners pay less than usual to encourage a long-term partnership.'
   },
+  
+  // Newsletter translations
+  newsletterTitle: {
+    de: 'Newsletter abonnieren',
+    en: 'Subscribe to newsletter'
+  },
+  newsletterPlaceholder: {
+    de: 'Ihre E-Mail-Adresse',
+    en: 'Your email address'
+  },
+  newsletterButton: {
+    de: 'Anmelden',
+    en: 'Sign up'
+  },
+  newsletterSuccess: {
+    de: 'Vielen Dank für Ihre Anmeldung!',
+    en: 'Thank you for subscribing!'
+  },
+  newsletterError: {
+    de: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.',
+    en: 'An error occurred. Please try again.'
+  },
+  newsletterInfo: {
+    de: 'Erhalten Sie Updates über FemRide und unsere App-Veröffentlichung',
+    en: 'Get updates about FemRide and our app release'
+  },
+  
+  // Cookie Consent translations
+  cookieTitle: {
+    de: 'Wir verwenden Cookies',
+    en: 'We use cookies'
+  },
+  cookieDescription: {
+    de: 'Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung auf unserer Website zu bieten. Durch die Nutzung unserer Website stimmen Sie der Verwendung von Cookies gemäß unserer Datenschutzrichtlinie zu.',
+    en: 'We use cookies to provide you with the best experience on our website. By using our website, you agree to the use of cookies in accordance with our privacy policy.'
+  },
+  cookieAcceptButton: {
+    de: 'Akzeptieren',
+    en: 'Accept'
+  },
+  cookieDeclineButton: {
+    de: 'Ablehnen',
+    en: 'Decline'
+  },
+  cookiePrivacyLink: {
+    de: 'Datenschutzrichtlinie lesen',
+    en: 'Read privacy policy'
+  },
+  cookieCloseButton: {
+    de: 'Schließen',
+    en: 'Close'
+  },
 };
 
 interface LanguageContextType {
