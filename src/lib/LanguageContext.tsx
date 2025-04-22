@@ -457,6 +457,14 @@ export const translations: Translations = {
     de: 'Häufig gestellte Fragen',
     en: 'Frequently Asked Questions'
   },
+  faqMainDesc: {
+    de: 'Wählen Sie eine Kategorie aus, um alle häufig gestellten Fragen und Antworten zu sehen.',
+    en: 'Select a category to see all frequently asked questions and answers.'
+  },
+  viewAllFAQs: {
+    de: 'Alle FAQs anzeigen',
+    en: 'View All FAQs'
+  },
   faqCategoryPassengers: {
     de: 'Fahrgästinnen',
     en: 'Passengers'
