@@ -647,6 +647,314 @@ export const translations: Translations = {
     de: 'Schließen',
     en: 'Close'
   },
+
+  // Ride Page Translations
+  forPassengers: {
+    de: 'FÜR FAHRGÄSTE',
+    en: 'FOR PASSENGERS'
+  },
+  bookYourRide: {
+    de: 'Buchen Sie Ihre Fahrt mit FemRide',
+    en: 'Book Your Ride with FemRide'
+  },
+  ridePageDesc: {
+    de: 'Sicher und komfortabel unterwegs - exklusiv für Frauen, mit verifizierten Fahrerinnen. Erleben Sie eine neue Art der Mobilität.',
+    en: 'Travel safely and comfortably - exclusively for women, with verified drivers. Experience a new way of mobility.'
+  },
+  ridePageComingSoon: {
+    de: 'Die FemRide App wird in Kürze verfügbar sein. Registrieren Sie sich für unseren Newsletter, um als Erste informiert zu werden.',
+    en: 'The FemRide app will be available soon. Sign up for our newsletter to be the first to know.'
+  },
+  comingSoon: {
+    de: 'Demnächst verfügbar',
+    en: 'Coming Soon'
+  },
+
+  // Driver Page Translations
+  forDrivers: {
+    de: 'FÜR FAHRERINNEN',
+    en: 'FOR DRIVERS'
+  },
+  becomeDriver: {
+    de: 'Werden Sie FemRide Fahrerin',
+    en: 'Become a FemRide Driver'
+  },
+  drivePageDesc: {
+    de: 'Werden Sie Teil unserer Mission, Mobilität für Frauen sicherer zu machen. Als FemRide Fahrerin genießen Sie flexible Arbeitszeiten und faire Verdienstmöglichkeiten.',
+    en: 'Join our mission to make mobility safer for women. As a FemRide driver, you\'ll enjoy flexible working hours and fair earning opportunities.'
+  },
+  driverFormNameLabel: {
+    de: 'Vollständiger Name',
+    en: 'Full Name'
+  },
+  driverFormNamePlaceholder: {
+    de: 'Geben Sie Ihren vollständigen Namen ein',
+    en: 'Enter your full name'
+  },
+  driverFormAgeLabel: {
+    de: 'Alter',
+    en: 'Age'
+  },
+  driverFormAgePlaceholder: {
+    de: 'Geben Sie Ihr Alter ein',
+    en: 'Enter your age'
+  },
+  driverFormEmailLabel: {
+    de: 'E-Mail-Adresse',
+    en: 'Email Address'
+  },
+  driverFormEmailPlaceholder: {
+    de: 'Geben Sie Ihre E-Mail-Adresse ein',
+    en: 'Enter your email address'
+  },
+  driverFormPhoneLabel: {
+    de: 'Telefonnummer',
+    en: 'Phone Number'
+  },
+  driverFormPhonePlaceholder: {
+    de: 'Geben Sie Ihre Telefonnummer ein',
+    en: 'Enter your phone number'
+  },
+  driverFormExperienceLabel: {
+    de: 'Fahrerfahrung',
+    en: 'Driving Experience'
+  },
+  driverFormExperiencePlaceholder: {
+    de: 'Beschreiben Sie Ihre Erfahrung als Fahrerin (z.B. Taxi, Uber, etc.)',
+    en: 'Describe your experience as a driver (e.g., Taxi, Uber, etc.)'
+  },
+  driverFormReasonLabel: {
+    de: 'Motivation',
+    en: 'Motivation'
+  },
+  driverFormReasonPlaceholder: {
+    de: 'Warum möchten Sie FemRide Fahrerin werden?',
+    en: 'Why do you want to become a FemRide driver?'
+  },
+  driverFormSubmit: {
+    de: 'Bewerbung absenden',
+    en: 'Submit Application'
+  },
+  driverFormSubmitting: {
+    de: 'Wird gesendet...',
+    en: 'Submitting...'
+  },
+  driverApplicationSuccessTitle: {
+    de: 'Bewerbung erfolgreich eingereicht',
+    en: 'Application Successfully Submitted'
+  },
+  driverApplicationSuccessDesc: {
+    de: 'Vielen Dank für Ihre Bewerbung. Wir werden uns in Kürze bei Ihnen melden.',
+    en: 'Thank you for your application. We will contact you shortly.'
+  },
+  driverApplicationErrorTitle: {
+    de: 'Fehler beim Senden',
+    en: 'Error Submitting Application'
+  },
+  driverApplicationErrorDesc: {
+    de: 'Es gab ein Problem beim Senden Ihrer Bewerbung. Bitte versuchen Sie es später erneut.',
+    en: 'There was a problem submitting your application. Please try again later.'
+  },
+  driverApplicationEmailSubject: {
+    en: "FemRide Driver Application",
+    de: "FemRide Fahrerbewerbung",
+  },
+
+  // Fleet Manager Application Form
+  fleetFormTitle: {
+    en: "Fleet Partnership Application",
+    de: "Flotten-Partnerschaft Bewerbung",
+  },
+  fleetFormDesc: {
+    en: "Join FemRide as a fleet partner and be part of our mission to provide safe transportation for women. Please fill out the form below and we'll contact you shortly.",
+    de: "Werden Sie Flottenpartner bei FemRide und unterstützen Sie unsere Mission, sicheren Transport für Frauen anzubieten. Bitte füllen Sie das untenstehende Formular aus und wir melden uns in Kürze bei Ihnen.",
+  },
+  fleetFormContactPersonLabel: {
+    en: "Contact Person",
+    de: "Ansprechpartner",
+  },
+  fleetFormContactPersonPlaceholder: {
+    en: "Enter the name of the primary contact person",
+    de: "Geben Sie den Namen der Hauptkontaktperson ein",
+  },
+  fleetFormCompanyLabel: {
+    en: "Company Name",
+    de: "Firmenname",
+  },
+  fleetFormCompanyPlaceholder: {
+    en: "Enter your company name",
+    de: "Geben Sie Ihren Firmennamen ein",
+  },
+  fleetFormBusinessEmailLabel: {
+    en: "Business Email",
+    de: "Geschäftliche E-Mail",
+  },
+  fleetFormBusinessEmailPlaceholder: {
+    en: "Enter your business email address",
+    de: "Geben Sie Ihre geschäftliche E-Mail-Adresse ein",
+  },
+  fleetFormPhoneLabel: {
+    en: "Contact Phone",
+    de: "Kontakttelefon",
+  },
+  fleetFormPhonePlaceholder: {
+    en: "Enter your contact phone number",
+    de: "Geben Sie Ihre Kontakttelefonnummer ein",
+  },
+  fleetFormFleetSizeLabel: {
+    en: "Current Fleet Size",
+    de: "Aktuelle Flottengröße",
+  },
+  fleetFormFleetSizePlaceholder: {
+    en: "Enter your current fleet size",
+    de: "Geben Sie Ihre aktuelle Flottengröße ein",
+  },
+  fleetFormMessageLabel: {
+    en: "Additional Information",
+    de: "Zusätzliche Informationen",
+  },
+  fleetFormMessagePlaceholder: {
+    en: "Please provide any additional information about your fleet and business",
+    de: "Bitte geben Sie zusätzliche Informationen über Ihre Flotte und Ihr Unternehmen an",
+  },
+  fleetFormSubmitButton: {
+    en: "Submit Application",
+    de: "Bewerbung Absenden",
+  },
+  fleetFormSubmitting: {
+    en: "Submitting...",
+    de: "Wird Gesendet...",
+  },
+  fleetFormSuccessMessage: {
+    en: "Thank you for your interest in becoming a FemRide fleet partner! We will review your application and contact you soon.",
+    de: "Vielen Dank für Ihr Interesse, Flottenpartner bei FemRide zu werden! Wir werden Ihre Bewerbung prüfen und uns in Kürze bei Ihnen melden.",
+  },
+  fleetFormErrorMessage: {
+    en: "There was a problem submitting your application. Please try again later.",
+    de: "Es gab ein Problem beim Senden Ihrer Bewerbung. Bitte versuchen Sie es später erneut.",
+  },
+  fleetApplicationEmailSubject: {
+    en: "FemRide Fleet Partnership Application",
+    de: "FemRide Flottenpartnerschaft Bewerbung",
+  },
+
+  // Ride Request Form Translations
+  requestRideTitle: {
+    en: "Request a Ride",
+    de: "Fahrt anfragen",
+  },
+  rideRequestDesc: {
+    en: "Fill out the form below to request a ride. We'll match you with a verified female driver.",
+    de: "Füllen Sie das untenstehende Formular aus, um eine Fahrt anzufragen. Wir vermitteln Ihnen eine verifizierte Fahrerin.",
+  },
+  personalInfoTitle: {
+    en: "Personal Information",
+    de: "Persönliche Informationen",
+  },
+  rideDetailsTitle: {
+    en: "Ride Details",
+    de: "Fahrtdetails",
+  },
+  additionalInfoTitle: {
+    en: "Additional Information",
+    de: "Zusätzliche Informationen",
+  },
+  rideRequestNameLabel: {
+    en: "Full Name",
+    de: "Vollständiger Name",
+  },
+  rideRequestNamePlaceholder: {
+    en: "Enter your full name",
+    de: "Geben Sie Ihren vollständigen Namen ein",
+  },
+  rideRequestEmailLabel: {
+    en: "Email Address",
+    de: "E-Mail-Adresse",
+  },
+  rideRequestEmailPlaceholder: {
+    en: "Enter your email address",
+    de: "Geben Sie Ihre E-Mail-Adresse ein",
+  },
+  rideRequestPhoneLabel: {
+    en: "Phone Number",
+    de: "Telefonnummer",
+  },
+  rideRequestPhonePlaceholder: {
+    en: "Enter your phone number",
+    de: "Geben Sie Ihre Telefonnummer ein",
+  },
+  pickupLocationLabel: {
+    en: "Pickup Location",
+    de: "Abholort",
+  },
+  pickupLocationPlaceholder: {
+    en: "Enter pickup address",
+    de: "Geben Sie die Abholadresse ein",
+  },
+  dropoffLocationLabel: {
+    en: "Dropoff Location",
+    de: "Zielort",
+  },
+  dropoffLocationPlaceholder: {
+    en: "Enter destination address",
+    de: "Geben Sie die Zieladresse ein",
+  },
+  pickupTimeLabel: {
+    en: "Pickup Time",
+    de: "Abholzeit",
+  },
+  passengerCountLabel: {
+    en: "Number of Passengers",
+    de: "Anzahl der Fahrgäste",
+  },
+  passengerCountPlaceholder: {
+    en: "Enter number of passengers",
+    de: "Geben Sie die Anzahl der Fahrgäste ein",
+  },
+  accessibilityLabel: {
+    en: "Accessibility Requirements",
+    de: "Barrierefreiheit Anforderungen",
+  },
+  accessibilityPlaceholder: {
+    en: "Any special accessibility needs?",
+    de: "Besondere Anforderungen an die Barrierefreiheit?",
+  },
+  additionalRequestsLabel: {
+    en: "Additional Requests",
+    de: "Zusätzliche Wünsche",
+  },
+  additionalRequestsPlaceholder: {
+    en: "Any additional information or special requests?",
+    de: "Weitere Informationen oder besondere Wünsche?",
+  },
+  submitRideRequestButton: {
+    en: "Request Ride",
+    de: "Fahrt anfragen",
+  },
+  submittingButton: {
+    en: "Submitting...",
+    de: "Wird gesendet...",
+  },
+  rideRequestSuccessTitle: {
+    en: "Request Submitted",
+    de: "Anfrage gesendet",
+  },
+  rideRequestSuccessMessage: {
+    en: "Your ride request has been submitted successfully. We'll contact you shortly with driver details.",
+    de: "Ihre Fahrtanfrage wurde erfolgreich übermittelt. Wir melden uns in Kürze mit den Fahrerdetails.",
+  },
+  rideRequestErrorTitle: {
+    en: "Request Failed",
+    de: "Anfrage fehlgeschlagen",
+  },
+  rideRequestErrorMessage: {
+    en: "There was a problem submitting your request. Please try again later.",
+    de: "Es gab ein Problem beim Senden Ihrer Anfrage. Bitte versuchen Sie es später erneut.",
+  },
+  rideRequestEmailSubject: {
+    en: "New FemRide Ride Request",
+    de: "Neue FemRide Fahrtanfrage",
+  },
 };
 
 interface LanguageContextType {

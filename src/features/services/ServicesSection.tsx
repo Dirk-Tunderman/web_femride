@@ -1,15 +1,15 @@
-
 import { Button } from "@/components/ui/button";
 import { useEffect, useState, useRef } from "react";
 import { ChevronRight } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
+import { useNavigate } from "react-router-dom";
 
 /**
  * Services section component showcasing FemRide's main service offerings
  * Enhanced with animations and improved visual design based on Refactoring UI principles
  */
 const ServicesSection = () => {
-  
+  const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
@@ -34,14 +34,6 @@ const ServicesSection = () => {
       observer.disconnect();
     };
   }, []);
-
-  // Function to scroll to contact form
-  const scrollToContactForm = () => {
-    const contactSection = document.getElementById('contact-section');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
   
   const serviceCards = [
     {
@@ -50,9 +42,10 @@ const ServicesSection = () => {
       title: t('servicesTitle1'),
       description: t('servicesDesc1'),
       buttonText: t('servicesButton1'),
-      color: "#a3adf4", // Using the correct blue color
+      color: "#a3adf4",
       imageSrc: "/lovable-uploads/6cb77555-69e9-4c53-8c49-17d4a2798133.png",
       imageAlt: "Women in car with pink hair",
+      route: "/ride"
     },
     {
       id: 2,
@@ -60,9 +53,10 @@ const ServicesSection = () => {
       title: t('servicesTitle2'),
       description: t('servicesDesc2'),
       buttonText: t('servicesButton2'),
-      color: "#a3adf4", // Using the correct blue color
+      color: "#a3adf4",
       imageSrc: "/lovable-uploads/97a44fdb-e7a6-4917-9b66-1a40f373e0a7.png",
       imageAlt: "Women in car enjoying a ride",
+      route: "/drive"
     },
     {
       id: 3,
@@ -70,9 +64,10 @@ const ServicesSection = () => {
       title: t('servicesTitle3'),
       description: t('servicesDesc3'),
       buttonText: t('servicesButton3'),
-      color: "#a3adf4", // Using the correct blue color
+      color: "#a3adf4",
       imageSrc: "/lovable-uploads/f56c6c65-2478-46a3-8ee7-3d8fcbea2312.png",
       imageAlt: "Women smiling in car with passengers",
+      route: "/fleet"
     },
   ];
 
@@ -105,7 +100,7 @@ const ServicesSection = () => {
           </p>
         </div>
         
-        {/* Service cards with enhanced animations - completely covered by images with text overlay */}
+        {/* Service cards with enhanced animations */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {serviceCards.map((card, index) => (
             <div 
@@ -135,25 +130,25 @@ const ServicesSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"></div>
                 </div>
 
-                {/* Header banner at top with bold blue text styling - INCREASED SIZE */}
+                {/* Header banner at top with bold blue text styling */}
                 <div 
                   className="p-3 text-center text-2xl font-extrabold uppercase tracking-wider text-[#a3adf4] relative rounded-b-3xl"
                 >
                   {card.header}
                 </div>
 
-                {/* Text content overlay - increased height from 400px to 450px */}
+                {/* Text content overlay */}
                 <div className="relative z-10 p-8 flex flex-col h-[500px]">
                   <h3 className="text-2xl font-bold mb-4 text-white">{card.title}</h3>
                   <p className="text-white/90 mb-6 flex-grow">
                     {card.description}
                   </p>
                   
-                  {/* Updated button to scroll to contact form */}
+                  {/* Updated button to use navigation */}
                   <div className="mt-auto">
                     <Button 
                       className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-semibold text-sm px-5 py-4 h-auto w-full shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group" 
-                      onClick={scrollToContactForm}
+                      onClick={() => navigate(card.route)}
                     >
                       <span className="flex items-center justify-center w-full">
                         <span className="tracking-wide font-bold">{card.buttonText}</span>

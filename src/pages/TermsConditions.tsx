@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../shared/Navbar';
 import { Footer } from '../shared/Footer';
 import { useLanguage } from "@/lib/LanguageContext";
@@ -7,11 +7,15 @@ const TermsConditions = () => {
   const { language } = useLanguage();
   const isGerman = language === 'de';
   
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-1 bg-gray-50 pt-24">
-        <div className="container mx-auto px-4 py-12 max-w-5xl">
+      <main className="flex-1 bg-gray-50">
+        <div className="container mx-auto px-4 py-12 max-w-5xl mt-16">
           <div className="bg-white p-6 md:p-10 rounded-lg shadow-sm">
             <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800 border-b border-[#fa9de3]/30 pb-4">
               {isGerman ? 'Allgemeine Geschäftsbedingungen' : 'Terms & Conditions'}
