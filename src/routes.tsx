@@ -11,6 +11,8 @@ import FleetPage from './pages/FleetPage';
 import PassengerFAQ from './pages/PassengerFAQ';
 import DriverFAQ from './pages/DriverFAQ';
 import FleetFAQ from './pages/FleetFAQ';
+import DeletePassengerAccount from "./pages/DeletePassengerAccount";
+import DeleteDriverAccount from "./pages/DeleteDriverAccount";
 
 export const router = createBrowserRouter([
   {
@@ -48,6 +50,14 @@ export const router = createBrowserRouter([
   {
     path: '/faq/fleet',
     element: <FleetFAQ />,
+  },
+  {
+    path: '/delete-passenger-account',
+    element: <DeletePassengerAccount />,
+  },
+  {
+    path: '/delete-driver-account',
+    element: <DeleteDriverAccount />,
   },
   {
     path: '*',

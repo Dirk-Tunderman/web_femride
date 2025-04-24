@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const PassengerFAQ = () => {
   const { t } = useLanguage();
@@ -74,6 +74,21 @@ const PassengerFAQ = () => {
                   </AccordionTrigger>
                   <AccordionContent className="pb-4 text-gray-600">
                     {t('faqPassengerA4')}
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-5" className="border-b border-gray-200">
+                  <AccordionTrigger className="text-lg font-medium py-4 hover:no-underline">
+                    How can I delete my passenger account?
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-4 text-gray-600">
+                    <p>If you wish to delete your FemRide passenger account, you can submit a deletion request through our dedicated form. Please note that this action is permanent and cannot be undone.</p>
+                    <Link 
+                      to="/delete-passenger-account" 
+                      className="text-[#fa9de3] hover:text-[#e989cc] font-medium mt-2 inline-block"
+                    >
+                      Click here to delete your passenger account →
+                    </Link>
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
