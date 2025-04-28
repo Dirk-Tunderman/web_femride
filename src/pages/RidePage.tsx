@@ -84,7 +84,7 @@ This request was submitted through the FemRide Ride Request Form.
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
       templateParams,
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
     );
   };
 
