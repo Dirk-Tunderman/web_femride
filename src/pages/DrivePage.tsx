@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
-import emailjs from '@emailjs/browser';
+import { sendEmail } from "@/lib/emailjs";
 import Navbar from "@/shared/Navbar";
 import { useNavigate } from "react-router-dom";
 import { ChevronLeft } from "lucide-react";
@@ -33,14 +33,14 @@ const DrivePage = () => {
     reason: "",
   });
 
-  const sendEmail = async (data: DriverApplication) => {
+  const createEmailContent = (data: DriverApplication) => {
     const formattedDate = new Date().toLocaleDateString(language === 'de' ? 'de-DE' : 'en-US', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
     });
 
-    const templateParams = {
+    return {
       to_email: "info@femride.de",
       from_name: data.name,
       from_email: data.email,
@@ -78,13 +78,6 @@ Contact Details for Follow-up:
 - Phone: ${data.phone}
       `,
     };
-
-    return emailjs.send(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      templateParams,
-      { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
-    );
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -92,7 +85,20 @@ Contact Details for Follow-up:
     setIsSubmitting(true);
 
     try {
-      await sendEmail(formData);
+      // Log environment variables right before sending
+      console.log("Environment variables at submission time:");
+      console.log("Public Key:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+      console.log("Service ID:", import.meta.env.VITE_EMAILJS_SERVICE_ID);
+      console.log("Template ID:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
+
+      const templateParams = createEmailContent(formData);
+
+      // Use our helper function from lib/emailjs.ts
+      await sendEmail(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams
+      );
 
       toast({
         title: t('driverApplicationSuccessTitle'),
@@ -110,9 +116,15 @@ Contact Details for Follow-up:
       });
     } catch (error) {
       console.error('Email sending failed:', error);
+      // More detailed error logging
+      if (error instanceof Error) {
+        console.error('Error message:', error.message);
+        console.error('Error stack:', error.stack);
+      }
+
       toast({
         title: t('driverApplicationErrorTitle'),
-        description: t('driverApplicationErrorDesc'),
+        description: `${t('driverApplicationErrorDesc')} (Error: ${error instanceof Error ? error.message : 'Unknown error'})`,
         variant: "destructive",
       });
     } finally {
