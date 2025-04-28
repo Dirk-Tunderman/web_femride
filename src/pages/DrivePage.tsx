@@ -34,8 +34,6 @@ const DrivePage = () => {
   });
 
   const sendEmail = async (data: DriverApplication) => {
-    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-
     const formattedDate = new Date().toLocaleDateString(language === 'de' ? 'de-DE' : 'en-US', {
       year: 'numeric',
       month: 'long',
@@ -84,7 +82,8 @@ Contact Details for Follow-up:
     return emailjs.send(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      templateParams
+      templateParams,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     );
   };
 
@@ -94,12 +93,12 @@ Contact Details for Follow-up:
 
     try {
       await sendEmail(formData);
-      
+
       toast({
         title: t('driverApplicationSuccessTitle'),
         description: t('driverApplicationSuccessDesc'),
       });
-      
+
       // Reset form
       setFormData({
         name: "",
@@ -131,7 +130,7 @@ Contact Details for Follow-up:
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-[#fa9de3]/10 to-[#a3adf4]/20">
       <Navbar />
-      
+
       {/* Back button - positioned and styled */}
       <div className="container mx-auto px-4 py-6">
         <Button
@@ -266,4 +265,4 @@ Contact Details for Follow-up:
   );
 };
 
-export default DrivePage; 
+export default DrivePage;

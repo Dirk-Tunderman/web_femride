@@ -50,8 +50,6 @@ const RidePage = () => {
   };
 
   const sendEmail = async (data: RideRequest) => {
-    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-
     const templateParams = {
       to_email: import.meta.env.VITE_ADMIN_EMAIL,
       from_name: data.name,
@@ -85,7 +83,8 @@ This request was submitted through the FemRide Ride Request Form.
     return emailjs.send(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      templateParams
+      templateParams,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     );
   };
 
@@ -330,4 +329,4 @@ This request was submitted through the FemRide Ride Request Form.
   );
 };
 
-export default RidePage; 
+export default RidePage;

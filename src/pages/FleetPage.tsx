@@ -44,10 +44,8 @@ const FleetPage = () => {
   };
 
   const sendEmail = async (data: FleetApplication) => {
-    emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY || "");
-
     const templateParams = {
-      to_email: process.env.REACT_APP_FLEET_EMAIL || "",
+      to_email: import.meta.env.VITE_ADMIN_EMAIL || "info@femride.de",
       from_name: data.contactPerson,
       from_email: data.email,
       subject: t('fleetApplicationEmailSubject'),
@@ -71,9 +69,10 @@ Date: ${new Date().toLocaleDateString(language === "de" ? "de-DE" : "en-US")}
 
     try {
       await emailjs.send(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID || "",
-        process.env.REACT_APP_EMAILJS_FLEET_TEMPLATE_ID || "",
-        templateParams
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
       return true;
     } catch (error) {
@@ -250,4 +249,4 @@ Date: ${new Date().toLocaleDateString(language === "de" ? "de-DE" : "en-US")}
   );
 };
 
-export default FleetPage; 
+export default FleetPage;
