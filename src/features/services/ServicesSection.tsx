@@ -38,8 +38,7 @@ const ServicesSection = () => {
   const serviceCards = [
     {
       id: 1,
-      header: t('servicesHeader1'),
-      title: t('servicesTitle1'),
+      header: t('servicesTitle1'),
       description: t('servicesDesc1'),
       buttonText: t('servicesButton1'),
       color: "#a3adf4",
@@ -49,8 +48,7 @@ const ServicesSection = () => {
     },
     {
       id: 2,
-      header: t('servicesHeader2'),
-      title: t('servicesTitle2'),
+      header: t('servicesTitle2'),
       description: t('servicesDesc2'),
       buttonText: t('servicesButton2'),
       color: "#a3adf4",
@@ -60,12 +58,11 @@ const ServicesSection = () => {
     },
     {
       id: 3,
-      header: t('servicesHeader3'),
-      title: t('servicesTitle3'),
+      header: t('servicesTitle3'),
       description: t('servicesDesc3'),
       buttonText: t('servicesButton3'),
       color: "#a3adf4",
-      imageSrc: "/lovable-uploads/f56c6c65-2478-46a3-8ee7-3d8fcbea2312.png",
+      imageSrc: "/lovable-uploads/f6Ms9JPuWeBNQ-6f-Tx3u.png",
       imageAlt: "Women smiling in car with passengers",
       route: "/fleet"
     },

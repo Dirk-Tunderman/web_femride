@@ -2,11 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Globe, Menu } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
-import { 
-  DropdownMenu, 
-  DropdownMenuContent, 
-  DropdownMenuItem, 
-  DropdownMenuTrigger 
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 
 /**
@@ -44,30 +44,51 @@ const Navbar = () => {
     setIsMenuOpen(false); // Close mobile menu if open
   };
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact-section');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false); // Close mobile menu if open
+  };
+
   return (
-    <header 
+    <header
       className={`py-4 px-6 md:px-10 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
-        scrolled 
-          ? "bg-white/95 backdrop-blur-md shadow-md py-3" 
+        scrolled
+          ? "bg-white/95 backdrop-blur-md shadow-md py-3"
           : "bg-white py-4"
       }`}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <div className="flex items-center">
+        {/* Desktop view - Logo on left */}
+        <div className="hidden md:flex items-center">
           <a href="/" className="flex items-center transition-transform hover:scale-105 duration-300">
-            <img 
-              src="/lovable-uploads/c7f8aded-75a3-4986-a5e0-dcf1a650407b.png" 
-              alt="FemRide Logo" 
-              className="h-8 md:h-10"
+            <img
+              src="/lovable-uploads/c7f8aded-75a3-4986-a5e0-dcf1a650407b.png"
+              alt="FemRide Logo"
+              className="h-10"
             />
           </a>
         </div>
-        
+
+        {/* Mobile view - Hamburger menu on left */}
+        <div className="md:hidden">
+          <Button
+            variant="ghost"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="transition-colors hover:bg-pink-50"
+          >
+            <Menu className="h-6 w-6" />
+          </Button>
+        </div>
+
+        {/* Desktop navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button 
-                variant="ghost" 
+              <Button
+                variant="ghost"
                 className="flex items-center text-[#222] font-medium hover:bg-pink-50 transition-colors"
               >
                 <Globe className="h-5 w-5 mr-2" />
@@ -83,33 +104,34 @@ const Navbar = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          
-          <a 
-            href="#support" 
-            className="text-[#222] font-medium relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#fa9de3] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+
+          <button
+            onClick={scrollToContact}
+            className="text-[#222] font-medium relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#fa9de3] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left bg-transparent border-none cursor-pointer"
           >
             {t('navSupport')}
-          </a>
-          
-          <Button 
+          </button>
+
+          <Button
             onClick={scrollToServices}
             className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-medium rounded-full px-6 py-2 transition-transform hover:scale-105 duration-200 shadow-md"
           >
             {t('navRegister')}
           </Button>
         </div>
-        
-        <div className="md:hidden">
-          <Button 
-            variant="ghost" 
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="transition-colors hover:bg-pink-50"
-          >
-            <Menu className="h-6 w-6" />
-          </Button>
+
+        {/* Mobile view - Logo on right */}
+        <div className="md:hidden flex items-center">
+          <a href="/" className="flex items-center transition-transform hover:scale-105 duration-300">
+            <img
+              src="/lovable-uploads/c7f8aded-75a3-4986-a5e0-dcf1a650407b.png"
+              alt="FemRide Logo"
+              className="h-8"
+            />
+          </a>
         </div>
       </div>
-      
+
       {isMenuOpen && (
         <div className="md:hidden mt-2 py-4 px-4 bg-white shadow-lg rounded-lg animate-fade-in">
           <div className="flex flex-col space-y-4">
@@ -129,12 +151,15 @@ const Navbar = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            
-            <a href="#support" className="text-[#222] font-medium py-2 px-4 text-center hover:bg-pink-50 rounded-md transition-colors">
+
+            <button
+              onClick={scrollToContact}
+              className="text-[#222] font-medium py-2 px-4 text-center hover:bg-pink-50 rounded-md transition-colors bg-transparent border-none cursor-pointer w-full"
+            >
               {t('navSupport')}
-            </a>
-            
-            <Button 
+            </button>
+
+            <Button
               onClick={scrollToServices}
               className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-medium rounded-full px-6 py-2 transition-transform hover:scale-105 duration-200"
             >

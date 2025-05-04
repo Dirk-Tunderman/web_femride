@@ -326,12 +326,12 @@ export const translations: Translations = {
     en: 'Planning a trip? Schedule a ride in advance for even more convenient airport transfers, important meetings, or any occasion that requires punctuality. Simply enter your details and secure your ride up to 90 days ahead.'
   },
   forFemaleDrivers: {
-    de: 'Für Fahrerinnen',
-    en: 'For female drivers'
+    de: 'Werde Fahrerin und tritt einer FemRide-Flotte in Deutschland bei!',
+    en: 'Become a driver and join a FemRide fleet in Germany!'
   },
   forFleetOperators: {
-    de: 'Für Flottenunternehmen',
-    en: 'For fleet operators'
+    de: 'Werde Flottenpartner von FemRide in Deutschland!',
+    en: 'Become a fleet partner of FemRide in Germany!'
   },
   
   // Download Section
@@ -436,16 +436,16 @@ export const translations: Translations = {
     en: 'For safe mobility, more opportunities, a fairer future!'
   },
   forFemaleDriversDesc: {
-    de: 'Werde Fahrerin und schließe dich einer FemRide-Flotte in Deutschland an! Auf der Suche nach einer Fahrerin-Position in Deutschland? Werde Teil eines Flottenunternehmens, das mit FemRide kooperiert, und fahre für eine Plattform, die Sicherheit, Chancengleichheit und faire Verdienstmöglichkeiten in den Mittelpunkt stellt. Nutze deine Chance auf einen flexiblen, sicheren Job mit attraktiven Einkommensperspektiven!',
-    en: 'Become a driver and join a FemRide fleet in Germany! Looking for a driver position in Germany? Become part of a fleet company that cooperates with FemRide, and drive for a platform that focuses on safety, equal opportunities, and fair earning potential. Take advantage of your chance for a flexible, secure job with attractive income prospects!'
+    de: 'Auf der Suche nach einer Fahrerin-Position in Deutschland? Werde Teil eines Flottenunternehmens, das mit FemRide kooperiert, und fahre für eine Plattform, die Sicherheit, Chancengleichheit und faire Verdienstmöglichkeiten in den Mittelpunkt stellt. Nutze deine Chance auf einen flexiblen, sicheren Job mit attraktiven Einkommensperspektiven!',
+    en: 'Looking for a driver position in Germany? Become part of a fleet company that cooperates with FemRide, and drive for a platform that focuses on safety, equal opportunities, and fair earning potential. Take advantage of your chance for a flexible, secure job with attractive income prospects!'
   },
   forFemaleDriversButton: {
     de: 'Jetzt als Fahrerin anmelden!',
     en: 'Sign up as a driver now!'
   },
   forFleetOperatorsDesc: {
-    de: 'Werde Flottenpartner von FemRide in Deutschland! Besitzt du ein Flottenunternehmen und suchst nach neuen, lukrativen Einsatzmöglichkeiten? Kooperiere mit FemRide und werde Teil einer Plattform, die gesellschaftlichen Impact und nachhaltige Mobilität in den Mittelpunkt stellt. Nutze dein Potenzial und steigere deine Flottenauslastung mit FemRide!',
-    en: 'Become a fleet partner of FemRide in Germany! Do you own a fleet company and are looking for new, lucrative deployment opportunities? Cooperate with FemRide and become part of a platform that focuses on social impact and sustainable mobility. Use your potential and increase your fleet utilization with FemRide!'
+    de: 'Besitzt du ein Flottenunternehmen und suchst nach neuen, lukrativen Einsatzmöglichkeiten? Kooperiere mit FemRide und werde Teil einer Plattform, die gesellschaftlichen Impact und nachhaltige Mobilität in den Mittelpunkt stellt. Nutze dein Potenzial und steigere deine Flottenauslastung mit FemRide!',
+    en: 'Do you own a fleet company and are looking for new, lucrative deployment opportunities? Cooperate with FemRide and become part of a platform that focuses on social impact and sustainable mobility. Use your potential and increase your fleet utilization with FemRide!'
   },
   forFleetOperatorsButton: {
     de: 'Jetzt als Flottenpartner registrieren!',
