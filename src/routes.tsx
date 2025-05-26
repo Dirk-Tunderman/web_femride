@@ -13,6 +13,8 @@ import DriverFAQ from './pages/DriverFAQ';
 import FleetFAQ from './pages/FleetFAQ';
 import DeletePassengerAccount from "./pages/DeletePassengerAccount";
 import DeleteDriverAccount from "./pages/DeleteDriverAccount";
+import Admin from './pages/Admin';
+import VerifyEmail from './pages/VerifyEmail';
 
 export const router = createBrowserRouter([
   {
@@ -58,6 +60,14 @@ export const router = createBrowserRouter([
   {
     path: '/delete-driver-account',
     element: <DeleteDriverAccount />,
+  },
+  {
+    path: '/admin',
+    element: <Admin />,
+  },
+  {
+    path: '/verify-email',
+    element: <VerifyEmail />,
   },
   {
     path: '*',

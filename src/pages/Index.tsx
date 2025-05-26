@@ -7,12 +7,16 @@ import AboutSection from '../features/about/AboutSection';
 import LatestFeaturesSection from '../features/latestFeatures/LatestFeaturesSection';
 import FAQSection from '../features/faq/FAQSection';
 import ContactSection from '../features/contact/ContactSection';
-import DownloadSection from '../features/download/DownloadSection';
+
+import WaitingListSection from '../features/waitinglist/WaitingListSection';
+import WaitlistPopup from '../components/WaitlistPopup';
 import { Footer } from '../shared/Footer';
 import { ChevronUp } from 'lucide-react';
+import { getReferralCode } from '../lib/referralUtils';
 
 const Index = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [referralCode, setReferralCode] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +29,14 @@ const Index = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Check for referral code using utility function
+  useEffect(() => {
+    const ref = getReferralCode();
+    if (ref) {
+      setReferralCode(ref);
+    }
   }, []);
 
   const scrollToTop = () => {
@@ -44,19 +56,22 @@ const Index = () => {
         <LatestFeaturesSection />
         <FAQSection />
         <ContactSection />
-        <DownloadSection />
+        <WaitingListSection />
       </main>
       <Footer />
-      
+
       {/* Scroll to top button - updated to rounded-full */}
-      <button 
-        onClick={scrollToTop} 
+      <button
+        onClick={scrollToTop}
         className={`fixed bottom-8 right-8 bg-[#fa9de3] hover:bg-[#e989cc] text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 z-50 ${
           showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
         }`}
       >
         <ChevronUp size={24} />
       </button>
+
+      {/* Waitlist Popup */}
+      <WaitlistPopup referralCode={referralCode || undefined} />
     </div>
   );
 };

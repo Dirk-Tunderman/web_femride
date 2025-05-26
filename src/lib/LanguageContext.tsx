@@ -14,7 +14,7 @@ export const translations: Translations = {
     de: 'Registrieren',
     en: 'Register'
   },
-  
+
   // Footer
   footerTerms: {
     de: 'AGB',
@@ -32,7 +32,7 @@ export const translations: Translations = {
     de: 'Alle Rechte vorbehalten.',
     en: 'All rights reserved.'
   },
-  
+
   // Founder Section
   founderTitle: {
     de: 'Gründer & CEO',
@@ -46,7 +46,7 @@ export const translations: Translations = {
     de: 'Als Mann setze ich mich bewusst für diese Mission ein, denn jeder von uns hat eine Frau in seinem Leben – sei es eine Mutter, Schwester, Tochter, Partnerin oder Freundin – für die es sich lohnt, eine sicherere und gerechtere Welt zu schaffen. Doch darüber hinaus geht es nicht nur um Einzelpersonen, sondern um die gesellschaftliche Verantwortung, die wir alle tragen.',
     en: "As a man, I am consciously committed to this mission because each of us has a woman in our life - whether a mother, sister, daughter, partner or friend - for whom it is worth creating a safer and more just world. But beyond that, it's not just about individuals, but about the social responsibility that we all bear."
   },
-  
+
   // Hero Section
   heroTagline: {
     de: 'FemRide',
@@ -72,7 +72,7 @@ export const translations: Translations = {
     de: 'Bald im Google Play & App Store verfügbar',
     en: 'Coming soon to Google Play & App Store'
   },
-  
+
   // Services Section
   servicesTitle: {
     de: 'Was wir anbieten',
@@ -130,7 +130,7 @@ export const translations: Translations = {
     de: 'Jetzt Flottenpartner werden',
     en: 'Become a fleet partner now'
   },
-  
+
   // Contact Section
   contactHeader: {
     de: 'KONTAKT',
@@ -241,7 +241,7 @@ export const translations: Translations = {
     de: 'Wird gesendet...',
     en: 'Sending...'
   },
-  
+
   // Footer content
   footerCompany: {
     de: 'FemRide UG',
@@ -287,7 +287,7 @@ export const translations: Translations = {
     de: 'Aykut Atli, Waldstraße 222A, 12527 Berlin',
     en: 'Aykut Atli, Waldstraße 222A, 12527 Berlin'
   },
-  
+
   // Our vision
   visionHeader: {
     de: 'OUR VISION',
@@ -297,7 +297,7 @@ export const translations: Translations = {
     de: 'Meet Our Founder',
     en: 'Meet Our Founder'
   },
-  
+
   // Section Headers
   sectionOurServices: {
     de: 'UNSERE DIENSTE',
@@ -315,7 +315,7 @@ export const translations: Translations = {
     de: 'Lernen Sie unseren Gründer kennen',
     en: 'Meet Our Founder'
   },
-  
+
   // Latest Features Section
   latestFeaturesSectionTitle: {
     de: 'Fahrt im Voraus buchen',
@@ -333,7 +333,7 @@ export const translations: Translations = {
     de: 'Werde Flottenpartner von FemRide in Deutschland!',
     en: 'Become a fleet partner of FemRide in Germany!'
   },
-  
+
   // Download Section
   downloadSectionTitle: {
     de: 'Laden Sie unsere App herunter',
@@ -379,7 +379,7 @@ export const translations: Translations = {
     de: 'JETZT BEI',
     en: 'GET ON'
   },
-  
+
   // About Section
   aboutMainTitle: {
     de: 'Was sagen die Frauen zu FemRide?',
@@ -417,7 +417,7 @@ export const translations: Translations = {
     de: 'Jetzt registrieren und Teil der Bewegung werden',
     en: 'Register now and become part of the movement'
   },
-  
+
   // Join Us Section
   joinUsSectionHeader: {
     de: 'JOIN US',
@@ -451,7 +451,7 @@ export const translations: Translations = {
     de: 'Jetzt als Flottenpartner registrieren!',
     en: 'Register as a fleet partner now!'
   },
-  
+
   // FAQ Section
   faqMainTitle: {
     de: 'Häufig gestellte Fragen',
@@ -489,7 +489,7 @@ export const translations: Translations = {
     de: 'FAQs für Subunternehmer',
     en: 'FAQs for Fleet Partners'
   },
-  
+
   // Passenger FAQs
   faqPassengerQ1: {
     de: 'Was ist FemRide?',
@@ -523,7 +523,7 @@ export const translations: Translations = {
     de: 'Unsere App bietet Live-Tracking, Notfall-Button und eine sichere Kommunikation zwischen Fahrerinnen und Passagierinnen. Zusätzlich identifizieren wir mit einem modernen System ob es sich bei dem Fahrgast und Fahrerin wirklich um Frauen handelt und garantieren damit die Sicherheit für die Benutzerin von FemRide.',
     en: 'Our app offers live tracking, an emergency button, and secure communication between drivers and passengers. Additionally, we use a modern system to verify that both passengers and drivers are women, guaranteeing the safety of FemRide users.'
   },
-  
+
   // Driver FAQs
   faqDriverQ1: {
     de: 'Wie kann ich Fahrerin bei FemRide werden?',
@@ -569,7 +569,7 @@ export const translations: Translations = {
     de: 'Nein, du fährst mit den Fahrzeugen deines Flottenpartners. Die Bedingungen variieren je nach Partnerunternehmen.',
     en: 'No, you drive with the vehicles of your fleet partner. The conditions vary depending on the partner company.'
   },
-  
+
   // Fleet FAQs
   faqFleetQ1: {
     de: 'Wie kann mein Unternehmen mit FemRide kooperieren?',
@@ -603,7 +603,7 @@ export const translations: Translations = {
     de: 'Dank eines fairen Preismodells zahlen Flottenpartner weniger als üblich, um eine langfristige Partnerschaft zu fördern.',
     en: 'Thanks to a fair pricing model, fleet partners pay less than usual to encourage a long-term partnership.'
   },
-  
+
   // Newsletter translations
   newsletterTitle: {
     de: 'Newsletter abonnieren',
@@ -629,7 +629,7 @@ export const translations: Translations = {
     de: 'Erhalten Sie Updates über FemRide und unsere App-Veröffentlichung',
     en: 'Get updates about FemRide and our app release'
   },
-  
+
   // Cookie Consent translations
   cookieTitle: {
     de: 'Wir verwenden Cookies',
@@ -962,6 +962,263 @@ export const translations: Translations = {
   rideRequestEmailSubject: {
     en: "New FemRide Ride Request",
     de: "Neue FemRide Fahrtanfrage",
+  },
+
+  // Waiting List Translations
+  waitingListTitle: {
+    de: "Endlich sicher unterwegs - Von Frauen für Frauen",
+    en: "Finally Safe Travel - By Women, For Women"
+  },
+  waitingListDescription: {
+    de: "Tragen Sie sich in unsere Warteliste ein und erfahren Sie als Erste, wenn unsere App verfügbar ist. Wir revolutionieren die Mobilität für Frauen mit Sicherheit als oberste Priorität.",
+    en: "Join our waiting list and be the first to know when our app launches. We're revolutionizing mobility for women with safety as our top priority."
+  },
+  waitingListUrgency: {
+    de: "Nur die ersten 1.000 Nutzerinnen erhalten kostenlosen Probemonat",
+    en: "Only the first 1,000 users get a free trial month"
+  },
+  waitingListSocialProof: {
+    de: "Über {count} Frauen bereits angemeldet",
+    en: "Over {count} women already signed up"
+  },
+  waitingListRecentSignup: {
+    de: "{name} aus {city} ist gerade beigetreten",
+    en: "{name} from {city} just joined"
+  },
+  waitingListReferralDescription: {
+    de: "Laden Sie Freunde ein und steigen Sie in der Warteliste auf! Für jeden Freund, den Sie einladen, rücken Sie 10 Plätze nach vorne.",
+    en: "Invite friends and move up the waitlist! For each friend you invite, you'll move up 10 places."
+  },
+  waitingListTrustSafety: {
+    de: "Sicherheit zuerst",
+    en: "Safety First"
+  },
+  waitingListTrustSafetyDesc: {
+    de: "Fahrerinnen für Fahrgäste. Ihre Sicherheit ist unsere oberste Priorität.",
+    en: "Women drivers for women passengers. Your safety is our top priority."
+  },
+  waitingListTrustCommunity: {
+    de: "Wachsende Gemeinschaft",
+    en: "Growing Community"
+  },
+  waitingListTrustCommunityDesc: {
+    de: "Schließen Sie sich Tausenden von Frauen an, die bereits auf unserer Warteliste stehen.",
+    en: "Join thousands of women already on our waitlist."
+  },
+  waitingListTrustEarly: {
+    de: "Frühzeitiger Zugang",
+    en: "Early Access"
+  },
+  waitingListTrustEarlyDesc: {
+    de: "Mitglieder der Warteliste erhalten vorrangigen Zugang, wenn wir starten.",
+    en: "Waitlist members get priority access when we launch."
+  },
+  waitingListTrustInvite: {
+    de: "Freunde einladen",
+    en: "Invite Friends"
+  },
+  waitingListJoinToday: {
+    de: "Treten Sie unserer Warteliste noch heute bei",
+    en: "Join Our Waitlist Today"
+  },
+  waitingListEmailPlaceholder: {
+    de: "Ihre E-Mail-Adresse",
+    en: "Your email address"
+  },
+  waitingListReferralPlaceholder: {
+    de: "Referral-Code (optional)",
+    en: "Referral code (optional)"
+  },
+  waitingListButton: {
+    de: "Jetzt Platz sichern",
+    en: "Secure Your Spot"
+  },
+  waitingListButtonSecondary: {
+    de: "Frühen Zugang erhalten",
+    en: "Get Early Access"
+  },
+  waitingListFree: {
+    de: "100% kostenlos & unverbindlich",
+    en: "100% free & no commitment"
+  },
+  waitingListPrivacy: {
+    de: "Deine Daten sind sicher bei uns",
+    en: "Your data is safe with us"
+  },
+  waitingListReferralOptional: {
+    de: "Haben Sie einen Referral-Code?",
+    en: "Have a referral code?"
+  },
+  // Exit-intent popup translations
+  waitingListExitTitle: {
+    de: "Warten Sie! Verpassen Sie nicht den sicheren Start",
+    en: "Wait! Don't miss the safe start"
+  },
+  waitingListExitDescription: {
+    de: "Sichern Sie sich Ihren Platz bevor wir voll sind",
+    en: "Secure your spot before we're full"
+  },
+  waitingListExitButton: {
+    de: "Letzten Platz sichern",
+    en: "Secure Last Spot"
+  },
+  waitingListExitDisclaimer: {
+    de: "Kostenlos & jederzeit abmeldbar",
+    en: "Free & unsubscribe anytime"
+  },
+  waitingListSubmitting: {
+    de: "Wird angemeldet...",
+    en: "Registering..."
+  },
+  waitingListSuccess: {
+    de: "Erfolgreich angemeldet!",
+    en: "Successfully registered!"
+  },
+  waitingListSuccessMessage: {
+    de: "Wir werden Sie benachrichtigen, sobald die App verfügbar ist.",
+    en: "We will notify you when the app is available."
+  },
+  waitingListReferralSuccess: {
+    de: "Ihr Referral-Code",
+    en: "Your Referral Code"
+  },
+  waitingListReferralSuccessMessage: {
+    de: "Teilen Sie diesen Code mit Freunden, um in der Warteliste aufzusteigen!",
+    en: "Share this code with friends to move up the waitlist!"
+  },
+  waitingListPositionMessage: {
+    de: "Ihre aktuelle Position in der Warteliste: {position}",
+    en: "Your current position in the waitlist: {position}"
+  },
+  waitingListCopyButton: {
+    de: "Kopieren",
+    en: "Copy"
+  },
+  waitingListCopied: {
+    de: "Kopiert!",
+    en: "Copied!"
+  },
+  waitingListShareButton: {
+    de: "Teilen",
+    en: "Share"
+  },
+  waitingListError: {
+    de: "Fehler",
+    en: "Error"
+  },
+  waitingListErrorMessage: {
+    de: "Es gab ein Problem bei der Anmeldung. Bitte versuchen Sie es später erneut.",
+    en: "There was a problem with your registration. Please try again later."
+  },
+  waitingListDuplicate: {
+    de: "E-Mail bereits registriert",
+    en: "Email already registered"
+  },
+  waitingListDuplicateMessage: {
+    de: "Diese E-Mail ist bereits auf unserer Warteliste.",
+    en: "This email is already on our waiting list."
+  },
+  waitingListInvalidReferral: {
+    de: "Ungültiger Referral-Code",
+    en: "Invalid referral code"
+  },
+  waitingListInvalidReferralMessage: {
+    de: "Der eingegebene Referral-Code ist ungültig. Bitte überprüfen Sie ihn und versuchen Sie es erneut.",
+    en: "The referral code you entered is invalid. Please check and try again."
+  },
+
+  // New translations for redesigned waiting list section
+  waitingListWhatYoureJoining: {
+    de: "Das erwartet Sie",
+    en: "What You're Joining"
+  },
+  waitingListWhatYoureJoiningDesc: {
+    de: "Willkommen in der FemRide Community! Hier ist ein Vorgeschmack auf die App, die Ihre Mobilität revolutionieren wird.",
+    en: "Welcome to the FemRide community! Here's a preview of the app that will revolutionize your mobility."
+  },
+  waitingListInDevelopment: {
+    de: "In Entwicklung",
+    en: "In Development"
+  },
+  waitingListAppPreview: {
+    de: "App-Vorschau",
+    en: "App Preview"
+  },
+  waitingListAppPreviewDesc: {
+    de: "Bald verfügbar für iOS und Android - Ihre sichere Fahrt ist nur einen Tap entfernt.",
+    en: "Coming soon for iOS and Android - your safe ride is just a tap away."
+  },
+  waitingListWhatsNext: {
+    de: "Was passiert als Nächstes?",
+    en: "What's Next?"
+  },
+  waitingListWhatsNextDesc: {
+    de: "Wir arbeiten hart daran, die App zu perfektionieren. Sie erhalten eine E-Mail, sobald wir bereit für den Start sind.",
+    en: "We're working hard to perfect the app. You'll receive an email as soon as we're ready to launch."
+  },
+  waitingListNotifyWhenReady: {
+    de: "Benachrichtigung bei Verfügbarkeit",
+    en: "We'll notify you when ready"
+  },
+
+  // Social sharing translations
+  socialShareTitle: {
+    de: "Mit Freunden teilen:",
+    en: "Share with friends:"
+  },
+  instagramCopiedMessage: {
+    de: "Text kopiert! Instagram wird geöffnet - einfach einfügen!",
+    en: "Text copied! Instagram opening - just paste!"
+  },
+
+  // User type selection translations
+  userTypeLabel: {
+    de: "Ich möchte mich anmelden als:",
+    en: "I want to join as:"
+  },
+  userTypePassenger: {
+    de: "🚗 Fahrgast (suche Fahrten)",
+    en: "🚗 Passenger (looking for rides)"
+  },
+  userTypeDriver: {
+    de: "👩‍💼 Fahrerin (möchte für FemRide fahren)",
+    en: "👩‍💼 Driver (want to drive for FemRide)"
+  },
+  userTypePassengerShort: {
+    de: "Fahrgast",
+    en: "Passenger"
+  },
+  userTypeDriverShort: {
+    de: "Fahrerin",
+    en: "Driver"
+  },
+  driverReferralBonus: {
+    de: "Fahrerinnen erhalten +5 Plätze pro Empfehlung",
+    en: "Drivers get +5 places per referral"
+  },
+  passengerReferralBonus: {
+    de: "Fahrgäste erhalten +10 Plätze pro Empfehlung",
+    en: "Passengers get +10 places per referral"
+  },
+  bothWaitlistsInfo: {
+    de: "💡 Du kannst dich sowohl als Fahrerin als auch als Fahrgast anmelden!",
+    en: "💡 You can sign up for both driver and passenger waitlists!"
+  },
+  alreadyOnOtherList: {
+    de: "Du bist bereits auf der {otherType}-Warteliste angemeldet.",
+    en: "You're already on the {otherType} waitlist."
+  },
+  referralCodeTitle: {
+    de: "Ihr Referral-Code",
+    en: "Your Referral Code"
+  },
+  referralCodeDescription: {
+    de: "Teilen Sie diesen Code mit Freunden, um in der Warteliste aufzusteigen!",
+    en: "Share this code with friends to move up in the waitlist!"
+  },
+  referralCodeShareHint: {
+    de: "Klicken Sie auf das Kopiersymbol und teilen Sie den Code über die unten stehenden Optionen",
+    en: "Click the copy icon and share the code using the options below"
   },
 };
 
