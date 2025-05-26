@@ -190,24 +190,56 @@ const WaitingListForm: React.FC<WaitingListFormProps> = ({
                       value={field.value}
                       className={simplified ? "grid grid-cols-2 gap-2" : "grid grid-cols-1 gap-3"}
                     >
-                      <Label
-                        htmlFor="passenger"
-                        className={`flex items-center space-x-2 ${simplified ? 'p-2' : 'p-3'} border-2 border-gray-200 rounded-lg hover:border-[#fa9de3] transition-colors cursor-pointer`}
+                      <label
+                        className={`flex items-center space-x-3 ${simplified ? 'p-3' : 'p-4'} border-2 rounded-xl transition-all duration-200 cursor-pointer ${
+                          field.value === 'passenger'
+                            ? 'border-[#fa9de3] bg-[#fa9de3]/5'
+                            : 'border-gray-200 hover:border-[#fa9de3]'
+                        }`}
                       >
-                        <RadioGroupItem value="passenger" id="passenger" />
-                        <span className="flex-1 text-sm">
+                        <RadioGroupItem
+                          value="passenger"
+                          id="passenger"
+                          className="sr-only"
+                        />
+                        <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all duration-200 ${
+                          field.value === 'passenger'
+                            ? 'border-[#fa9de3] bg-[#fa9de3]'
+                            : 'border-gray-300'
+                        }`}>
+                          {field.value === 'passenger' && (
+                            <div className="w-2 h-2 rounded-full bg-white"></div>
+                          )}
+                        </div>
+                        <span className="flex-1 text-sm font-medium">
                           {simplified ? t('userTypePassengerShort') : t('userTypePassenger')}
                         </span>
-                      </Label>
-                      <Label
-                        htmlFor="driver"
-                        className={`flex items-center space-x-2 ${simplified ? 'p-2' : 'p-3'} border-2 border-gray-200 rounded-lg hover:border-[#a3adf4] transition-colors cursor-pointer`}
+                      </label>
+                      <label
+                        className={`flex items-center space-x-3 ${simplified ? 'p-3' : 'p-4'} border-2 rounded-xl transition-all duration-200 cursor-pointer ${
+                          field.value === 'driver'
+                            ? 'border-[#a3adf4] bg-[#a3adf4]/5'
+                            : 'border-gray-200 hover:border-[#a3adf4]'
+                        }`}
                       >
-                        <RadioGroupItem value="driver" id="driver" />
-                        <span className="flex-1 text-sm">
+                        <RadioGroupItem
+                          value="driver"
+                          id="driver"
+                          className="sr-only"
+                        />
+                        <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all duration-200 ${
+                          field.value === 'driver'
+                            ? 'border-[#a3adf4] bg-[#a3adf4]'
+                            : 'border-gray-300'
+                        }`}>
+                          {field.value === 'driver' && (
+                            <div className="w-2 h-2 rounded-full bg-white"></div>
+                          )}
+                        </div>
+                        <span className="flex-1 text-sm font-medium">
                           {simplified ? t('userTypeDriverShort') : t('userTypeDriver')}
                         </span>
-                      </Label>
+                      </label>
                     </RadioGroup>
                   </FormControl>
                   <FormMessage />
