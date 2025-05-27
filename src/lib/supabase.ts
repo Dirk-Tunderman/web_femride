@@ -16,12 +16,15 @@ const sendVerificationEmail = async (email: string, verificationToken: string, u
     console.log('🔗 VERIFICATION LINK (for testing):', verificationLink);
     console.log('📧 Sending email to:', email);
     console.log('👤 User type:', userType);
+    console.log('🌍 Environment:', import.meta.env.DEV ? 'Development' : 'Production');
 
     // Try to send real email via our API
     try {
       const apiUrl = import.meta.env.DEV
         ? 'http://localhost:3001/api/send-verification'  // Development
         : '/api/send-verification';  // Production (Vercel)
+
+      console.log('📡 Calling API:', apiUrl);
 
       const response = await fetch(apiUrl, {
         method: 'POST',
@@ -36,7 +39,10 @@ const sendVerificationEmail = async (email: string, verificationToken: string, u
         }),
       });
 
+      console.log('📡 API Response status:', response.status);
+
       const result = await response.json();
+      console.log('📡 API Response data:', result);
 
       if (response.ok) {
         console.log('✅ Email sent successfully via Resend');
@@ -46,21 +52,24 @@ const sendVerificationEmail = async (email: string, verificationToken: string, u
         throw new Error(result.error || 'Failed to send email');
       }
     } catch (apiError) {
-      console.error('❌ Email API not available, falling back to development mode:', apiError);
+      console.error('❌ Email API not available:', apiError);
 
-      // Fallback: Show alert with verification link for testing
-      if (import.meta.env.DEV) {
-        const typeParam = userType === 'driver' ? '&type=driver' : '';
-        const fallbackLink = `${window.location.origin}/verify-email?email=${encodeURIComponent(email)}&token=${verificationToken}${typeParam}`;
-        setTimeout(() => {
-          alert(`EMAIL SERVER NOT RUNNING - Development fallback:\n\nVerification link for ${email} (${userType}):\n\n${fallbackLink}\n\nClick OK and then visit this link to verify your email.`);
-        }, 1000);
+      // In production, this is a real error - don't show fallback
+      if (!import.meta.env.DEV) {
+        console.error('❌ Production email API failed:', apiError);
+        throw new Error('Email service unavailable. Please try again later.');
       }
 
-      return { success: true, verificationLink, fallback: true };
+      // Fallback: Show alert with verification link for testing (development only)
+      const fallbackLink = `${window.location.origin}/verify-email?email=${encodeURIComponent(email)}&token=${verificationToken}${typeParam}`;
+      setTimeout(() => {
+        alert(`EMAIL SERVER NOT RUNNING - Development fallback:\n\nVerification link for ${email} (${userType}):\n\n${fallbackLink}\n\nClick OK and then visit this link to verify your email.`);
+      }, 1000);
+
+      return { success: true, verificationLink: fallbackLink, fallback: true };
     }
   } catch (error) {
-    console.error('Error in verification email process:', error);
+    console.error('❌ Error in verification email process:', error);
     return { success: false, error };
   }
 };
@@ -68,8 +77,13 @@ const sendVerificationEmail = async (email: string, verificationToken: string, u
 // Function to add an email to the waiting list with optional referral code
 export const addToWaitingList = async (email: string, referralCode?: string, userType: 'passenger' | 'driver' = 'passenger') => {
   try {
+    console.log('🗃️ Adding to waitlist:', { email, userType, hasReferralCode: !!referralCode });
+    console.log('🔗 Supabase URL:', supabaseUrl);
+    console.log('🔑 Supabase Key length:', supabaseKey?.length || 0);
+
     // Use the appropriate function based on user type
     const functionName = userType === 'driver' ? 'register_driver_to_waitlist' : 'register_to_waitlist';
+    console.log('📞 Calling RPC function:', functionName);
 
     const { data, error } = await supabase
       .rpc(functionName, {
@@ -77,8 +91,17 @@ export const addToWaitingList = async (email: string, referralCode?: string, use
         referral_code_param: referralCode || null
       });
 
+    console.log('🗃️ Supabase response:', { data, error });
+
     if (error) {
-      console.error('Supabase error:', error);
+      console.error('❌ Supabase error:', error);
+      console.error('❌ Error details:', {
+        code: error.code,
+        message: error.message,
+        details: error.details,
+        hint: error.hint
+      });
+
       // Check if it's a duplicate email error
       if (error.code === '23505' || error.message?.includes('duplicate') || error.message?.includes('already registered')) {
         const listType = userType === 'driver' ? 'driver' : 'passenger';

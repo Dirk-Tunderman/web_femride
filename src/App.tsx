@@ -3,6 +3,7 @@ import { router } from './routes';
 import { Toaster } from './components/ui/toaster';
 import { LanguageProvider } from './lib/LanguageContext';
 import CookieConsent from './components/CookieConsent';
+import DebugPanel from './components/DebugPanel';
 
 import './App.css';
 
@@ -12,6 +13,7 @@ function App() {
       <RouterProvider router={router} />
       <Toaster />
       <CookieConsent />
+      <DebugPanel />
     </LanguageProvider>
   );
 }

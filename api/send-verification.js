@@ -22,13 +22,26 @@ export default async function handler(req, res) {
   }
 
   try {
+    console.log('🚀 Vercel function called with:', {
+      method: req.method,
+      hasBody: !!req.body,
+      env: {
+        hasResendKey: !!process.env.RESEND_API_KEY,
+        resendKeyLength: process.env.RESEND_API_KEY?.length || 0
+      }
+    });
+
     const { email, verificationToken, baseUrl, userType = 'passenger' } = req.body;
 
+    console.log('📧 Email request details:', { email, userType, baseUrl, hasToken: !!verificationToken });
+
     if (!email || !verificationToken || !baseUrl) {
+      console.error('❌ Missing required fields:', { email: !!email, verificationToken: !!verificationToken, baseUrl: !!baseUrl });
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
     if (!process.env.RESEND_API_KEY) {
+      console.error('❌ RESEND_API_KEY not found in environment variables');
       return res.status(500).json({ error: 'Email service not configured' });
     }
 
@@ -133,15 +146,15 @@ The FemRide Team
     });
 
     if (error) {
-      console.error('Resend error:', error);
+      console.error('❌ Resend error:', error);
       return res.status(500).json({ error: 'Failed to send email', details: error });
     }
 
-    console.log('Email sent successfully to:', email);
+    console.log('✅ Email sent successfully to:', email, 'with ID:', data?.id);
     return res.status(200).json({ success: true, data });
 
   } catch (error) {
-    console.error('Server error:', error);
-    return res.status(500).json({ error: 'Internal server error' });
+    console.error('❌ Server error:', error);
+    return res.status(500).json({ error: 'Internal server error', details: error.message });
   }
 }
