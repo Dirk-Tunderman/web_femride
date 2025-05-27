@@ -1,6 +1,12 @@
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend only if API key is available
+// Try multiple possible environment variable names
+const resendApiKey = process.env.RESEND_API_KEY || process.env.VITE_RESEND_API_KEY || process.env.NEXT_PUBLIC_RESEND_API_KEY;
+let resend = null;
+if (resendApiKey) {
+  resend = new Resend(resendApiKey);
+}
 
 export default async function handler(req, res) {
   // Enable CORS
@@ -26,8 +32,9 @@ export default async function handler(req, res) {
       method: req.method,
       hasBody: !!req.body,
       env: {
-        hasResendKey: !!process.env.RESEND_API_KEY,
-        resendKeyLength: process.env.RESEND_API_KEY?.length || 0
+        hasResendKey: !!resendApiKey,
+        resendKeyLength: resendApiKey?.length || 0,
+        allEnvVars: Object.keys(process.env).filter(key => key.includes('RESEND') || key.includes('API'))
       }
     });
 
@@ -40,9 +47,15 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
-    if (!process.env.RESEND_API_KEY) {
+    if (!resendApiKey || !resend) {
       console.error('❌ RESEND_API_KEY not found in environment variables');
-      return res.status(500).json({ error: 'Email service not configured' });
+      console.error('❌ Available environment variables:', Object.keys(process.env).filter(key => key.includes('RESEND') || key.includes('API')));
+      return res.status(500).json({
+        error: 'Email service not configured',
+        details: 'RESEND_API_KEY environment variable is missing',
+        availableEnvVars: Object.keys(process.env).filter(key => key.includes('RESEND') || key.includes('API')),
+        checkedVars: ['RESEND_API_KEY', 'VITE_RESEND_API_KEY', 'NEXT_PUBLIC_RESEND_API_KEY']
+      });
     }
 
     const typeParam = userType === 'driver' ? '&type=driver' : '';
