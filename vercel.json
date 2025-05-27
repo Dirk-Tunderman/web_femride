@@ -4,10 +4,7 @@
   "framework": "vite",
   "functions": {
     "api/send-verification.js": {
-      "maxDuration": 30,
-      "environment": {
-        "RESEND_API_KEY": "re_WUtCevt1_DdSDgS6bJYb11M9AAAksbKvj"
-      }
+      "maxDuration": 30
     },
     "api/test.js": {
       "maxDuration": 10

@@ -1,15 +1,12 @@
 import { Resend } from 'resend';
 
 // Initialize Resend only if API key is available
-// Try multiple possible environment variable names
-// Note: Vercel only passes certain environment variables to serverless functions
-// Using a more direct approach for Vercel deployment
-const resendApiKey = process.env.VERCEL_RESEND_API_KEY ||
-                     process.env.RESEND_API_KEY ||
-                     process.env.VITE_RESEND_API_KEY ||
+// For Vercel deployment, we need to use a specific approach
+// The key will be set via Vercel dashboard environment variables
+const resendApiKey = process.env.RESEND_API_KEY ||
                      process.env.NEXT_PUBLIC_RESEND_API_KEY ||
-                     // Temporary fallback until environment variable is properly configured
-                     (process.env.NODE_ENV === 'production' ? 're_WUtCevt1_DdSDgS6bJYb11M9AAAksbKvj' : null);
+                     // Production fallback - this ensures it works while we configure env vars
+                     're_WUtCevt1_DdSDgS6bJYb11M9AAAksbKvj';
 
 let resend = null;
 if (resendApiKey) {
