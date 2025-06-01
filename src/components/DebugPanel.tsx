@@ -59,6 +59,40 @@ const DebugPanel: React.FC = () => {
     }
   };
 
+  const testDriverRegistration = async () => {
+    setLoading(true);
+    try {
+      console.log('🚗 Testing Driver Registration...');
+      const { addToWaitingList } = await import('@/lib/supabase');
+
+      const result = await addToWaitingList(testEmail, null, 'driver');
+      console.log('🚗 Driver registration result:', result);
+      setTestResults(result);
+    } catch (error) {
+      console.error('❌ Driver registration error:', error);
+      setTestResults({ error: error.message });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const testPassengerRegistration = async () => {
+    setLoading(true);
+    try {
+      console.log('🚙 Testing Passenger Registration...');
+      const { addToWaitingList } = await import('@/lib/supabase');
+
+      const result = await addToWaitingList(testEmail, null, 'passenger');
+      console.log('🚙 Passenger registration result:', result);
+      setTestResults(result);
+    } catch (error) {
+      console.error('❌ Passenger registration error:', error);
+      setTestResults({ error: error.message });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   // Only show in development or if admin email is set
   const isAdmin = import.meta.env.VITE_ADMIN_EMAIL && 
     window.location.search.includes('debug=true');
@@ -90,12 +124,29 @@ const DebugPanel: React.FC = () => {
               onChange={(e) => setTestEmail(e.target.value)}
               className="text-xs"
             />
-            <Button 
-              onClick={testEmailAPI} 
+            <Button
+              onClick={testEmailAPI}
               disabled={loading}
               className="text-xs"
             >
               Test Email
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-2 gap-2">
+            <Button
+              onClick={testPassengerRegistration}
+              disabled={loading}
+              className="text-xs bg-blue-500 hover:bg-blue-600"
+            >
+              Test Passenger
+            </Button>
+            <Button
+              onClick={testDriverRegistration}
+              disabled={loading}
+              className="text-xs bg-green-500 hover:bg-green-600"
+            >
+              Test Driver
             </Button>
           </div>
         </div>
