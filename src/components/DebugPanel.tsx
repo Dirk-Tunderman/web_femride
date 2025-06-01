@@ -65,7 +65,9 @@ const DebugPanel: React.FC = () => {
       console.log('🚗 Testing Driver Registration...');
       const { addToWaitingList } = await import('@/lib/supabase');
 
-      const result = await addToWaitingList(testEmail, null, 'driver');
+      // Use a unique email for testing
+      const uniqueEmail = `test.driver.${Date.now()}@example.com`;
+      const result = await addToWaitingList(uniqueEmail, null, 'driver');
       console.log('🚗 Driver registration result:', result);
       setTestResults(result);
     } catch (error) {
@@ -99,7 +101,9 @@ const DebugPanel: React.FC = () => {
       console.log('🚙 Testing Passenger Registration...');
       const { addToWaitingList } = await import('@/lib/supabase');
 
-      const result = await addToWaitingList(testEmail, null, 'passenger');
+      // Use a unique email for testing
+      const uniqueEmail = `test.passenger.${Date.now()}@example.com`;
+      const result = await addToWaitingList(uniqueEmail, null, 'passenger');
       console.log('🚙 Passenger registration result:', result);
       setTestResults(result);
     } catch (error) {
