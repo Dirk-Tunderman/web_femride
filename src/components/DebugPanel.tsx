@@ -95,6 +95,27 @@ const DebugPanel: React.FC = () => {
     }
   };
 
+  const debugDriverVerification = async () => {
+    setLoading(true);
+    try {
+      console.log('🔍 Debug Driver Verification...');
+      const { supabase } = await import('@/lib/supabase');
+
+      // Use the test email and token from the database
+      const { data, error } = await supabase.rpc('debug_driver_verification', {
+        email_param: 'test.verification.fix@example.com',
+        token_param: 'ki3xzxnPEegcXDSx8lpAOOukKDluxDot'
+      });
+      console.log('🔍 Debug result:', { data, error });
+      setTestResults({ data, error, type: 'debug_verification' });
+    } catch (error) {
+      console.error('❌ Debug verification error:', error);
+      setTestResults({ error: error.message });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const testPassengerRegistration = async () => {
     setLoading(true);
     try {
@@ -171,13 +192,22 @@ const DebugPanel: React.FC = () => {
             </Button>
           </div>
 
-          <Button
-            onClick={testDriverFunction}
-            disabled={loading}
-            className="text-xs bg-purple-500 hover:bg-purple-600 w-full"
-          >
-            Test Driver Function Direct
-          </Button>
+          <div className="grid grid-cols-2 gap-2">
+            <Button
+              onClick={testDriverFunction}
+              disabled={loading}
+              className="text-xs bg-purple-500 hover:bg-purple-600"
+            >
+              Test Driver Function
+            </Button>
+            <Button
+              onClick={debugDriverVerification}
+              disabled={loading}
+              className="text-xs bg-orange-500 hover:bg-orange-600"
+            >
+              Debug Driver Verify
+            </Button>
+          </div>
         </div>
 
         {testResults && (
