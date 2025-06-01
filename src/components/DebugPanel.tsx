@@ -76,6 +76,23 @@ const DebugPanel: React.FC = () => {
     }
   };
 
+  const testDriverFunction = async () => {
+    setLoading(true);
+    try {
+      console.log('🧪 Testing Driver Function Directly...');
+      const { supabase } = await import('@/lib/supabase');
+
+      const { data, error } = await supabase.rpc('test_driver_function');
+      console.log('🧪 Direct function test result:', { data, error });
+      setTestResults({ data, error, type: 'direct_function_test' });
+    } catch (error) {
+      console.error('❌ Direct function test error:', error);
+      setTestResults({ error: error.message });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const testPassengerRegistration = async () => {
     setLoading(true);
     try {
@@ -149,6 +166,14 @@ const DebugPanel: React.FC = () => {
               Test Driver
             </Button>
           </div>
+
+          <Button
+            onClick={testDriverFunction}
+            disabled={loading}
+            className="text-xs bg-purple-500 hover:bg-purple-600 w-full"
+          >
+            Test Driver Function Direct
+          </Button>
         </div>
 
         {testResults && (
