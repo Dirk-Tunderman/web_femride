@@ -170,7 +170,7 @@ Best regards`;
   };
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(fullShareText);
+    navigator.clipboard.writeText(referralCode);
     if (onCopy) onCopy();
   };
 
