@@ -79,7 +79,7 @@ export const translations: Translations = {
     en: 'What we offer'
   },
   servicesSubtitle: {
-    de: 'Entdecken Sie unsere maßgeschneiderten Dienste für Fahrgäste, Fahrerinnen und Flottenpartner',
+    de: 'Entdecke unsere maßgeschneiderten Dienste für Fahrgäste, Fahrerinnen und Flottenpartner',
     en: 'Discover our tailored services for passengers, drivers, and fleet partners'
   },
   servicesHeader1: {
@@ -141,19 +141,19 @@ export const translations: Translations = {
     en: 'Interested in collaborating with FemRide?'
   },
   contactText1: {
-    de: 'Sie sind Flottenunternehmer und möchten Ihre Fahrzeuge über FemRide einsetzen?',
+    de: 'Du bist Flottenunternehmerin und möchtest deine Fahrzeuge über FemRide einsetzen?',
     en: 'Are you a fleet entrepreneur and want to use your vehicles through FemRide?'
   },
   contactText2: {
-    de: 'Sie sind Fahrerin und möchten Teil unserer Plattform werden?',
+    de: 'Du bist Fahrerin und möchtest Teil unserer Plattform werden?',
     en: 'Are you a driver and want to become part of our platform?'
   },
   contactText3: {
-    de: 'Oder Sie möchten mit uns kooperieren, weil Sie unsere Vision teilen?',
+    de: 'Oder du möchtest mit uns kooperieren, weil du unsere Vision teilst?',
     en: 'Or would you like to cooperate with us because you share our vision?'
   },
   contactText4: {
-    de: 'Dann kontaktieren Sie uns über das Formular – wir melden uns umgehend bei Ihnen!',
+    de: 'Dann kontaktiere uns über das Formular – wir melden uns umgehend bei dir!',
     en: 'Then contact us using the form – we will get back to you immediately!'
   },
   contactText5: {
@@ -165,7 +165,7 @@ export const translations: Translations = {
     en: 'Name'
   },
   contactNamePlaceholder: {
-    de: 'Ihr vollständiger Name',
+    de: 'Dein vollständiger Name',
     en: 'Your full name'
   },
   contactEmailLabel: {
@@ -173,7 +173,7 @@ export const translations: Translations = {
     en: 'Email'
   },
   contactEmailPlaceholder: {
-    de: 'Ihre E-Mail-Adresse',
+    de: 'Deine E-Mail-Adresse',
     en: 'Your email address'
   },
   contactPhoneLabel: {
@@ -181,7 +181,7 @@ export const translations: Translations = {
     en: 'Phone'
   },
   contactPhonePlaceholder: {
-    de: 'Ihre Telefonnummer (optional)',
+    de: 'Deine Telefonnummer (optional)',
     en: 'Your phone number (optional)'
   },
   contactMessageLabel: {
@@ -189,7 +189,7 @@ export const translations: Translations = {
     en: 'Message'
   },
   contactMessagePlaceholder: {
-    de: 'Ihre Nachricht an uns...',
+    de: 'Deine Nachricht an uns...',
     en: 'Your message to us...'
   },
   contactSubmitButton: {
@@ -201,7 +201,7 @@ export const translations: Translations = {
     en: 'Message sent'
   },
   contactSuccessDesc: {
-    de: 'Vielen Dank für Ihre Nachricht. Wir werden uns umgehend bei Ihnen melden.',
+    de: 'Vielen Dank für deine Nachricht. Wir werden uns umgehend bei dir melden.',
     en: 'Thank you for your message. We will get back to you as soon as possible.'
   },
   contactErrorTitle: {
@@ -209,7 +209,7 @@ export const translations: Translations = {
     en: 'Error sending message'
   },
   contactErrorDesc: {
-    de: 'Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.',
+    de: 'Es gab ein Problem beim Senden deiner Nachricht. Bitte versuche es später erneut.',
     en: 'There was a problem sending your message. Please try again later.'
   },
   // New translations for the contact form
@@ -312,7 +312,7 @@ export const translations: Translations = {
     en: 'OUR VISION'
   },
   sectionMeetFounder: {
-    de: 'Lernen Sie unseren Gründer kennen',
+    de: 'Lerne unseren Gründer kennen',
     en: 'Meet Our Founder'
   },
 
@@ -322,7 +322,7 @@ export const translations: Translations = {
     en: 'Book a ride in advance'
   },
   latestFeaturesSectionText: {
-    de: 'Planen Sie eine Reise? Buchen Sie Ihre Fahrt im Voraus für noch bequemere Flughafentransfers, wichtige Meetings oder andere Termine, die Pünktlichkeit erfordern. Geben Sie einfach Ihre Details ein und sichern Sie Ihre Fahrt bis zu 90 Tage im Voraus.',
+    de: 'Planst du eine Reise? Buche deine Fahrt im Voraus für noch bequemere Flughafentransfers, wichtige Meetings oder andere Termine, die Pünktlichkeit erfordern. Gib einfach deine Details ein und sichere dir deine Fahrt bis zu 90 Tage im Voraus.',
     en: 'Planning a trip? Schedule a ride in advance for even more convenient airport transfers, important meetings, or any occasion that requires punctuality. Simply enter your details and secure your ride up to 90 days ahead.'
   },
   forFemaleDrivers: {
@@ -336,7 +336,7 @@ export const translations: Translations = {
 
   // Download Section
   downloadSectionTitle: {
-    de: 'Laden Sie unsere App herunter',
+    de: 'Lade unsere App herunter',
     en: 'Download our app'
   },
   downloadSectionSubtitle: {
@@ -344,7 +344,7 @@ export const translations: Translations = {
     en: 'Coming soon to Google Play & App Store'
   },
   downloadSectionDesc: {
-    de: 'Scannen Sie den QR-Code mit Ihrer Handykamera, um die FemRide App herunterzuladen.',
+    de: 'Scanne den QR-Code mit deiner Handykamera, um die FemRide App herunterzuladen.',
     en: 'Scan the QR code with your phone camera to download the FemRide app.'
   },
   downloadSectionMainText: {
@@ -368,7 +368,7 @@ export const translations: Translations = {
     en: 'Coming soon'
   },
   downloadSectionNotify: {
-    de: 'Bleiben Sie auf dem Laufenden und erfahren Sie als Erste/r, wenn unsere App verfügbar ist',
+    de: 'Bleibe auf dem Laufenden und erfahre als Erste, wenn unsere App verfügbar ist',
     en: 'Stay updated and be the first to know when our app is available'
   },
   downloadOn: {
@@ -458,7 +458,7 @@ export const translations: Translations = {
     en: 'Frequently Asked Questions'
   },
   faqMainDesc: {
-    de: 'Wählen Sie eine Kategorie aus, um alle häufig gestellten Fragen und Antworten zu sehen.',
+    de: 'Wähle eine Kategorie aus, um alle häufig gestellten Fragen und Antworten zu sehen.',
     en: 'Select a category to see all frequently asked questions and answers.'
   },
   viewAllFAQs: {
@@ -610,7 +610,7 @@ export const translations: Translations = {
     en: 'Subscribe to newsletter'
   },
   newsletterPlaceholder: {
-    de: 'Ihre E-Mail-Adresse',
+    de: 'Deine E-Mail-Adresse',
     en: 'Your email address'
   },
   newsletterButton: {
@@ -618,11 +618,11 @@ export const translations: Translations = {
     en: 'Sign up'
   },
   newsletterSuccess: {
-    de: 'Vielen Dank für Ihre Anmeldung!',
+    de: 'Vielen Dank für deine Anmeldung!',
     en: 'Thank you for subscribing!'
   },
   newsletterError: {
-    de: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.',
+    de: 'Ein Fehler ist aufgetreten. Bitte versuche es erneut.',
     en: 'An error occurred. Please try again.'
   },
   newsletterInfo: {
@@ -636,7 +636,7 @@ export const translations: Translations = {
     en: 'We use cookies'
   },
   cookieDescription: {
-    de: 'Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung auf unserer Website zu bieten. Durch die Nutzung unserer Website stimmen Sie der Verwendung von Cookies gemäß unserer Datenschutzrichtlinie zu.',
+    de: 'Wir verwenden Cookies, um dir die bestmögliche Erfahrung auf unserer Website zu bieten. Durch die Nutzung unserer Website stimmst du der Verwendung von Cookies gemäß unserer Datenschutzrichtlinie zu.',
     en: 'We use cookies to provide you with the best experience on our website. By using our website, you agree to the use of cookies in accordance with our privacy policy.'
   },
   cookieAcceptButton: {
@@ -662,15 +662,15 @@ export const translations: Translations = {
     en: 'FOR PASSENGERS'
   },
   bookYourRide: {
-    de: 'Buchen Sie Ihre Fahrt mit FemRide',
+    de: 'Buche deine Fahrt mit FemRide',
     en: 'Book Your Ride with FemRide'
   },
   ridePageDesc: {
-    de: 'Sicher und komfortabel unterwegs - exklusiv für Frauen, mit verifizierten Fahrerinnen. Erleben Sie eine neue Art der Mobilität.',
+    de: 'Sicher und komfortabel unterwegs - exklusiv für Frauen, mit verifizierten Fahrerinnen. Erlebe eine neue Art der Mobilität.',
     en: 'Travel safely and comfortably - exclusively for women, with verified drivers. Experience a new way of mobility.'
   },
   ridePageComingSoon: {
-    de: 'Die FemRide App wird in Kürze verfügbar sein. Registrieren Sie sich für unseren Newsletter, um als Erste informiert zu werden.',
+    de: 'Die FemRide App wird in Kürze verfügbar sein. Registriere dich für unseren Newsletter, um als Erste informiert zu werden.',
     en: 'The FemRide app will be available soon. Sign up for our newsletter to be the first to know.'
   },
   comingSoon: {
@@ -684,11 +684,11 @@ export const translations: Translations = {
     en: 'FOR DRIVERS'
   },
   becomeDriver: {
-    de: 'Werden Sie FemRide Fahrerin',
+    de: 'Werde FemRide Fahrerin',
     en: 'Become a FemRide Driver'
   },
   drivePageDesc: {
-    de: 'Werden Sie Teil unserer Mission, Mobilität für Frauen sicherer zu machen. Als FemRide Fahrerin genießen Sie flexible Arbeitszeiten und faire Verdienstmöglichkeiten.',
+    de: 'Werde Teil unserer Mission, Mobilität für Frauen sicherer zu machen. Als FemRide Fahrerin genießt du flexible Arbeitszeiten und faire Verdienstmöglichkeiten.',
     en: 'Join our mission to make mobility safer for women. As a FemRide driver, you\'ll enjoy flexible working hours and fair earning opportunities.'
   },
   driverFormNameLabel: {
@@ -696,7 +696,7 @@ export const translations: Translations = {
     en: 'Full Name'
   },
   driverFormNamePlaceholder: {
-    de: 'Geben Sie Ihren vollständigen Namen ein',
+    de: 'Gib deinen vollständigen Namen ein',
     en: 'Enter your full name'
   },
   driverFormAgeLabel: {
@@ -704,7 +704,7 @@ export const translations: Translations = {
     en: 'Age'
   },
   driverFormAgePlaceholder: {
-    de: 'Geben Sie Ihr Alter ein',
+    de: 'Gib dein Alter ein',
     en: 'Enter your age'
   },
   driverFormEmailLabel: {
@@ -712,7 +712,7 @@ export const translations: Translations = {
     en: 'Email Address'
   },
   driverFormEmailPlaceholder: {
-    de: 'Geben Sie Ihre E-Mail-Adresse ein',
+    de: 'Gib deine E-Mail-Adresse ein',
     en: 'Enter your email address'
   },
   driverFormPhoneLabel: {
@@ -720,7 +720,7 @@ export const translations: Translations = {
     en: 'Phone Number'
   },
   driverFormPhonePlaceholder: {
-    de: 'Geben Sie Ihre Telefonnummer ein',
+    de: 'Gib deine Telefonnummer ein',
     en: 'Enter your phone number'
   },
   driverFormExperienceLabel: {
@@ -728,7 +728,7 @@ export const translations: Translations = {
     en: 'Driving Experience'
   },
   driverFormExperiencePlaceholder: {
-    de: 'Beschreiben Sie Ihre Erfahrung als Fahrerin (z.B. Taxi, Uber, etc.)',
+    de: 'Beschreibe deine Erfahrung als Fahrerin (z.B. Taxi, Uber, etc.)',
     en: 'Describe your experience as a driver (e.g., Taxi, Uber, etc.)'
   },
   driverFormReasonLabel: {
@@ -736,7 +736,7 @@ export const translations: Translations = {
     en: 'Motivation'
   },
   driverFormReasonPlaceholder: {
-    de: 'Warum möchten Sie FemRide Fahrerin werden?',
+    de: 'Warum möchtest du FemRide Fahrerin werden?',
     en: 'Why do you want to become a FemRide driver?'
   },
   driverFormSubmit: {
@@ -752,7 +752,7 @@ export const translations: Translations = {
     en: 'Application Successfully Submitted'
   },
   driverApplicationSuccessDesc: {
-    de: 'Vielen Dank für Ihre Bewerbung. Wir werden uns in Kürze bei Ihnen melden.',
+    de: 'Vielen Dank für deine Bewerbung. Wir werden uns in Kürze bei dir melden.',
     en: 'Thank you for your application. We will contact you shortly.'
   },
   driverApplicationErrorTitle: {
@@ -760,7 +760,7 @@ export const translations: Translations = {
     en: 'Error Submitting Application'
   },
   driverApplicationErrorDesc: {
-    de: 'Es gab ein Problem beim Senden Ihrer Bewerbung. Bitte versuchen Sie es später erneut.',
+    de: 'Es gab ein Problem beim Senden deiner Bewerbung. Bitte versuche es später erneut.',
     en: 'There was a problem submitting your application. Please try again later.'
   },
   driverApplicationEmailSubject: {
@@ -775,7 +775,7 @@ export const translations: Translations = {
   },
   fleetFormDesc: {
     en: "Join FemRide as a fleet partner and be part of our mission to provide safe transportation for women. Please fill out the form below and we'll contact you shortly.",
-    de: "Werden Sie Flottenpartner bei FemRide und unterstützen Sie unsere Mission, sicheren Transport für Frauen anzubieten. Bitte füllen Sie das untenstehende Formular aus und wir melden uns in Kürze bei Ihnen.",
+    de: "Werde Flottenpartner bei FemRide und unterstütze unsere Mission, sicheren Transport für Frauen anzubieten. Bitte fülle das untenstehende Formular aus und wir melden uns in Kürze bei dir.",
   },
   fleetFormContactPersonLabel: {
     en: "Contact Person",
@@ -783,7 +783,7 @@ export const translations: Translations = {
   },
   fleetFormContactPersonPlaceholder: {
     en: "Enter the name of the primary contact person",
-    de: "Geben Sie den Namen der Hauptkontaktperson ein",
+    de: "Gib den Namen der Hauptkontaktperson ein",
   },
   fleetFormCompanyLabel: {
     en: "Company Name",
@@ -791,7 +791,7 @@ export const translations: Translations = {
   },
   fleetFormCompanyPlaceholder: {
     en: "Enter your company name",
-    de: "Geben Sie Ihren Firmennamen ein",
+    de: "Gib deinen Firmennamen ein",
   },
   fleetFormBusinessEmailLabel: {
     en: "Business Email",
@@ -799,7 +799,7 @@ export const translations: Translations = {
   },
   fleetFormBusinessEmailPlaceholder: {
     en: "Enter your business email address",
-    de: "Geben Sie Ihre geschäftliche E-Mail-Adresse ein",
+    de: "Gib deine geschäftliche E-Mail-Adresse ein",
   },
   fleetFormPhoneLabel: {
     en: "Contact Phone",
@@ -807,7 +807,7 @@ export const translations: Translations = {
   },
   fleetFormPhonePlaceholder: {
     en: "Enter your contact phone number",
-    de: "Geben Sie Ihre Kontakttelefonnummer ein",
+    de: "Gib deine Kontakttelefonnummer ein",
   },
   fleetFormFleetSizeLabel: {
     en: "Current Fleet Size",
@@ -815,7 +815,7 @@ export const translations: Translations = {
   },
   fleetFormFleetSizePlaceholder: {
     en: "Enter your current fleet size",
-    de: "Geben Sie Ihre aktuelle Flottengröße ein",
+    de: "Gib deine aktuelle Flottengröße ein",
   },
   fleetFormMessageLabel: {
     en: "Additional Information",
@@ -823,7 +823,7 @@ export const translations: Translations = {
   },
   fleetFormMessagePlaceholder: {
     en: "Please provide any additional information about your fleet and business",
-    de: "Bitte geben Sie zusätzliche Informationen über Ihre Flotte und Ihr Unternehmen an",
+    de: "Bitte gib zusätzliche Informationen über deine Flotte und dein Unternehmen an",
   },
   fleetFormSubmitButton: {
     en: "Submit Application",
@@ -835,11 +835,11 @@ export const translations: Translations = {
   },
   fleetFormSuccessMessage: {
     en: "Thank you for your interest in becoming a FemRide fleet partner! We will review your application and contact you soon.",
-    de: "Vielen Dank für Ihr Interesse, Flottenpartner bei FemRide zu werden! Wir werden Ihre Bewerbung prüfen und uns in Kürze bei Ihnen melden.",
+    de: "Vielen Dank für dein Interesse, Flottenpartner bei FemRide zu werden! Wir werden deine Bewerbung prüfen und uns in Kürze bei dir melden.",
   },
   fleetFormErrorMessage: {
     en: "There was a problem submitting your application. Please try again later.",
-    de: "Es gab ein Problem beim Senden Ihrer Bewerbung. Bitte versuchen Sie es später erneut.",
+    de: "Es gab ein Problem beim Senden deiner Bewerbung. Bitte versuche es später erneut.",
   },
   fleetApplicationEmailSubject: {
     en: "FemRide Fleet Partnership Application",
@@ -853,7 +853,7 @@ export const translations: Translations = {
   },
   rideRequestDesc: {
     en: "Fill out the form below to request a ride. We'll match you with a verified female driver.",
-    de: "Füllen Sie das untenstehende Formular aus, um eine Fahrt anzufragen. Wir vermitteln Ihnen eine verifizierte Fahrerin.",
+    de: "Fülle das untenstehende Formular aus, um eine Fahrt anzufragen. Wir vermitteln dir eine verifizierte Fahrerin.",
   },
   personalInfoTitle: {
     en: "Personal Information",
@@ -873,7 +873,7 @@ export const translations: Translations = {
   },
   rideRequestNamePlaceholder: {
     en: "Enter your full name",
-    de: "Geben Sie Ihren vollständigen Namen ein",
+    de: "Gib deinen vollständigen Namen ein",
   },
   rideRequestEmailLabel: {
     en: "Email Address",
@@ -881,7 +881,7 @@ export const translations: Translations = {
   },
   rideRequestEmailPlaceholder: {
     en: "Enter your email address",
-    de: "Geben Sie Ihre E-Mail-Adresse ein",
+    de: "Gib deine E-Mail-Adresse ein",
   },
   rideRequestPhoneLabel: {
     en: "Phone Number",
@@ -889,7 +889,7 @@ export const translations: Translations = {
   },
   rideRequestPhonePlaceholder: {
     en: "Enter your phone number",
-    de: "Geben Sie Ihre Telefonnummer ein",
+    de: "Gib deine Telefonnummer ein",
   },
   pickupLocationLabel: {
     en: "Pickup Location",
@@ -897,7 +897,7 @@ export const translations: Translations = {
   },
   pickupLocationPlaceholder: {
     en: "Enter pickup address",
-    de: "Geben Sie die Abholadresse ein",
+    de: "Gib die Abholadresse ein",
   },
   dropoffLocationLabel: {
     en: "Dropoff Location",
@@ -905,7 +905,7 @@ export const translations: Translations = {
   },
   dropoffLocationPlaceholder: {
     en: "Enter destination address",
-    de: "Geben Sie die Zieladresse ein",
+    de: "Gib die Zieladresse ein",
   },
   pickupTimeLabel: {
     en: "Pickup Time",
@@ -917,7 +917,7 @@ export const translations: Translations = {
   },
   passengerCountPlaceholder: {
     en: "Enter number of passengers",
-    de: "Geben Sie die Anzahl der Fahrgäste ein",
+    de: "Gib die Anzahl der Fahrgäste ein",
   },
   accessibilityLabel: {
     en: "Accessibility Requirements",
@@ -949,7 +949,7 @@ export const translations: Translations = {
   },
   rideRequestSuccessMessage: {
     en: "Your ride request has been submitted successfully. We'll contact you shortly with driver details.",
-    de: "Ihre Fahrtanfrage wurde erfolgreich übermittelt. Wir melden uns in Kürze mit den Fahrerdetails.",
+    de: "Deine Fahrtanfrage wurde erfolgreich übermittelt. Wir melden uns in Kürze mit den Fahrerdetails.",
   },
   rideRequestErrorTitle: {
     en: "Request Failed",
@@ -957,7 +957,7 @@ export const translations: Translations = {
   },
   rideRequestErrorMessage: {
     en: "There was a problem submitting your request. Please try again later.",
-    de: "Es gab ein Problem beim Senden Ihrer Anfrage. Bitte versuchen Sie es später erneut.",
+    de: "Es gab ein Problem beim Senden deiner Anfrage. Bitte versuche es später erneut.",
   },
   rideRequestEmailSubject: {
     en: "New FemRide Ride Request",
@@ -970,7 +970,7 @@ export const translations: Translations = {
     en: "Finally Safe Travel - By Women, For Women"
   },
   waitingListDescription: {
-    de: "Tragen Sie sich in unsere Warteliste ein und erfahren Sie als Erste, wenn unsere App verfügbar ist. Wir revolutionieren die Mobilität für Frauen mit Sicherheit als oberste Priorität.",
+    de: "Trage dich in unsere Warteliste ein und erfahre als Erste, wenn unsere App verfügbar ist. Wir revolutionieren die Mobilität für Frauen mit Sicherheit als oberste Priorität.",
     en: "Join our waiting list and be the first to know when our app launches. We're revolutionizing mobility for women with safety as our top priority."
   },
   waitingListUrgency: {
@@ -986,7 +986,7 @@ export const translations: Translations = {
     en: "{name} from {city} just joined"
   },
   waitingListReferralDescription: {
-    de: "Laden Sie Freunde ein und steigen Sie in der Warteliste auf! Für jeden Freund, den Sie einladen, rücken Sie 10 Plätze nach vorne.",
+    de: "Lade Freunde ein und steige in der Warteliste auf! Für jeden Freund, den du einlädst, rückst du 10 Plätze nach vorne.",
     en: "Invite friends and move up the waitlist! For each friend you invite, you'll move up 10 places."
   },
   waitingListTrustSafety: {
@@ -994,7 +994,7 @@ export const translations: Translations = {
     en: "Safety First"
   },
   waitingListTrustSafetyDesc: {
-    de: "Fahrerinnen für Fahrgäste. Ihre Sicherheit ist unsere oberste Priorität.",
+    de: "Fahrerinnen für Fahrgäste. Deine Sicherheit ist unsere oberste Priorität.",
     en: "Women drivers for women passengers. Your safety is our top priority."
   },
   waitingListTrustCommunity: {
@@ -1002,7 +1002,7 @@ export const translations: Translations = {
     en: "Growing Community"
   },
   waitingListTrustCommunityDesc: {
-    de: "Schließen Sie sich Tausenden von Frauen an, die bereits auf unserer Warteliste stehen.",
+    de: "Schließe dich Tausenden von Frauen an, die bereits auf unserer Warteliste stehen.",
     en: "Join thousands of women already on our waitlist."
   },
   waitingListTrustEarly: {
@@ -1018,11 +1018,11 @@ export const translations: Translations = {
     en: "Invite Friends"
   },
   waitingListJoinToday: {
-    de: "Treten Sie unserer Warteliste noch heute bei",
+    de: "Tritt unserer Warteliste noch heute bei",
     en: "Join Our Waitlist Today"
   },
   waitingListEmailPlaceholder: {
-    de: "Ihre E-Mail-Adresse",
+    de: "Deine E-Mail-Adresse",
     en: "Your email address"
   },
   waitingListReferralPlaceholder: {
@@ -1055,7 +1055,7 @@ export const translations: Translations = {
     en: "Wait! Don't miss the safe start"
   },
   waitingListExitDescription: {
-    de: "Sichern Sie sich Ihren Platz bevor wir voll sind",
+    de: "Sichere dir deinen Platz bevor wir voll sind",
     en: "Secure your spot before we're full"
   },
   waitingListExitButton: {
@@ -1075,19 +1075,19 @@ export const translations: Translations = {
     en: "Successfully registered!"
   },
   waitingListSuccessMessage: {
-    de: "Wir werden Sie benachrichtigen, sobald die App verfügbar ist.",
+    de: "Wir werden dich benachrichtigen, sobald die App verfügbar ist.",
     en: "We will notify you when the app is available."
   },
   waitingListReferralSuccess: {
-    de: "Ihr Referral-Code",
+    de: "Dein Referral-Code",
     en: "Your Referral Code"
   },
   waitingListReferralSuccessMessage: {
-    de: "Teilen Sie diesen Code mit Freunden, um in der Warteliste aufzusteigen!",
+    de: "Teile diesen Code mit Freunden, um in der Warteliste aufzusteigen!",
     en: "Share this code with friends to move up the waitlist!"
   },
   waitingListPositionMessage: {
-    de: "Ihre aktuelle Position in der Warteliste: {position}",
+    de: "Deine aktuelle Position in der Warteliste: {position}",
     en: "Your current position in the waitlist: {position}"
   },
   waitingListCopyButton: {
@@ -1107,7 +1107,7 @@ export const translations: Translations = {
     en: "Error"
   },
   waitingListErrorMessage: {
-    de: "Es gab ein Problem bei der Anmeldung. Bitte versuchen Sie es später erneut.",
+    de: "Es gab ein Problem bei der Anmeldung. Bitte versuche es später erneut.",
     en: "There was a problem with your registration. Please try again later."
   },
   waitingListDuplicate: {
@@ -1123,17 +1123,17 @@ export const translations: Translations = {
     en: "Invalid referral code"
   },
   waitingListInvalidReferralMessage: {
-    de: "Der eingegebene Referral-Code ist ungültig. Bitte überprüfen Sie ihn und versuchen Sie es erneut.",
+    de: "Der eingegebene Referral-Code ist ungültig. Bitte überprüfe ihn und versuche es erneut.",
     en: "The referral code you entered is invalid. Please check and try again."
   },
 
   // New translations for redesigned waiting list section
   waitingListWhatYoureJoining: {
-    de: "Das erwartet Sie",
+    de: "Das erwartet dich",
     en: "What You're Joining"
   },
   waitingListWhatYoureJoiningDesc: {
-    de: "Willkommen in der FemRide Community! Hier ist ein Vorgeschmack auf die App, die Ihre Mobilität revolutionieren wird.",
+    de: "Willkommen in der FemRide Community! Hier ist ein Vorgeschmack auf die App, die deine Mobilität revolutionieren wird.",
     en: "Welcome to the FemRide community! Here's a preview of the app that will revolutionize your mobility."
   },
   waitingListInDevelopment: {
@@ -1145,7 +1145,7 @@ export const translations: Translations = {
     en: "App Preview"
   },
   waitingListAppPreviewDesc: {
-    de: "Bald verfügbar für iOS und Android - Ihre sichere Fahrt ist nur einen Tap entfernt.",
+    de: "Bald verfügbar für iOS und Android - deine sichere Fahrt ist nur einen Tap entfernt.",
     en: "Coming soon for iOS and Android - your safe ride is just a tap away."
   },
   waitingListWhatsNext: {
@@ -1153,7 +1153,7 @@ export const translations: Translations = {
     en: "What's Next?"
   },
   waitingListWhatsNextDesc: {
-    de: "Wir arbeiten hart daran, die App zu perfektionieren. Sie erhalten eine E-Mail, sobald wir bereit für den Start sind.",
+    de: "Wir arbeiten hart daran, die App zu perfektionieren. Du erhältst eine E-Mail, sobald wir bereit für den Start sind.",
     en: "We're working hard to perfect the app. You'll receive an email as soon as we're ready to launch."
   },
   waitingListNotifyWhenReady: {
@@ -1213,11 +1213,11 @@ export const translations: Translations = {
     en: "Your Referral Code"
   },
   referralCodeDescription: {
-    de: "Teilen Sie diesen Code mit Freunden, um in der Warteliste aufzusteigen!",
+    de: "Teile diesen Code mit Freunden, um in der Warteliste aufzusteigen!",
     en: "Share this code with friends to move up in the waitlist!"
   },
   referralCodeShareHint: {
-    de: "Klicken Sie auf das Kopiersymbol und teilen Sie den Code über die unten stehenden Optionen",
+    de: "Klicke auf das Kopiersymbol und teile den Code über die unten stehenden Optionen",
     en: "Click the copy icon and share the code using the options below"
   },
 
