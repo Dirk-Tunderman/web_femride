@@ -264,8 +264,8 @@ export const translations: Translations = {
     en: 'Represented by:'
   },
   footerCEOName: {
-    de: 'Aykut Atli (Geschäftsführer)',
-    en: 'Aykut Atli (CEO)'
+    de: 'Aykut Atli (Geschäftsführer), Dr. Kerstin Wendt (Operationsgeschäftsführerin)',
+    en: 'Aykut Atli (CEO), Dr. Kerstin Wendt (COO)'
   },
   footerRegistry: {
     de: 'Handelsregister:',

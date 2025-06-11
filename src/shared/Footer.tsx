@@ -90,17 +90,16 @@ export const Footer = () => {
             <div className="space-y-4">
               <div>
                 <h4 className="font-medium text-white mb-1">Impressum</h4>
-                <p className="text-gray-300">{isGerman ? 'Aykut Atli (Geschäftsführer)' : 'Aykut Atli (CEO)'}</p>
+                <p className="text-gray-300 mb-1">{t('footerCEO')}</p>
+                <p className="text-gray-300">{t('footerCEOName')}</p>
               </div>
               <div>
-                <h4 className="font-medium text-white mb-1">Handelsregister:</h4>
-                <p className="text-gray-300">{isGerman ? 'Amtsgericht Berlin (Charlottenburg)' : 'District Court Berlin (Charlottenburg)'}</p>
-                <p className="text-gray-300">HRB 272631</p>
+                <h4 className="font-medium text-white mb-1">{t('footerRegistry')}</h4>
+                <p className="text-gray-300">{t('footerRegistryCourt')}</p>
+                <p className="text-gray-300">{t('footerHRB')}</p>
               </div>
               <div>
-                <p className="text-gray-300 text-sm">{isGerman 
-                  ? 'Verantwortlich für den Inhalt gemäß § 18 Abs. 2 MStV: Aykut Atli'
-                  : 'Responsible for the content according to § 18 Abs. 2 MStV: Aykut Atli'}</p>
+                <p className="text-gray-300 text-sm">{t('footerResponsible')} {t('footerResponsiblePerson')}</p>
               </div>
             </div>
           </div>
