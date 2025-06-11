@@ -626,7 +626,7 @@ export const translations: Translations = {
     en: 'An error occurred. Please try again.'
   },
   newsletterInfo: {
-    de: 'Erhalten Sie Updates über FemRide und unsere App-Veröffentlichung',
+    de: 'Erhalte Updates über FemRide und unsere App-Veröffentlichung',
     en: 'Get updates about FemRide and our app release'
   },
 
