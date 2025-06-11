@@ -1220,6 +1220,16 @@ export const translations: Translations = {
     de: "Klicken Sie auf das Kopiersymbol und teilen Sie den Code über die unten stehenden Optionen",
     en: "Click the copy icon and share the code using the options below"
   },
+
+  // Supporters Section
+  supportersTitle: {
+    de: "Wir werden unterstützt von",
+    en: "We are supported by"
+  },
+  supportersSubtitle: {
+    de: "Unsere Partner und Unterstützer, die uns auf unserem Weg begleiten",
+    en: "Our partners and supporters who accompany us on our journey"
+  },
 };
 
 interface LanguageContextType {

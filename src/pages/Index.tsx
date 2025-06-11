@@ -9,6 +9,7 @@ import FAQSection from '../features/faq/FAQSection';
 import ContactSection from '../features/contact/ContactSection';
 
 import WaitingListSection from '../features/waitinglist/WaitingListSection';
+import SupportersSection from '../features/supporters/SupportersSection';
 import WaitlistPopup from '../components/WaitlistPopup';
 import { Footer } from '../shared/Footer';
 import { ChevronUp } from 'lucide-react';
@@ -57,6 +58,7 @@ const Index = () => {
         <FAQSection />
         <ContactSection />
         <WaitingListSection />
+        <SupportersSection />
       </main>
       <Footer />
 
