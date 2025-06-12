@@ -63,7 +63,7 @@ const SupportersSection = () => {
     },
     {
       name: 'EIT Urban Mobility',
-      logo: '/supporters/eit-urban-mobility-logo.svg',
+      logo: '/supporters/eid.svg',
       url: 'https://www.eiturbanmobility.eu/',
       description: 'Mobility Innovation Partner'
     }
