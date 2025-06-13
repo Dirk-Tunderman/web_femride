@@ -986,8 +986,8 @@ export const translations: Translations = {
     en: "{name} from {city} just joined"
   },
   waitingListReferralDescription: {
-    de: "Lade Freunde ein und steige in der Warteliste auf! Für jeden Freund, den du einlädst, rückst du 10 Plätze nach vorne.",
-    en: "Invite friends and move up the waitlist! For each friend you invite, you'll move up 10 places."
+    de: "Lade Freunde ein und steige in der Warteliste auf! Empfiehlst du eine Fahrerin, rückst du 10 Plätze vor. Empfiehlst du eine Fahrgast, rückst du 2 Plätze vor.",
+    en: "Invite friends and move up the waitlist! Refer a driver and move up 10 places. Refer a passenger and move up 2 places."
   },
   waitingListTrustSafety: {
     de: "Sicherheit zuerst",
@@ -1083,8 +1083,8 @@ export const translations: Translations = {
     en: "Your Referral Code"
   },
   waitingListReferralSuccessMessage: {
-    de: "Teile diesen Code mit Freunden, um in der Warteliste aufzusteigen!",
-    en: "Share this code with friends to move up the waitlist!"
+    de: "Teile diesen Code mit Freunden! Fahrerinnen bringen dir 10 Plätze, Fahrgäste 2 Plätze nach vorne.",
+    en: "Share this code with friends! Drivers get you 10 places up, passengers get you 2 places up."
   },
   waitingListPositionMessage: {
     de: "Deine aktuelle Position in der Warteliste: {position}",
@@ -1193,12 +1193,12 @@ export const translations: Translations = {
     en: "Driver"
   },
   driverReferralBonus: {
-    de: "Fahrerinnen erhalten +5 Plätze pro Empfehlung",
-    en: "Drivers get +5 places per referral"
+    de: "Fahrerinnen: +10 Plätze für Fahrerinnen, +2 Plätze für Fahrgäste",
+    en: "Drivers: +10 places for drivers, +2 places for passengers"
   },
   passengerReferralBonus: {
-    de: "Fahrgäste erhalten +10 Plätze pro Empfehlung",
-    en: "Passengers get +10 places per referral"
+    de: "Fahrgäste: +10 Plätze für Fahrerinnen, +2 Plätze für Fahrgäste",
+    en: "Passengers: +10 places for drivers, +2 places for passengers"
   },
   bothWaitlistsInfo: {
     de: "💡 Du kannst dich sowohl als Fahrerin als auch als Fahrgast anmelden!",
@@ -1213,8 +1213,8 @@ export const translations: Translations = {
     en: "Your Referral Code"
   },
   referralCodeDescription: {
-    de: "Teile diesen Code mit Freunden, um in der Warteliste aufzusteigen!",
-    en: "Share this code with friends to move up in the waitlist!"
+    de: "Teile diesen Code mit Freunden! Fahrerinnen bringen dir 10 Plätze, Fahrgäste 2 Plätze nach vorne.",
+    en: "Share this code with friends! Drivers get you 10 places up, passengers get you 2 places up."
   },
   referralCodeShareHint: {
     de: "Klicke auf das Kopiersymbol und teile den Code über die unten stehenden Optionen",

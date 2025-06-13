@@ -69,7 +69,8 @@ export default async function handler(req, res) {
     // Different content based on user type
     const isDriver = userType === 'driver';
     const userTypeText = isDriver ? 'driver' : 'passenger';
-    const referralBonus = isDriver ? '5' : '10';
+    // Referral bonus depends on who you refer: drivers = 10 places, passengers = 2 places
+    const referralBonusText = 'drivers (10 places) or passengers (2 places)';
     const welcomeText = isDriver ? 'Welcome to the FemRide Driver Program!' : 'Welcome to FemRide!';
     const subjectText = isDriver ? 'Verify your FemRide driver registration' : 'Verify your FemRide waitlist registration';
 
@@ -110,7 +111,7 @@ export default async function handler(req, res) {
               <h3 style="color: #333; margin-top: 0; font-size: 16px;">What happens next?</h3>
               <ul style="margin: 10px 0; padding-left: 20px; color: #666;">
                 <li>Your position in the ${userTypeText} waitlist will be confirmed</li>
-                <li>If you used a referral code, the referrer will move up ${referralBonus} places</li>
+                <li>If you used a referral code, the referrer will move up based on your type</li>
                 <li>You'll receive updates about our launch</li>
                 <li>You'll be among the first to access FemRide when we go live</li>
                 ${isDriver ? '<li>You can start earning by driving for FemRide once we launch</li>' : ''}
@@ -147,12 +148,12 @@ ${verificationLink}
 
 What happens next?
 - Your position in the ${userTypeText} waitlist will be confirmed
-- If you used a referral code, the referrer will move up ${referralBonus} places
+- If you used a referral code, the referrer will move up based on your type
 - You'll receive updates about our launch
 - You'll be among the first to access FemRide when we go live${isDriver ? '\n- You can start earning by driving for FemRide once we launch' : ''}
 
 🎁 Share & Earn Bonus Places!
-You'll receive your personal referral code after verification. Share it with friends to move up ${referralBonus} places for each verified referral!
+You'll receive your personal referral code after verification. Share it with friends to move up: 10 places for drivers, 2 places for passengers!
 
 Important: This verification link will expire in 24 hours for security reasons.
 

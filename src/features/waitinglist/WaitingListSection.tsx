@@ -144,7 +144,7 @@ const WaitingListSection: React.FC<WaitingListSectionProps> = ({ className = '' 
             </div>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow-md max-w-xl mx-auto mb-12">
+          <div id="waitlist-form" className="bg-white p-8 rounded-xl shadow-md max-w-xl mx-auto mb-12">
             <h3 className="text-xl font-bold mb-4 text-center">{t('waitingListJoinToday')}</h3>
             <WaitingListForm
               className="w-full"

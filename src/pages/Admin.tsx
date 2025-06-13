@@ -501,7 +501,7 @@ const AdminPage: React.FC = () => {
           <TabsContent value="passenger-stats">
             <div className="mb-4">
               <h2 className="text-xl font-semibold text-gray-800">Passenger Statistics</h2>
-              <p className="text-gray-600">Referral bonus: +10 places per referral</p>
+              <p className="text-gray-600">Referral bonus: +10 places for drivers, +2 places for passengers</p>
             </div>
             {referralStats ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -578,7 +578,7 @@ const AdminPage: React.FC = () => {
           <TabsContent value="driver-stats">
             <div className="mb-4">
               <h2 className="text-xl font-semibold text-gray-800">Driver Statistics</h2>
-              <p className="text-gray-600">Referral bonus: +5 places per referral</p>
+              <p className="text-gray-600">Referral bonus: +10 places for drivers, +2 places for passengers</p>
             </div>
             {driverReferralStats ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">

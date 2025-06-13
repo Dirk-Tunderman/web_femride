@@ -36,10 +36,10 @@ const Navbar = () => {
     setLanguage(language === 'de' ? 'en' : 'de');
   };
 
-  const scrollToServices = () => {
-    const servicesSection = document.getElementById('services');
-    if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: 'smooth' });
+  const scrollToWaitingList = () => {
+    const waitingListForm = document.getElementById('waitlist-form');
+    if (waitingListForm) {
+      waitingListForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
     setIsMenuOpen(false); // Close mobile menu if open
   };
@@ -113,7 +113,7 @@ const Navbar = () => {
           </button>
 
           <Button
-            onClick={scrollToServices}
+            onClick={scrollToWaitingList}
             className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-medium rounded-full px-6 py-2 transition-transform hover:scale-105 duration-200 shadow-md"
           >
             {t('navRegister')}
@@ -160,7 +160,7 @@ const Navbar = () => {
             </button>
 
             <Button
-              onClick={scrollToServices}
+              onClick={scrollToWaitingList}
               className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-medium rounded-full px-6 py-2 transition-transform hover:scale-105 duration-200"
             >
               {t('navRegister')}

@@ -82,7 +82,7 @@ ${verificationLink}
 
 What happens next?
 - Your position in the waitlist will be confirmed
-- If you used a referral code, the referrer will move up 10 places
+- If you used a referral code, the referrer will move up based on your type
 - You'll receive updates about our launch
 - You'll be among the first to access FemRide when we go live
 
