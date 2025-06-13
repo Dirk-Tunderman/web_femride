@@ -34,7 +34,7 @@ const LatestFeaturesSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 relative overflow-hidden bg-[#a3adf4]/20">
+    <section id="features" ref={sectionRef} className="py-20 relative overflow-hidden bg-[#a3adf4]/20">
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-white to-[#a3adf4]/20 -z-10"></div>
       <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-[#a3adf4]/10 filter blur-[60px] animate-blob"></div>

@@ -10,7 +10,7 @@ const HeroSection = () => {
   const isMobile = useIsMobile();
   
   return (
-    <div className="relative min-h-[90vh] flex items-center justify-center">
+    <div id="hero" className="relative min-h-[90vh] flex items-center justify-center">
       {/* Hero background with the woman in car image */}
       <div className="absolute inset-0 w-full h-full">
         <img 
