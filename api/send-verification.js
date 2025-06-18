@@ -121,7 +121,7 @@ export default async function handler(req, res) {
             <div style="background: linear-gradient(135deg, #fa9de3 0%, #a3adf4 100%); padding: 20px; border-radius: 8px; margin: 20px 0; text-align: center;">
               <h3 style="color: white; margin-top: 0; font-size: 16px;">🎁 Share & Earn Bonus Places!</h3>
               <p style="color: white; margin: 10px 0; font-size: 14px;">
-                You'll receive your personal referral code after verification. Share it with friends to move up ${referralBonus} places for each verified referral!
+                You'll receive your personal referral code after verification. Share it with friends to move up ${referralBonusText} for each verified referral!
               </p>
             </div>
 
