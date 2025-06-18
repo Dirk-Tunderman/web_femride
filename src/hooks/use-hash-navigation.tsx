@@ -47,25 +47,44 @@ export const useHashNavigation = ({
           return;
         }
 
-        // Find the most visible section
+        // Find the most visible section with improved logic
         let mostVisibleSection = '';
         let maxVisibility = 0;
+        let hasHeroVisible = false;
 
+        // First pass: check if hero is significantly visible
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && entry.target.id === 'hero') {
             const visibilityRatio = entry.intersectionRatio;
-            const sectionId = entry.target.id;
-
-            // Special handling for hero section
-            if (sectionId === 'hero' && visibilityRatio > rootThreshold) {
-              mostVisibleSection = '';
-              maxVisibility = visibilityRatio;
-            } else if (sectionId !== 'hero' && visibilityRatio > sectionThreshold && visibilityRatio > maxVisibility) {
-              mostVisibleSection = sectionId;
+            if (visibilityRatio > rootThreshold) {
+              hasHeroVisible = true;
               maxVisibility = visibilityRatio;
             }
           }
         });
+
+        // If hero is significantly visible, clear hash
+        if (hasHeroVisible) {
+          mostVisibleSection = '';
+        } else {
+          // Second pass: find the most visible non-hero section
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && entry.target.id !== 'hero') {
+              const visibilityRatio = entry.intersectionRatio;
+              const sectionId = entry.target.id;
+
+              // Use a lower threshold for maintaining current section vs switching
+              const currentHash = window.location.hash.substring(1);
+              const isCurrentSection = sectionId === currentHash;
+              const threshold = isCurrentSection ? 0.1 : sectionThreshold; // Lower threshold for current section
+
+              if (visibilityRatio > threshold && visibilityRatio > maxVisibility) {
+                mostVisibleSection = sectionId;
+                maxVisibility = visibilityRatio;
+              }
+            }
+          });
+        }
 
         // Update URL hash if needed
         const currentHash = window.location.hash.substring(1);
@@ -80,7 +99,7 @@ export const useHashNavigation = ({
         }
       },
       {
-        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+        threshold: [0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
         rootMargin: '-80px 0px -20% 0px' // Account for fixed navbar
       }
     );
