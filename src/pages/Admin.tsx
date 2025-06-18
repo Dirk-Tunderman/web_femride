@@ -48,6 +48,55 @@ const AdminPage: React.FC = () => {
   const pageSize = 100;
   const navigate = useNavigate();
 
+  // Load initial data with explicit parameters to avoid stale closure issues
+  const loadInitialData = async () => {
+    console.log('🚀 Loading initial data with explicit parameters');
+
+    // Load passenger waitlist with initial values
+    setIsLoading(true);
+    try {
+      const result = await getWaitlist(pageSize, 1, false, '');
+      console.log('🚀 Initial passenger waitlist result:', result);
+      if (result.success) {
+        setWaitlistData(result.results || []);
+        setTotalCount(result.total_count || 0);
+        setPageCount(result.page_count || 1);
+        console.log('✅ Initial passenger data loaded:', {
+          resultsCount: result.results?.length || 0,
+          totalCount: result.total_count || 0
+        });
+      } else {
+        console.error('❌ Error loading initial passenger waitlist:', result.message);
+      }
+    } catch (error) {
+      console.error('❌ Error loading initial passenger waitlist:', error);
+    } finally {
+      setIsLoading(false);
+    }
+
+    // Load driver waitlist with initial values
+    setIsDriverLoading(true);
+    try {
+      const result = await getDriverWaitlist(pageSize, 1, false, '');
+      console.log('🚀 Initial driver waitlist result:', result);
+      if (result.success) {
+        setDriverWaitlistData(result.results || []);
+        setDriverTotalCount(result.total_count || 0);
+        setDriverPageCount(result.page_count || 1);
+        console.log('✅ Initial driver data loaded:', {
+          resultsCount: result.results?.length || 0,
+          totalCount: result.total_count || 0
+        });
+      } else {
+        console.error('❌ Error loading initial driver waitlist:', result.message);
+      }
+    } catch (error) {
+      console.error('❌ Error loading initial driver waitlist:', error);
+    } finally {
+      setIsDriverLoading(false);
+    }
+  };
+
   // Simple authentication
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -63,30 +112,39 @@ const AdminPage: React.FC = () => {
 
   // Check if user is already authenticated
   useEffect(() => {
+    console.log('🔐 Initial authentication check');
     const isAuth = localStorage.getItem('adminAuthenticated') === 'true';
+    console.log('🔐 Authentication status:', isAuth);
     setIsAuthenticated(isAuth);
 
-    // If authenticated, load initial data
+    // If authenticated, load initial data with explicit initial values
     if (isAuth) {
-      fetchWaitlistData();
-      fetchDriverWaitlistData();
+      console.log('🔐 User authenticated, loading initial data...');
+      // Load initial data with explicit parameters to avoid stale closure issues
+      loadInitialData();
     }
   }, []);
 
   // Fetch waitlist data
   const fetchWaitlistData = async () => {
+    console.log('📊 Fetching passenger waitlist data with params:', { pageSize, currentPage, verifiedOnly, searchTerm });
     setIsLoading(true);
     try {
       const result = await getWaitlist(pageSize, currentPage, verifiedOnly, searchTerm);
+      console.log('📊 Passenger waitlist API result:', result);
       if (result.success) {
         setWaitlistData(result.results || []);
         setTotalCount(result.total_count || 0);
         setPageCount(result.page_count || 1);
+        console.log('✅ Passenger waitlist data set:', {
+          resultsCount: result.results?.length || 0,
+          totalCount: result.total_count || 0
+        });
       } else {
-        console.error('Error fetching waitlist:', result.message);
+        console.error('❌ Error fetching waitlist:', result.message);
       }
     } catch (error) {
-      console.error('Error fetching waitlist:', error);
+      console.error('❌ Error fetching waitlist:', error);
     } finally {
       setIsLoading(false);
     }
@@ -96,18 +154,24 @@ const AdminPage: React.FC = () => {
 
   // Fetch driver waitlist data
   const fetchDriverWaitlistData = async () => {
+    console.log('🚗 Fetching driver waitlist data with params:', { pageSize, driverCurrentPage, driverVerifiedOnly, driverSearchTerm });
     setIsDriverLoading(true);
     try {
       const result = await getDriverWaitlist(pageSize, driverCurrentPage, driverVerifiedOnly, driverSearchTerm);
+      console.log('🚗 Driver waitlist API result:', result);
       if (result.success) {
         setDriverWaitlistData(result.results || []);
         setDriverTotalCount(result.total_count || 0);
         setDriverPageCount(result.page_count || 1);
+        console.log('✅ Driver waitlist data set:', {
+          resultsCount: result.results?.length || 0,
+          totalCount: result.total_count || 0
+        });
       } else {
-        console.error('Error fetching driver waitlist:', result.message);
+        console.error('❌ Error fetching driver waitlist:', result.message);
       }
     } catch (error) {
-      console.error('Error fetching driver waitlist:', error);
+      console.error('❌ Error fetching driver waitlist:', error);
     } finally {
       setIsDriverLoading(false);
     }
@@ -151,15 +215,17 @@ const AdminPage: React.FC = () => {
   // Effect to refetch data when page, filter, or search changes
   useEffect(() => {
     if (isAuthenticated) {
+      console.log('🔄 Passenger waitlist useEffect triggered:', { currentPage, verifiedOnly, searchTerm });
       fetchWaitlistData();
     }
-  }, [currentPage, verifiedOnly]);
+  }, [currentPage, verifiedOnly, searchTerm, isAuthenticated]);
 
   useEffect(() => {
     if (isAuthenticated) {
+      console.log('🔄 Driver waitlist useEffect triggered:', { driverCurrentPage, driverVerifiedOnly, driverSearchTerm });
       fetchDriverWaitlistData();
     }
-  }, [driverCurrentPage, driverVerifiedOnly]);
+  }, [driverCurrentPage, driverVerifiedOnly, driverSearchTerm, isAuthenticated]);
 
   // Logout function
   const handleLogout = () => {
