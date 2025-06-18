@@ -15,6 +15,15 @@ const ServicesSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const { t } = useLanguage();
 
+  const scrollToWaitingList = () => {
+    // Navigate to waitlist section and update hash
+    window.location.hash = 'waitlist';
+    const waitingListForm = document.getElementById('waitlist-form');
+    if (waitingListForm) {
+      waitingListForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -141,11 +150,19 @@ const ServicesSection = () => {
                     {card.description}
                   </p>
                   
-                  {/* Updated button to use navigation */}
+                  {/* Updated button to use navigation or scroll to waitlist */}
                   <div className="mt-auto">
-                    <Button 
-                      className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-semibold text-sm px-5 py-4 h-auto w-full shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group" 
-                      onClick={() => navigate(card.route)}
+                    <Button
+                      className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-semibold text-sm px-5 py-4 h-auto w-full shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group"
+                      onClick={() => {
+                        // For ride and drive cards (id 1 and 2), scroll to waitlist
+                        // For fleet card (id 3), navigate to fleet page
+                        if (card.id === 1 || card.id === 2) {
+                          scrollToWaitingList();
+                        } else {
+                          navigate(card.route);
+                        }
+                      }}
                     >
                       <span className="flex items-center justify-center w-full">
                         <span className="tracking-wide font-bold">{card.buttonText}</span>
