@@ -14,10 +14,17 @@ import WaitlistPopup from '../components/WaitlistPopup';
 import { Footer } from '../shared/Footer';
 import { ChevronUp } from 'lucide-react';
 import { getReferralCode } from '../lib/referralUtils';
+import { useHashNavigation } from '../hooks/use-hash-navigation';
 
 const Index = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [referralCode, setReferralCode] = useState<string | null>(null);
+
+  // Define all sections for hash navigation
+  const sections = ['hero', 'services', 'about', 'features', 'faq', 'contact', 'waitlist', 'supporters'];
+
+  // Initialize hash navigation
+  const { navigateToSection } = useHashNavigation({ sections });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,10 +48,7 @@ const Index = () => {
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    navigateToSection('hero');
   };
 
   return (

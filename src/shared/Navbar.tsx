@@ -37,6 +37,8 @@ const Navbar = () => {
   };
 
   const scrollToWaitingList = () => {
+    // Navigate to waitlist section and update hash
+    window.location.hash = 'waitlist';
     const waitingListForm = document.getElementById('waitlist-form');
     if (waitingListForm) {
       waitingListForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -45,6 +47,8 @@ const Navbar = () => {
   };
 
   const scrollToContact = () => {
+    // Navigate to contact section and update hash
+    window.location.hash = 'contact';
     const contactSection = document.getElementById('contact');
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
