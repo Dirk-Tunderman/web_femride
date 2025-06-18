@@ -315,6 +315,10 @@ export const translations: Translations = {
     de: 'Lerne unseren Gründer kennen',
     en: 'Meet Our Founder'
   },
+  sectionOurTeam: {
+    de: 'UNSER TEAM',
+    en: 'OUR TEAM'
+  },
 
   // Latest Features Section
   latestFeaturesSectionTitle: {
@@ -1229,6 +1233,76 @@ export const translations: Translations = {
   supportersSubtitle: {
     de: "Unsere Partner und Unterstützer, die uns auf unserem Weg begleiten",
     en: "Our partners and supporters who accompany us on our journey"
+  },
+
+  // Team Section
+  teamMainTitle: {
+    de: "Das Team hinter FemRide",
+    en: "The Team Behind FemRide"
+  },
+  teamMissionTitle: {
+    de: "Warum machen wir das überhaupt?",
+    en: "Why are we doing this?"
+  },
+  teamMissionText1: {
+    de: "Wir haben FemRide gegründet, um die erheblichen Sicherheitsbedenken anzugehen, mit denen Frauen bei der Nutzung herkömmlicher Ride-Hailing-Dienste konfrontiert sind. Studien zeigen, dass sich bis zu 78% der Frauen während Taxi- und Ride-Sharing-Fahrten unwohl fühlen. Frag deine Schwester, Tante, Kollegin, Frau, Nachbarin oder Tochter nach ihren Erfahrungen - sicher wirst du diese unangenehme Geschichte hören.",
+    en: "We founded FemRide to address the significant safety concerns women face when using traditional ride-hailing services, with studies showing that up to 78% of women feel uncomfortable during taxi and ride-sharing trips. Ask your sister, auntie, colleague, wife, neighbour or daughter about their experiences - sure, you will hear that unpleasant story."
+  },
+  teamMissionText2: {
+    de: "Die Inspiration kam von einer persönlichen Erfahrung, als Aykuts Verlobte eine negative Begegnung während einer Ride-Hailing-Fahrt hatte, was den realen Bedarf für sicherere Transportalternativen verdeutlichte. Aktuelle Mobilitätslösungen berücksichtigen nicht angemessen die Perspektiven und Sicherheitsbedürfnisse von Frauen, obwohl Frauen als Nutzerinnen öffentlicher Verkehrsmittel überrepräsentiert sind.",
+    en: "The inspiration came from a personal experience when Aykut's fiancée had a negative encounter during a ride-hailing ride, highlighting the real-world need for safer transportation alternatives. Current mobility solutions fail to adequately consider women's perspectives and safety needs, despite women being overrepresented as users of public transportation."
+  },
+  teamAykutTitle: {
+    de: "Gründer & CEO",
+    en: "Founder & CEO"
+  },
+  teamAykutDesc: {
+    de: "Aykut bringt umfangreiche unternehmerische Erfahrung aus mehreren Start-ups verschiedener Branchen mit, mit einer bewährten Erfolgsbilanz im Vertrieb und beim Aufbau innovativer Plattformlösungen. Seine Leidenschaft ist es, durch Technologie sinnvollen gesellschaftlichen Wandel zu schaffen.",
+    en: "Aykut brings extensive entrepreneurial experience from multiple start-ups across different industries, with a proven track record in sales and building innovative platform solutions. His passion is to create meaningful social change through technology."
+  },
+  teamAykutFun: {
+    de: "Der Name Aykut ist türkischen Ursprungs und bedeutet 'glückverheißender Mond'. Was könnte bei einem Ride-Hailing-Service, der für mehr Sicherheit sorgen will, besonders nachts, schon schiefgehen?",
+    en: "The name Aykut is of Turkish origin and means 'auspicious moon'. What could possibly go wrong for a ride-hailing service that wants to ensure greater safety, especially at night?"
+  },
+  teamKerstinTitle: {
+    de: "Co-Gründerin & Operationsgeschäftsführerin",
+    en: "Co-Founder & COO"
+  },
+  teamKerstinDesc: {
+    de: "Kerstin ergänzt unser Gründungsteam mit über 15 Jahren Expertise in Mobilität und Sicherheit in öffentlichen und privaten Institutionen. Als aktive Führungskraft im Women in Mobility Netzwerk setzt sie sich für inklusive Transportlösungen ein und versteht die einzigartigen Mobilitätsherausforderungen von Frauen tiefgreifend.",
+    en: "Kerstin complements our founding team with over 15 years of expertise in mobility and security across public and private institutions. As an active leader in the Women in Mobility network, she champions inclusive transportation solutions and deeply understands women's unique mobility challenges."
+  },
+  teamKerstinFun: {
+    de: "Kerstin besitzt seit ihrem 18. Lebensjahr einen Führerschein, aber nie ein eigenes Auto. Sie mag es gar nicht, in der Stadt nach einem Parkplatz zu suchen. Daher sieht man sie meist mit ihrem Gravelbike durch die Straßen Berlins fahren.",
+    en: "Kerstin holds a driving licence since she turned 18, but never owned a car herself. She very much dislikes looking for a parking space in the city. Thus, she is most often seen riding her gravel bike through the streets of Berlin."
+  },
+  teamDavidTitle: {
+    de: "Operations Manager",
+    en: "Operations Manager"
+  },
+  teamDavidDesc: {
+    de: "David überwacht das tägliche Funktionieren der FemRide-Plattform und sorgt für eine reibungslose Koordination zwischen Fahrerinnen und Fahrgästen. Er ist ein großartiger Zuhörer und ein schneller Lerner.",
+    en: "David oversees the day-to-day functioning of the FemRide platform and ensures smooth coordination between drivers and passengers. He is a great listener and a quick learner."
+  },
+  teamDavidFun: {
+    de: "David ist von FemRides Mission zutiefst überzeugt und ist erst kürzlich von einem kleinen bayerischen Dorf in die pulsierende Stadt Berlin gezogen. Das nennen wir volles Engagement!",
+    en: "David is deeply convinced of FemRide's mission and just recently moved from a small Bavarian village to the buzzling city of Berlin. We call that full engagement!"
+  },
+  teamJoinTitle: {
+    de: "Werde Teil unseres Teams",
+    en: "Join Our Team"
+  },
+  teamJoinDesc1: {
+    de: "Werde Teil von FemRide und sei Teil einer revolutionären Bewegung, die die urbane Mobilität neu gestaltet und dabei echte gesellschaftliche Wirkung erzielt – wo deine Arbeit nicht nur ein Unternehmen aufbaut, sondern eine sicherere Welt für Frauen überall schafft.",
+    en: "Join FemRide and be part of a revolutionary movement that's reshaping urban mobility while creating real social impact – where your work doesn't just build a business, but builds a safer world for women everywhere."
+  },
+  teamJoinDesc2: {
+    de: "Bei FemRide hast du die einzigartige Gelegenheit, beim Aufbau und Betrieb von Europas erster frauenorientierter Ride-Hailing-Plattform von Grund auf zu helfen und dabei modernste Technologie mit sinnvollem Zweck in einem schnell wachsenden Startup-Umfeld zu verbinden.",
+    en: "At FemRide, you'll have the unique opportunity to help launch and operate Europe's first women-focused ride-hailing platform from the ground up, combining cutting-edge technology with meaningful purpose in a fast-growing startup environment."
+  },
+  teamJoinButton: {
+    de: "Kontaktiere uns",
+    en: "Contact Us"
   },
 };
 

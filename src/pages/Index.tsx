@@ -4,6 +4,7 @@ import Navbar from '../shared/Navbar';
 import HeroSection from '../features/hero/HeroSection';
 import ServicesSection from '../features/services/ServicesSection';
 import AboutSection from '../features/about/AboutSection';
+import TeamSection from '../features/team/TeamSection';
 import LatestFeaturesSection from '../features/latestFeatures/LatestFeaturesSection';
 import FAQSection from '../features/faq/FAQSection';
 import ContactSection from '../features/contact/ContactSection';
@@ -21,7 +22,7 @@ const Index = () => {
   const [referralCode, setReferralCode] = useState<string | null>(null);
 
   // Define all sections for hash navigation
-  const sections = ['hero', 'services', 'about', 'features', 'faq', 'contact', 'waitlist', 'supporters'];
+  const sections = ['hero', 'services', 'about', 'team', 'features', 'faq', 'contact', 'waitlist', 'supporters'];
 
   // Initialize hash navigation
   const { navigateToSection } = useHashNavigation({ sections });
@@ -58,6 +59,7 @@ const Index = () => {
         <HeroSection />
         <ServicesSection />
         <AboutSection />
+        <TeamSection />
         <LatestFeaturesSection />
         <FAQSection />
         <ContactSection />
