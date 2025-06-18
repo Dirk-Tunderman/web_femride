@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email API Test</title>
+</head>
+<body>
+    <h1>Email API Test</h1>
+    <button onclick="testEmail()">Test Email API</button>
+    <div id="result"></div>
+
+    <script>
+        async function testEmail() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Testing...';
+            
+            try {
+                console.log('🧪 Testing email API...');
+                
+                const response = await fetch('http://localhost:3001/api/send-verification', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: 'team@veloxforce.ai',
+                        verificationToken: 'test-token-123',
+                        baseUrl: 'http://localhost:8081',
+                        userType: 'passenger'
+                    }),
+                });
+
+                console.log('📡 Response status:', response.status);
+                console.log('📡 Response headers:', Object.fromEntries(response.headers.entries()));
+                
+                const text = await response.text();
+                console.log('📡 Raw response text:', text);
+                
+                let json;
+                try {
+                    json = JSON.parse(text);
+                    console.log('📡 Parsed JSON:', json);
+                } catch (parseError) {
+                    console.error('❌ Failed to parse JSON:', parseError.message);
+                    resultDiv.innerHTML = `<pre>Parse Error: ${parseError.message}\nRaw text: ${text}</pre>`;
+                    return;
+                }
+                
+                resultDiv.innerHTML = `<pre>${JSON.stringify(json, null, 2)}</pre>`;
+                
+            } catch (error) {
+                console.error('❌ Test failed:', error);
+                resultDiv.innerHTML = `<pre>Error: ${error.message}</pre>`;
+            }
+        }
+    </script>
+</body>
+</html>

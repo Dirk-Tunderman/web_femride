@@ -41,7 +41,18 @@ const sendVerificationEmail = async (email: string, verificationToken: string, u
 
       console.log('📡 API Response status:', response.status);
 
-      const result = await response.json();
+      // Handle empty response
+      const responseText = await response.text();
+      console.log('📡 Raw response text:', responseText);
+
+      let result;
+      try {
+        result = responseText ? JSON.parse(responseText) : {};
+      } catch (parseError) {
+        console.error('❌ Failed to parse JSON response:', parseError);
+        throw new Error(`Invalid response from email server: ${responseText}`);
+      }
+
       console.log('📡 API Response data:', result);
 
       if (response.ok) {
@@ -49,7 +60,7 @@ const sendVerificationEmail = async (email: string, verificationToken: string, u
         return { success: true, data: result };
       } else {
         console.error('❌ Email API error:', result);
-        throw new Error(result.error || 'Failed to send email');
+        throw new Error(result.error || result.details || 'Failed to send email');
       }
     } catch (apiError) {
       console.error('❌ Email API not available:', apiError);

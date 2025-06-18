@@ -112,17 +112,38 @@ The FemRide Team
 
     if (error) {
       console.error('Resend error:', error);
-      return res.status(500).json({ error: 'Failed to send email', details: error });
+
+      // Handle different types of Resend errors
+      if (error.statusCode === 422) {
+        return res.status(400).json({
+          success: false,
+          error: 'Invalid email address or domain not allowed',
+          details: error.message
+        });
+      }
+
+      return res.status(500).json({
+        success: false,
+        error: 'Failed to send email',
+        details: error.message || error
+      });
     }
 
     console.log('Email sent successfully to:', email);
     console.log('Resend response:', data);
     console.log('Email ID:', data?.id);
-    return res.status(200).json({ success: true, data });
+
+    const responseData = { success: true, data };
+    console.log('📤 Sending response:', JSON.stringify(responseData));
+    return res.status(200).json(responseData);
 
   } catch (error) {
     console.error('Server error:', error);
-    return res.status(500).json({ error: 'Internal server error' });
+    return res.status(500).json({
+      success: false,
+      error: 'Internal server error',
+      details: error.message || error
+    });
   }
 });
 
