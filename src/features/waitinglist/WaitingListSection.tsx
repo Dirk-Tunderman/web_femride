@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '@/lib/LanguageContext';
 import WaitingListForm from '@/components/WaitingListForm';
-import { getPublicWaitlistStats } from '@/lib/supabase';
-import { Shield, Users, Clock, Star, TrendingUp, Bell } from 'lucide-react';
+import { Shield, Users, Clock, Star, Bell } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { getReferralCode } from '@/lib/referralUtils';
@@ -15,9 +14,6 @@ const WaitingListSection: React.FC<WaitingListSectionProps> = ({ className = '' 
   const { t } = useLanguage();
   const isMobile = useIsMobile();
   const [referralCode, setReferralCode] = useState<string | null>(null);
-  const [totalSignups, setTotalSignups] = useState<number>(0);
-  const [recentSignups, setRecentSignups] = useState<any[]>([]);
-  const [currentRecentIndex, setCurrentRecentIndex] = useState(0);
 
   // Check for referral code using utility function
   useEffect(() => {
@@ -27,36 +23,7 @@ const WaitingListSection: React.FC<WaitingListSectionProps> = ({ className = '' 
     }
   }, []);
 
-  // Fetch waitlist stats
-  useEffect(() => {
-    const fetchStats = async () => {
-      const stats = await getPublicWaitlistStats();
-      if (stats.success) {
-        setTotalSignups(stats.total_count);
-        setRecentSignups(stats.recent_signups);
-      }
-    };
-    fetchStats();
-  }, []);
 
-  // Rotate recent signups with realistic timing (8-15 seconds, randomized)
-  useEffect(() => {
-    if (recentSignups.length > 0) {
-      const getRandomInterval = () => Math.floor(Math.random() * 7000) + 8000; // 8-15 seconds
-
-      const scheduleNext = () => {
-        const timeout = setTimeout(() => {
-          setCurrentRecentIndex((prev) => (prev + 1) % recentSignups.length);
-          scheduleNext(); // Schedule the next rotation with a new random interval
-        }, getRandomInterval());
-
-        return timeout;
-      };
-
-      const timeout = scheduleNext();
-      return () => clearTimeout(timeout);
-    }
-  }, [recentSignups]);
 
   return (
     <section id="waitlist" className={`py-16 bg-gradient-to-b from-white to-[#fa9de3]/10 ${className}`}>
@@ -70,35 +37,7 @@ const WaitingListSection: React.FC<WaitingListSectionProps> = ({ className = '' 
               {t('waitingListDescription')}
             </p>
 
-            {/* Social Proof */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
-              {totalSignups > 0 && (
-                <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-                  <TrendingUp className="h-4 w-4 text-green-500" />
-                  <span className="text-sm font-medium">
-                    {t('waitingListSocialProof').replace('{count}', totalSignups.toString())}
-                  </span>
-                </div>
-              )}
 
-              {recentSignups.length > 0 && (
-                <div className="flex items-center gap-2 bg-[#fa9de3]/10 px-4 py-2 rounded-full">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm text-gray-600">
-                    {t('waitingListRecentSignup')
-                      .replace('{name}', recentSignups[currentRecentIndex]?.email?.split('@')[0] || 'Lisa')
-                      .replace('{city}', recentSignups[currentRecentIndex]?.city || 'München')}
-                  </span>
-                </div>
-              )}
-            </div>
-
-            {/* Urgency */}
-            <div className="bg-gradient-to-r from-[#fa9de3]/20 to-[#a3adf4]/20 px-6 py-3 rounded-lg mb-6 max-w-lg mx-auto">
-              <p className="text-sm font-medium text-gray-700">
-                {t('waitingListUrgency')}
-              </p>
-            </div>
           </div>
 
           {/* Trust signals */}
