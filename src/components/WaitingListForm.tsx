@@ -12,12 +12,16 @@ import { Shield, ChevronDown, ChevronUp } from 'lucide-react';
 import SocialShare from '@/components/SocialShare';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
+import { Checkbox } from '@/components/ui/checkbox';
 
 // Define form schema with Zod
 const formSchema = z.object({
   email: z.string().email('Please enter a valid email address'),
   referralCode: z.string().optional(),
   userType: z.enum(['passenger', 'driver']),
+  dsgvoAccepted: z.boolean().refine(val => val === true, {
+    message: 'You must accept the privacy policy'
+  }),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -53,6 +57,7 @@ const WaitingListForm: React.FC<WaitingListFormProps> = ({
       email: '',
       referralCode: initialReferralCode || '',
       userType: defaultUserType,
+      dsgvoAccepted: false,
     },
   });
 
@@ -312,6 +317,29 @@ const WaitingListForm: React.FC<WaitingListFormProps> = ({
                 <ChevronDown size={16} />
               </button>
             )}
+
+            {/* DSGVO Checkbox */}
+            <FormField
+              control={form.control}
+              name="dsgvoAccepted"
+              render={({ field }) => (
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                      className="mt-1"
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <Label className="text-sm text-gray-700 cursor-pointer">
+                      {t('waitingListDsgvoCheckbox')}
+                    </Label>
+                  </div>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
             <Button
               type="submit"

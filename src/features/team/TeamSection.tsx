@@ -168,11 +168,11 @@ const TeamSection = () => {
             <Button
               className={`px-8 py-6 ${isMobile ? 'text-sm' : 'text-lg'} bg-[#fa9de3] hover:bg-[#e989cc] text-black rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative overflow-hidden group`}
               onClick={() => {
-                // Navigate to contact section and update hash
-                window.location.hash = 'contact';
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                // Navigate to support section and update hash
+                window.location.hash = 'support';
+                const supportSection = document.getElementById('support');
+                if (supportSection) {
+                  supportSection.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
             >

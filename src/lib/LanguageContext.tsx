@@ -61,7 +61,7 @@ export const translations: Translations = {
     en: 'by Women'
   },
   heroSubtitle: {
-    de: 'FemRide - Europas erste Ride-Hailing-Plattform, exklusiv für Frauen',
+    de: 'FemRide - Europas erste Ride-Hailing-App nur für Frauen (sichere Fahrvermittlung)',
     en: 'FemRide - Europe\'s first ride-hailing platform, exclusively for women'
   },
   heroButton: {
@@ -69,7 +69,7 @@ export const translations: Translations = {
     en: 'Get the FemRide app'
   },
   heroComingSoon: {
-    de: 'Bald im Google Play & App Store verfügbar',
+    de: 'Verfügbar ab Sommer 2025',
     en: 'Coming soon to Google Play & App Store'
   },
 
@@ -91,7 +91,7 @@ export const translations: Translations = {
     en: 'Book your first ride'
   },
   servicesDesc1: {
-    de: 'Exklusiv für Frauen, mit verifizierten Fahrerinnen, für maximale Sicherheit und Vertrauen.',
+    de: 'Nur für Frauen – mit geprüften Fahrerinnen für deinen Schutz.',
     en: 'Exclusively for women, with verified drivers, for maximum safety and trust.'
   },
   servicesButton1: {
@@ -107,7 +107,7 @@ export const translations: Translations = {
     en: 'Become a driver'
   },
   servicesDesc2: {
-    de: 'Fahre ausschließlich Frauen, verdiene fair und sei Teil von FemRide und unserer Community.',
+    de: 'Fahre nur Frauen, verdiene fair und werde Teil unserer Community.',
     en: 'Drive exclusively women, earn fairly and be part of FemRide and our community.'
   },
   servicesButton2: {
@@ -123,7 +123,7 @@ export const translations: Translations = {
     en: 'Become a fleet partner'
   },
   servicesDesc3: {
-    de: "Maximieren Sie Ihre Flotten Auslastung und profitieren Sie von FemRide's Wachstum und attraktiven Konditionen.",
+    de: "Mehr Auslastung für deine Flotte – profitiere vom FemRide-Erfolg.",
     en: "Maximize your fleet utilization and benefit from FemRide's growth and attractive conditions."
   },
   servicesButton3: {
@@ -141,7 +141,7 @@ export const translations: Translations = {
     en: 'Interested in collaborating with FemRide?'
   },
   contactText1: {
-    de: 'Du bist Flottenunternehmerin und möchtest deine Fahrzeuge über FemRide einsetzen?',
+    de: 'Du hast eine Taxi-Flotte und willst mehr verdienen?',
     en: 'Are you a fleet entrepreneur and want to use your vehicles through FemRide?'
   },
   contactText2: {
@@ -153,11 +153,11 @@ export const translations: Translations = {
     en: 'Or would you like to cooperate with us because you share our vision?'
   },
   contactText4: {
-    de: 'Dann kontaktiere uns über das Formular – wir melden uns umgehend bei dir!',
+    de: 'Dann kontaktiere uns über das Formular – wir melden uns schnell zurück!',
     en: 'Then contact us using the form – we will get back to you immediately!'
   },
   contactText5: {
-    de: 'Wir freuen uns darauf, gemeinsam Mobilität sicherer und fairer zu gestalten.',
+    de: 'Wir freuen uns darauf, gemeinsam Mobilität sicherer zu machen.',
     en: 'We look forward to making mobility safer and fairer together.'
   },
   contactNameLabel: {
@@ -326,15 +326,15 @@ export const translations: Translations = {
     en: 'Book a ride in advance'
   },
   latestFeaturesSectionText: {
-    de: 'Planst du eine Reise? Buche deine Fahrt im Voraus für noch bequemere Flughafentransfers, wichtige Meetings oder andere Termine, die Pünktlichkeit erfordern. Gib einfach deine Details ein und sichere dir deine Fahrt bis zu 90 Tage im Voraus.',
+    de: 'Planst du eine Reise? Buche deine Fahrt im Voraus für noch bequemere Flughafentransfers, wichtige Meetings oder andere Termine, die Pünktlichkeit erfordern. Gib einfach deine Details ein und sichere dir deine Fahrt bis zu 3 Monate im Voraus.',
     en: 'Planning a trip? Schedule a ride in advance for even more convenient airport transfers, important meetings, or any occasion that requires punctuality. Simply enter your details and secure your ride up to 90 days ahead.'
   },
   forFemaleDrivers: {
-    de: 'Werde Fahrerin und tritt einer FemRide-Flotte in Deutschland bei!',
+    de: 'Werde FemRide-Fahrerin!',
     en: 'Become a driver and join a FemRide fleet in Germany!'
   },
   forFleetOperators: {
-    de: 'Werde Flottenpartner von FemRide in Deutschland!',
+    de: 'Werde FemRide-Partner!',
     en: 'Become a fleet partner of FemRide in Germany!'
   },
 
@@ -344,7 +344,7 @@ export const translations: Translations = {
     en: 'Download our app'
   },
   downloadSectionSubtitle: {
-    de: 'Bald im Google Play & App Store verfügbar',
+    de: 'Verfügbar ab Sommer 2025',
     en: 'Coming soon to Google Play & App Store'
   },
   downloadSectionDesc: {
@@ -390,7 +390,7 @@ export const translations: Translations = {
     en: 'What do women say about FemRide?'
   },
   aboutMainDesc: {
-    de: 'FemRide macht den Unterschied! – Eine Umfrage mit über 100 Teilnehmer:innen, davon 90 % Frauen, zeigt: Sichere Mobilität ist ein dringendes Bedürfnis.',
+    de: 'Das sagen Frauen über FemRide: Umfrage mit 100 Teilnehmerinnen zeigt klaren Bedarf.',
     en: 'FemRide makes the difference! – A survey with over 100 participants, 90% of whom are women, shows: Safe mobility is an urgent need.'
   },
   aboutTestimonial1Title: {
@@ -398,7 +398,7 @@ export const translations: Translations = {
     en: '"Finally a safe alternative!"'
   },
   aboutTestimonial1Desc: {
-    de: 'der Frauen fühlen sich mit einer Ride-Hailing-Plattform, exklusiv für Frauen sicherer. FemRide schafft Vertrauen durch geprüfte Fahrerinnen und Schutzmaßnahmen für Frauen und Fahrerinnen.',
+    de: 'der Frauen fühlen sich mit einer Ride-Hailing-Plattform speziell für Frauen sicherer. FemRide schafft Vertrauen durch geprüfte Fahrerinnen und Schutzmaßnahmen für alle Nutzerinnen.',
     en: 'of women feel safer with a ride-hailing platform exclusively for women. FemRide creates trust through verified female drivers and protective measures for women and drivers.'
   },
   aboutTestimonial2Title: {
@@ -414,7 +414,7 @@ export const translations: Translations = {
     en: '"This is exactly what was missing!"'
   },
   aboutTestimonial3Desc: {
-    de: 'der Frauen sind überzeugt, dass FemRide eine nachhaltige Lösung für mehr Sicherheit im Ride-Hailing bietet. Eine Plattform, die Frauen mehr Freiheit und Unabhängigkeit denn je ermöglicht.',
+    de: 'der Frauen sind überzeugt, dass FemRide die Lösung für sicheres Ride-Hailing bietet. Eine Plattform, die Frauen mehr Freiheit und Unabhängigkeit denn je ermöglicht.',
     en: 'of women are convinced that FemRide offers a sustainable solution for more safety in ride-hailing. A platform that enables women more freedom and independence than ever before.'
   },
   aboutCtaButton: {
@@ -432,7 +432,7 @@ export const translations: Translations = {
     en: 'Join FemRide'
   },
   joinUsSectionSubtitle: {
-    de: 'Werde ein Teil der FemRide Bewegung',
+    de: 'Werde Teil von FemRide',
     en: 'Become part of the FemRide movement'
   },
   joinUsSectionDescription: {
@@ -440,7 +440,7 @@ export const translations: Translations = {
     en: 'For safe mobility, more opportunities, a fairer future!'
   },
   forFemaleDriversDesc: {
-    de: 'Auf der Suche nach einer Fahrerin-Position in Deutschland? Werde Teil eines Flottenunternehmens, das mit FemRide kooperiert, und fahre für eine Plattform, die Sicherheit, Chancengleichheit und faire Verdienstmöglichkeiten in den Mittelpunkt stellt. Nutze deine Chance auf einen flexiblen, sicheren Job mit attraktiven Einkommensperspektiven!',
+    de: 'Auf der Suche nach einer Fahrerin-Position in Deutschland? Werde Teil eines Flottenunternehmens, das mit FemRide kooperiert, und fahre für eine Plattform, die Vertrauen, Chancengleichheit und faire Verdienstmöglichkeiten in den Mittelpunkt stellt. Starte als FemRide-Fahrerin mit fairem Verdienst!',
     en: 'Looking for a driver position in Germany? Become part of a fleet company that cooperates with FemRide, and drive for a platform that focuses on safety, equal opportunities, and fair earning potential. Take advantage of your chance for a flexible, secure job with attractive income prospects!'
   },
   forFemaleDriversButton: {
@@ -448,11 +448,11 @@ export const translations: Translations = {
     en: 'Sign up as a driver now!'
   },
   forFleetOperatorsDesc: {
-    de: 'Besitzt du ein Flottenunternehmen und suchst nach neuen, lukrativen Einsatzmöglichkeiten? Kooperiere mit FemRide und werde Teil einer Plattform, die gesellschaftlichen Impact und nachhaltige Mobilität in den Mittelpunkt stellt. Nutze dein Potenzial und steigere deine Flottenauslastung mit FemRide!',
+    de: 'Besitzt du ein Flottenunternehmen und suchst nach besseren Verdienstchancen? Kooperiere mit FemRide und werde Teil einer Plattform, die sozialen Mehrwert und nachhaltige Mobilität in den Mittelpunkt stellt. Nutze dein Potenzial und steigere deine Flottenauslastung mit FemRide!',
     en: 'Do you own a fleet company and are looking for new, lucrative deployment opportunities? Cooperate with FemRide and become part of a platform that focuses on social impact and sustainable mobility. Use your potential and increase your fleet utilization with FemRide!'
   },
   forFleetOperatorsButton: {
-    de: 'Jetzt als Flottenpartner registrieren!',
+    de: 'Partner werden',
     en: 'Register as a fleet partner now!'
   },
 
@@ -466,7 +466,7 @@ export const translations: Translations = {
     en: 'Select a category to see all frequently asked questions and answers.'
   },
   viewAllFAQs: {
-    de: 'Alle FAQs anzeigen',
+    de: 'Mehr erfahren',
     en: 'View All FAQs'
   },
   faqCategoryPassengers: {
@@ -478,7 +478,7 @@ export const translations: Translations = {
     en: 'Drivers'
   },
   faqCategoryFleet: {
-    de: 'Subunternehmer',
+    de: 'Flottenpartner',
     en: 'Fleet Partners'
   },
   faqTitlePassengers: {
@@ -490,7 +490,7 @@ export const translations: Translations = {
     en: 'FAQs for Drivers'
   },
   faqTitleFleet: {
-    de: 'FAQs für Subunternehmer',
+    de: 'FAQs für Flottenpartner',
     en: 'FAQs for Fleet Partners'
   },
 
@@ -670,7 +670,7 @@ export const translations: Translations = {
     en: 'Book Your Ride with FemRide'
   },
   ridePageDesc: {
-    de: 'Sicher und komfortabel unterwegs - exklusiv für Frauen, mit verifizierten Fahrerinnen. Erlebe eine neue Art der Mobilität.',
+    de: 'Sicher und komfortabel unterwegs - nur für Frauen, mit verifizierten Fahrerinnen. Erlebe eine neue Art der Mobilität.',
     en: 'Travel safely and comfortably - exclusively for women, with verified drivers. Experience a new way of mobility.'
   },
   ridePageComingSoon: {
@@ -974,19 +974,19 @@ export const translations: Translations = {
     en: "Finally Safe Travel - By Women, For Women"
   },
   waitingListDescription: {
-    de: "Trage dich in unsere Warteliste ein und erfahre als Erste, wenn unsere App verfügbar ist. Wir revolutionieren die Mobilität für Frauen mit Sicherheit als oberste Priorität.",
+    de: "Trage dich in unsere Warteliste ein und erfahre als Erste, wenn unsere App verfügbar ist. Wir verbessern die Mobilität für Frauen mit Sicherheit als oberste Priorität.",
     en: "Join our waiting list and be the first to know when our app launches. We're revolutionizing mobility for women with safety as our top priority."
   },
   waitingListUrgency: {
-    de: "Nur die ersten 1.000 Nutzerinnen erhalten kostenlosen Probemonat",
+    de: "Nur die ersten 1.000 Nutzerinnen erhalten ersten Monat gratis",
     en: "Only the first 1,000 users get a free trial month"
   },
   waitingListSocialProof: {
-    de: "Über {count} Frauen bereits angemeldet",
+    de: "Bereits 150+ Frauen angemeldet",
     en: "Over {count} women already signed up"
   },
   waitingListRecentSignup: {
-    de: "{name} aus {city} ist gerade beigetreten",
+    de: "{name} aus {city} ist gerade dabei",
     en: "{name} from {city} just joined"
   },
   waitingListReferralDescription: {
@@ -994,11 +994,11 @@ export const translations: Translations = {
     en: "Invite friends and move up the waitlist! Refer a driver and move up 10 places. Refer a passenger and move up 2 places."
   },
   waitingListTrustSafety: {
-    de: "Sicherheit zuerst",
+    de: "Schutz zuerst",
     en: "Safety First"
   },
   waitingListTrustSafetyDesc: {
-    de: "Fahrerinnen für Fahrgäste. Deine Sicherheit ist unsere oberste Priorität.",
+    de: "Fahrerinnen für Fahrgäste. Dein Schutz ist unsere oberste Priorität.",
     en: "Women drivers for women passengers. Your safety is our top priority."
   },
   waitingListTrustCommunity: {
@@ -1006,7 +1006,7 @@ export const translations: Translations = {
     en: "Growing Community"
   },
   waitingListTrustCommunityDesc: {
-    de: "Schließe dich Tausenden von Frauen an, die bereits auf unserer Warteliste stehen.",
+    de: "Schließe dich hunderten Frauen an, die bereits auf unserer Warteliste stehen.",
     en: "Join thousands of women already on our waitlist."
   },
   waitingListTrustEarly: {
@@ -1034,7 +1034,7 @@ export const translations: Translations = {
     en: "Referral code (optional)"
   },
   waitingListButton: {
-    de: "Jetzt Platz sichern",
+    de: "Kostenlos anmelden",
     en: "Secure Your Spot"
   },
   waitingListButtonSecondary: {
@@ -1049,13 +1049,17 @@ export const translations: Translations = {
     de: "Deine Daten sind sicher bei uns",
     en: "Your data is safe with us"
   },
+  waitingListDsgvoCheckbox: {
+    de: "Ich stimme der Datenschutzerklärung zu",
+    en: "I agree to the privacy policy"
+  },
   waitingListReferralOptional: {
-    de: "Haben Sie einen Referral-Code?",
+    de: "Hast du einen Referral-Code?",
     en: "Have a referral code?"
   },
   // Exit-intent popup translations
   waitingListExitTitle: {
-    de: "Warten Sie! Verpassen Sie nicht den sicheren Start",
+    de: "Warte! Verpasse nicht den sicheren Start",
     en: "Wait! Don't miss the safe start"
   },
   waitingListExitDescription: {
@@ -1137,7 +1141,7 @@ export const translations: Translations = {
     en: "What You're Joining"
   },
   waitingListWhatYoureJoiningDesc: {
-    de: "Willkommen in der FemRide Community! Hier ist ein Vorgeschmack auf die App, die deine Mobilität revolutionieren wird.",
+    de: "Willkommen in der FemRide Community! Hier ist ein Vorgeschmack auf die App, die deine Mobilität verbessern wird.",
     en: "Welcome to the FemRide community! Here's a preview of the app that will revolutionize your mobility."
   },
   waitingListInDevelopment: {
@@ -1157,7 +1161,7 @@ export const translations: Translations = {
     en: "What's Next?"
   },
   waitingListWhatsNextDesc: {
-    de: "Wir arbeiten hart daran, die App zu perfektionieren. Du erhältst eine E-Mail, sobald wir bereit für den Start sind.",
+    de: "Wir arbeiten hart daran, die App fertigzustellen. Du erhältst eine E-Mail, sobald wir bereit für den Start sind.",
     en: "We're working hard to perfect the app. You'll receive an email as soon as we're ready to launch."
   },
   waitingListNotifyWhenReady: {

@@ -47,11 +47,11 @@ const Navbar = () => {
   };
 
   const scrollToContact = () => {
-    // Navigate to contact section and update hash
-    window.location.hash = 'contact';
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+    // Navigate to support section and update hash
+    window.location.hash = 'support';
+    const supportSection = document.getElementById('support');
+    if (supportSection) {
+      supportSection.scrollIntoView({ behavior: 'smooth' });
     }
     setIsMenuOpen(false); // Close mobile menu if open
   };

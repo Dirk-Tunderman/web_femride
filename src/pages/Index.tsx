@@ -22,7 +22,7 @@ const Index = () => {
   const [referralCode, setReferralCode] = useState<string | null>(null);
 
   // Define all sections for hash navigation
-  const sections = ['hero', 'services', 'about', 'team', 'features', 'faq', 'contact', 'waitlist', 'supporters'];
+  const sections = ['hero', 'services', 'about', 'team', 'features', 'faq', 'support', 'waitlist', 'supporters'];
 
   // Initialize hash navigation
   const { navigateToSection } = useHashNavigation({ sections });

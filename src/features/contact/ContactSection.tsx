@@ -104,7 +104,7 @@ ${formData.message}
     <section
       ref={sectionRef}
       className="py-20 relative overflow-hidden"
-      id="contact"
+      id="support"
     >
       {/* Background with gradients and decorations */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#a3adf4]/90 via-[#a3adf4] to-[#a3adf4]/80 -z-10"></div>
