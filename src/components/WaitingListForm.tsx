@@ -13,6 +13,7 @@ import SocialShare from '@/components/SocialShare';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
+import { trackWaitlistSignup, trackFormInteraction, trackReferralUsage } from '@/lib/analytics';
 
 // Define form schema with Zod
 const formSchema = z.object({
@@ -66,12 +67,24 @@ const WaitingListForm: React.FC<WaitingListFormProps> = ({
     setIsSubmitting(true);
 
     try {
+      // Track form start
+      trackFormInteraction('waitlist_form', 'start');
+
       // Check if user is already on the other waitlist
       const otherWaitlistCheck = await checkEmailInOtherWaitlist(data.email, data.userType);
 
       const result = await addToWaitingList(data.email, data.referralCode, data.userType);
 
       if (result.success) {
+        // Track successful waitlist signup
+        trackWaitlistSignup(data.userType, data.email);
+        trackFormInteraction('waitlist_form', 'complete');
+
+        // Track referral usage if referral code was provided
+        if (data.referralCode) {
+          trackReferralUsage(data.referralCode);
+        }
+
         // Mark user as signed up to disable exit-intent popup
         localStorage.setItem('femrideSignedUp', 'true');
 
@@ -134,6 +147,10 @@ const WaitingListForm: React.FC<WaitingListFormProps> = ({
       }
     } catch (error) {
       console.error('Error submitting form:', error);
+
+      // Track form error
+      trackFormInteraction('waitlist_form', 'abandon');
+
       toast({
         title: t('waitingListError'),
         description: t('waitingListErrorMessage'),

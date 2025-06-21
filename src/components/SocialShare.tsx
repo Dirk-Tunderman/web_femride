@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/lib/LanguageContext';
 import { generateReferralUrl } from '@/lib/referralUtils';
+import { trackSocialShare } from '@/lib/analytics';
 import {
   MessageCircle,
   Facebook,
@@ -80,6 +81,7 @@ Join the waitlist: ${shareUrl}`;
 
   // Social media sharing functions
   const shareToWhatsApp = () => {
+    trackSocialShare('whatsapp', 'referral_link');
     const whatsappText = encodeURIComponent(fullShareText);
 
     if (isMobile) {
