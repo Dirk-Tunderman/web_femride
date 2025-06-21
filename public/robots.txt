@@ -12,3 +12,10 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Disallow admin and verification pages from indexing
+Disallow: /admin
+Disallow: /verify-email
+
+# Sitemap location
+Sitemap: https://femride.de/sitemap.xml
