@@ -37,13 +37,7 @@
       ]
     }
   ],
-  "redirects": [
-    {
-      "source": "/sitemap.xml",
-      "destination": "/sitemap.xml",
-      "permanent": true
-    }
-  ],
+
   "rewrites": [
     {
       "source": "/api/(.*)",
