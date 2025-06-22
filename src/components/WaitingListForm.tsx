@@ -340,7 +340,7 @@ const WaitingListForm: React.FC<WaitingListFormProps> = ({
               control={form.control}
               name="dsgvoAccepted"
               render={({ field }) => (
-                <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                <FormItem className="flex flex-row items-start justify-center space-x-3 space-y-0">
                   <FormControl>
                     <Checkbox
                       checked={field.value}
