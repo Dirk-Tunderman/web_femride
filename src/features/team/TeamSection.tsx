@@ -42,7 +42,7 @@ const TeamSection = () => {
       title: t('teamAykutTitle'),
       description: t('teamAykutDesc'),
       funFact: t('teamAykutFun'),
-      image: "/lovable-uploads/aykut_teamsec.jpg",
+      image: "/lovable-uploads/aykut_teamsec_2.png",
       alt: "Aykut Atli - Founder & CEO"
     },
     {
