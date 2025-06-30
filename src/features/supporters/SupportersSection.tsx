@@ -32,6 +32,12 @@ const SupportersSection = () => {
 
   const baseSupporters = [
     {
+      name: 'Veloxforce',
+      logo: '/supporters/veloxforce-logo-text (1).svg',
+      url: 'https://www.veloxforce.ai/',
+      description: 'AI Automation Partner'
+    },
+    {
       name: 'JAM FM',
       logo: '/supporters/jam-fm-logo.svg',
       url: 'https://www.jam.fm/',
@@ -119,7 +125,13 @@ const SupportersSection = () => {
                     <img
                       src={supporter.logo}
                       alt={`${supporter.name} logo`}
-                      className={`${supporter.name === 'VALI ESMT' ? 'max-h-14 md:max-h-24' : 'max-h-12 md:max-h-20'} max-w-full object-contain transition-all duration-300 group-hover:scale-110`}
+                      className={`${
+                        supporter.name === 'Veloxforce'
+                          ? 'max-h-20 md:max-h-32'
+                          : supporter.name === 'VALI ESMT'
+                            ? 'max-h-14 md:max-h-24'
+                            : 'max-h-12 md:max-h-20'
+                      } max-w-full object-contain transition-all duration-300 group-hover:scale-110`}
                       loading="lazy"
                     />
                   </div>
