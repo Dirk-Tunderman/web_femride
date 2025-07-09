@@ -1308,6 +1308,20 @@ export const translations: Translations = {
     de: "Kontaktiere uns",
     en: "Contact Us"
   },
+
+  // Applicant Pool Consent
+  applicantPoolConsentTitle: {
+    de: "Aufnahme in den Bewerberpool:",
+    en: "Inclusion in the applicant pool:"
+  },
+  applicantPoolConsentText: {
+    de: "Ja, wir fragen eine Einwilligung ab, um unsere Bewerber in einen Bewerberpool aufzunehmen.",
+    en: "Yes, we request consent to include our applicants in an applicant pool."
+  },
+  applicantPoolConsentHint: {
+    de: "Die Aufnahme abgelehnter Bewerber in einen Bewerberpool darf nur mit ausdrücklicher Einwilligung des Bewerbers erfolgen. Die Daten sollten nach spätestens zwei (2) Jahren wieder gelöscht werden.",
+    en: "The inclusion of rejected applicants in an applicant pool may only be done with the explicit consent of the applicant. The data should be deleted after no more than two (2) years."
+  },
 };
 
 interface LanguageContextType {

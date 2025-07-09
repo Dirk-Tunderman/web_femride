@@ -27,15 +27,24 @@ export const useHashNavigation = ({
     // Handle initial page load with hash
     if (isInitialLoad.current && window.location.hash) {
       const hash = window.location.hash.substring(1);
-      const element = document.getElementById(hash);
-      if (element) {
-        // Small delay to ensure page is fully loaded
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth' });
-          isInitialLoad.current = false;
-        }, 100);
-        return;
-      }
+
+      // Small delay to ensure page is fully loaded
+      setTimeout(() => {
+        // Special case for waitlist - scroll to the form instead of the section
+        if (hash === 'waitlist') {
+          const waitlistForm = document.getElementById('waitlist-form');
+          if (waitlistForm) {
+            waitlistForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        } else {
+          const element = document.getElementById(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+        isInitialLoad.current = false;
+      }, 100);
+      return;
     }
     isInitialLoad.current = false;
 
@@ -116,11 +125,19 @@ export const useHashNavigation = ({
     const handleHashChange = () => {
       isManualNavigation.current = true;
       const hash = window.location.hash.substring(1);
-      
+
       if (hash) {
-        const element = document.getElementById(hash);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+        // Special case for waitlist - scroll to the form instead of the section
+        if (hash === 'waitlist') {
+          const waitlistForm = document.getElementById('waitlist-form');
+          if (waitlistForm) {
+            waitlistForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        } else {
+          const element = document.getElementById(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
         }
       } else {
         // Scroll to top if hash is cleared
@@ -147,15 +164,24 @@ export const useHashNavigation = ({
   // Method to manually navigate to a section
   const navigateToSection = (sectionId: string) => {
     isManualNavigation.current = true;
-    
+
     if (sectionId === 'hero' || sectionId === '') {
       window.history.pushState(null, '', window.location.pathname + window.location.search);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       window.history.pushState(null, '', `#${sectionId}`);
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+
+      // Special case for waitlist - scroll to the form instead of the section
+      if (sectionId === 'waitlist') {
+        const waitlistForm = document.getElementById('waitlist-form');
+        if (waitlistForm) {
+          waitlistForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      } else {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
       }
     }
 

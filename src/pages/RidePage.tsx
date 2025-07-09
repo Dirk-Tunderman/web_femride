@@ -3,11 +3,12 @@ import { useLanguage } from "../lib/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "@/components/ui/use-toast";
 import emailjs from "@emailjs/browser";
 import Navbar from "@/shared/Navbar";
 import { useNavigate } from "react-router-dom";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, Info } from "lucide-react";
 import { useScrollTop } from "@/hooks/use-scroll-top";
 
 interface RideRequest {
@@ -20,6 +21,7 @@ interface RideRequest {
   passengerCount: string;
   accessibility: string;
   additionalInfo: string;
+  applicantPoolConsent: boolean;
 }
 
 const RidePage = () => {
@@ -37,6 +39,7 @@ const RidePage = () => {
     passengerCount: "",
     accessibility: "",
     additionalInfo: "",
+    applicantPoolConsent: false,
   });
 
   const handleChange = (
@@ -90,6 +93,17 @@ This request was submitted through the FemRide Ride Request Form.
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Validate consent checkbox
+    if (!formData.applicantPoolConsent) {
+      toast({
+        title: "Einwilligung erforderlich",
+        description: "Bitte bestätigen Sie die Aufnahme in den Bewerberpool.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -108,6 +122,7 @@ This request was submitted through the FemRide Ride Request Form.
         passengerCount: "",
         accessibility: "",
         additionalInfo: "",
+        applicantPoolConsent: false,
       });
     } catch (error) {
       console.error("Error sending email:", error);
@@ -309,6 +324,39 @@ This request was submitted through the FemRide Ride Request Form.
                     rows={4}
                   />
                 </div>
+              </div>
+            </div>
+
+            {/* Applicant Pool Consent */}
+            <div className="space-y-4 p-4 bg-gray-50 rounded-xl border border-gray-200">
+              <div className="flex items-start space-x-3">
+                <h3 className="text-sm font-medium text-gray-900 mb-2">
+                  {t('applicantPoolConsentTitle')}
+                </h3>
+              </div>
+
+              <div className="flex items-start space-x-3">
+                <Checkbox
+                  id="applicantPoolConsent"
+                  checked={formData.applicantPoolConsent}
+                  onCheckedChange={(checked) =>
+                    setFormData({ ...formData, applicantPoolConsent: checked as boolean })
+                  }
+                  className="mt-1"
+                />
+                <label
+                  htmlFor="applicantPoolConsent"
+                  className="text-sm text-gray-700 cursor-pointer leading-relaxed"
+                >
+                  {t('applicantPoolConsentText')}
+                </label>
+              </div>
+
+              <div className="flex items-start space-x-3 mt-3 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                <Info className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                <p className="text-xs text-blue-800 leading-relaxed">
+                  <strong>Hinweis:</strong> {t('applicantPoolConsentHint')}
+                </p>
               </div>
             </div>
 
