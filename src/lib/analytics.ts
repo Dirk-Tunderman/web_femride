@@ -1,5 +1,6 @@
 // Google Analytics 4 utility functions for FemRide
 // Tracking SEO performance, conversions, and user interactions
+// Privacy-compliant implementation that respects user consent
 
 declare global {
   interface Window {
@@ -8,15 +9,54 @@ declare global {
   }
 }
 
+// Check if user has consented to cookies/tracking
+export const hasTrackingConsent = (): boolean => {
+  if (typeof window === 'undefined') return false;
+  return localStorage.getItem('femrideCookieConsent') === 'true';
+};
+
 // Check if Google Analytics is loaded
 export const isGALoaded = (): boolean => {
   return typeof window !== 'undefined' && typeof window.gtag === 'function';
 };
 
+// Load Google Analytics dynamically after user consent
+export const loadGoogleAnalytics = (): void => {
+  if (typeof window === 'undefined' || !hasTrackingConsent()) return;
+
+  // Check if already loaded
+  if (isGALoaded()) return;
+
+  // Create and load the gtag script
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-EZZ2025DS8';
+  document.head.appendChild(script);
+
+  // Initialize dataLayer and gtag
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function() {
+    window.dataLayer.push(arguments);
+  };
+
+  // Configure Google Analytics
+  script.onload = () => {
+    window.gtag('js', new Date());
+    window.gtag('config', 'G-EZZ2025DS8', {
+      page_title: document.title,
+      page_location: window.location.href,
+      send_page_view: true,
+      anonymize_ip: true, // Additional privacy protection
+      allow_google_signals: false, // Disable advertising features
+      allow_ad_personalization_signals: false // Disable ad personalization
+    });
+  };
+};
+
 // Track page views (automatically handled by GA4, but useful for SPA routing)
 export const trackPageView = (page_title: string, page_location: string) => {
-  if (!isGALoaded()) return;
-  
+  if (!hasTrackingConsent() || !isGALoaded()) return;
+
   window.gtag('config', 'G-EZZ2025DS8', {
     page_title,
     page_location,
@@ -26,8 +66,8 @@ export const trackPageView = (page_title: string, page_location: string) => {
 
 // Track waitlist signups (critical conversion event)
 export const trackWaitlistSignup = (userType: 'passenger' | 'driver' | 'both', email?: string) => {
-  if (!isGALoaded()) return;
-  
+  if (!hasTrackingConsent() || !isGALoaded()) return;
+
   window.gtag('event', 'waitlist_signup', {
     event_category: 'conversion',
     event_label: userType,
@@ -37,7 +77,7 @@ export const trackWaitlistSignup = (userType: 'passenger' | 'driver' | 'both', e
       signup_source: 'website'
     }
   });
-  
+
   // Track as conversion for SEO performance monitoring
   window.gtag('event', 'conversion', {
     send_to: 'G-EZZ2025DS8',
@@ -48,8 +88,8 @@ export const trackWaitlistSignup = (userType: 'passenger' | 'driver' | 'both', e
 
 // Track referral code usage (for viral growth tracking)
 export const trackReferralUsage = (referralCode: string) => {
-  if (!isGALoaded()) return;
-  
+  if (!hasTrackingConsent() || !isGALoaded()) return;
+
   window.gtag('event', 'referral_used', {
     event_category: 'engagement',
     event_label: 'referral_code',
@@ -61,8 +101,8 @@ export const trackReferralUsage = (referralCode: string) => {
 
 // Track social media sharing (SEO and viral growth)
 export const trackSocialShare = (platform: string, content_type: string = 'website') => {
-  if (!isGALoaded()) return;
-  
+  if (!hasTrackingConsent() || !isGALoaded()) return;
+
   window.gtag('event', 'share', {
     method: platform,
     content_type: content_type,
@@ -72,8 +112,8 @@ export const trackSocialShare = (platform: string, content_type: string = 'websi
 
 // Track language switching (for international SEO insights)
 export const trackLanguageSwitch = (from_language: string, to_language: string) => {
-  if (!isGALoaded()) return;
-  
+  if (!hasTrackingConsent() || !isGALoaded()) return;
+
   window.gtag('event', 'language_switch', {
     event_category: 'user_preference',
     event_label: `${from_language}_to_${to_language}`,
@@ -86,8 +126,8 @@ export const trackLanguageSwitch = (from_language: string, to_language: string) 
 
 // Track scroll depth (engagement metric for SEO)
 export const trackScrollDepth = (percentage: number) => {
-  if (!isGALoaded()) return;
-  
+  if (!hasTrackingConsent() || !isGALoaded()) return;
+
   // Only track at 25%, 50%, 75%, 100% to avoid spam
   if ([25, 50, 75, 100].includes(percentage)) {
     window.gtag('event', 'scroll', {
@@ -100,8 +140,8 @@ export const trackScrollDepth = (percentage: number) => {
 
 // Track form interactions (for conversion funnel analysis)
 export const trackFormInteraction = (form_name: string, action: 'start' | 'complete' | 'abandon') => {
-  if (!isGALoaded()) return;
-  
+  if (!hasTrackingConsent() || !isGALoaded()) return;
+
   window.gtag('event', `form_${action}`, {
     event_category: 'form_interaction',
     event_label: form_name,
@@ -114,8 +154,8 @@ export const trackFormInteraction = (form_name: string, action: 'start' | 'compl
 
 // Track navigation clicks (for user journey analysis)
 export const trackNavigation = (destination: string, source: string = 'main_nav') => {
-  if (!isGALoaded()) return;
-  
+  if (!hasTrackingConsent() || !isGALoaded()) return;
+
   window.gtag('event', 'navigation_click', {
     event_category: 'navigation',
     event_label: destination,
@@ -128,8 +168,8 @@ export const trackNavigation = (destination: string, source: string = 'main_nav'
 
 // Track search queries (if search functionality is added)
 export const trackSearch = (search_term: string, results_count?: number) => {
-  if (!isGALoaded()) return;
-  
+  if (!hasTrackingConsent() || !isGALoaded()) return;
+
   window.gtag('event', 'search', {
     search_term,
     event_category: 'search',
@@ -141,8 +181,8 @@ export const trackSearch = (search_term: string, results_count?: number) => {
 
 // Track file downloads (for resource tracking)
 export const trackDownload = (file_name: string, file_type: string) => {
-  if (!isGALoaded()) return;
-  
+  if (!hasTrackingConsent() || !isGALoaded()) return;
+
   window.gtag('event', 'file_download', {
     event_category: 'download',
     event_label: file_name,
@@ -155,8 +195,8 @@ export const trackDownload = (file_name: string, file_type: string) => {
 
 // Track external link clicks (for SEO and partnership analysis)
 export const trackExternalLink = (url: string, link_text?: string) => {
-  if (!isGALoaded()) return;
-  
+  if (!hasTrackingConsent() || !isGALoaded()) return;
+
   window.gtag('event', 'click', {
     event_category: 'external_link',
     event_label: url,
@@ -169,8 +209,8 @@ export const trackExternalLink = (url: string, link_text?: string) => {
 
 // Track video interactions (if video content is added)
 export const trackVideoInteraction = (video_title: string, action: 'play' | 'pause' | 'complete', progress?: number) => {
-  if (!isGALoaded()) return;
-  
+  if (!hasTrackingConsent() || !isGALoaded()) return;
+
   window.gtag('event', `video_${action}`, {
     event_category: 'video',
     event_label: video_title,
@@ -185,8 +225,8 @@ export const trackVideoInteraction = (video_title: string, action: 'play' | 'pau
 
 // Track custom events for A/B testing or feature usage
 export const trackCustomEvent = (event_name: string, parameters: Record<string, any> = {}) => {
-  if (!isGALoaded()) return;
-  
+  if (!hasTrackingConsent() || !isGALoaded()) return;
+
   window.gtag('event', event_name, {
     event_category: 'custom',
     ...parameters
@@ -195,8 +235,8 @@ export const trackCustomEvent = (event_name: string, parameters: Record<string, 
 
 // Enhanced ecommerce tracking (for future premium features)
 export const trackPurchase = (transaction_id: string, value: number, currency: string = 'EUR', items: any[] = []) => {
-  if (!isGALoaded()) return;
-  
+  if (!hasTrackingConsent() || !isGALoaded()) return;
+
   window.gtag('event', 'purchase', {
     transaction_id,
     value,
@@ -207,8 +247,8 @@ export const trackPurchase = (transaction_id: string, value: number, currency: s
 
 // Track user engagement time (for SEO ranking factors)
 export const trackEngagementTime = (engagement_time_msec: number) => {
-  if (!isGALoaded()) return;
-  
+  if (!hasTrackingConsent() || !isGALoaded()) return;
+
   window.gtag('event', 'user_engagement', {
     engagement_time_msec,
     event_category: 'engagement'
@@ -217,8 +257,8 @@ export const trackEngagementTime = (engagement_time_msec: number) => {
 
 // Utility function to track Core Web Vitals (for SEO performance)
 export const trackWebVitals = (metric: { name: string; value: number; id: string }) => {
-  if (!isGALoaded()) return;
-  
+  if (!hasTrackingConsent() || !isGALoaded()) return;
+
   window.gtag('event', metric.name, {
     event_category: 'Web Vitals',
     event_label: metric.id,
@@ -256,5 +296,7 @@ export default {
   trackEngagementTime,
   trackWebVitals,
   debugAnalytics,
-  isGALoaded
+  isGALoaded,
+  hasTrackingConsent,
+  loadGoogleAnalytics
 };

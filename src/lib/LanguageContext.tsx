@@ -636,12 +636,12 @@ export const translations: Translations = {
 
   // Cookie Consent translations
   cookieTitle: {
-    de: 'Wir verwenden Cookies',
-    en: 'We use cookies'
+    de: 'Cookies & Analytics',
+    en: 'Cookies & Analytics'
   },
   cookieDescription: {
-    de: 'Wir verwenden Cookies, um dir die bestmögliche Erfahrung auf unserer Website zu bieten. Durch die Nutzung unserer Website stimmst du der Verwendung von Cookies gemäß unserer Datenschutzrichtlinie zu.',
-    en: 'We use cookies to provide you with the best experience on our website. By using our website, you agree to the use of cookies in accordance with our privacy policy.'
+    de: 'Wir verwenden Google Analytics, um die Website-Nutzung zu analysieren und zu verbessern. Dies umfasst das Tracking von Seitenaufrufen, Klicks und anderen Interaktionen. Du kannst diese Tracking-Cookies akzeptieren oder ablehnen.',
+    en: 'We use Google Analytics to analyze and improve website usage. This includes tracking page views, clicks, and other interactions. You can accept or decline these tracking cookies.'
   },
   cookieAcceptButton: {
     de: 'Akzeptieren',

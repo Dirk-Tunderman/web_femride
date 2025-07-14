@@ -1,22 +1,47 @@
 import { useState, useEffect } from 'react';
 import { useLanguage } from '@/lib/LanguageContext';
 import { X } from 'lucide-react';
+import { loadGoogleAnalytics } from '@/lib/analytics';
 
 /**
  * CookieConsent component displays a consent banner for cookies
  * It supports multiple languages via the LanguageContext
  * Stores user consent in localStorage to remember preference
+ * Hides on specific pages as required by Apple's privacy guidelines
  */
 const CookieConsent = () => {
   const [isVisible, setIsVisible] = useState(false);
   const { t } = useLanguage();
 
+  // Pages where cookie banner should not be shown (Apple requirement)
+  const hideCookieBannerPages = [
+    '/delete-driver-account',
+    '/faq/drivers',
+    '/drive'
+  ];
+
+  // Check if current page should hide cookie banner
+  const shouldHideBanner = () => {
+    if (typeof window === 'undefined') return false;
+    return hideCookieBannerPages.includes(window.location.pathname);
+  };
+
   // Check if user has already given consent
   useEffect(() => {
+    // Don't show banner on specific pages (Apple requirement)
+    if (shouldHideBanner()) {
+      return;
+    }
+
     const hasConsent = localStorage.getItem('femrideCookieConsent');
     if (!hasConsent) {
       // Only show banner if consent hasn't been given
       setIsVisible(true);
+    }
+
+    // If user previously accepted cookies, load analytics
+    if (hasConsent === 'true') {
+      loadGoogleAnalytics();
     }
   }, []);
 
@@ -24,6 +49,8 @@ const CookieConsent = () => {
   const acceptCookies = () => {
     localStorage.setItem('femrideCookieConsent', 'true');
     setIsVisible(false);
+    // Load Google Analytics after user consent
+    loadGoogleAnalytics();
   };
 
   // Handle user declining cookies
