@@ -276,8 +276,8 @@ export const translations: Translations = {
     en: 'District Court Berlin (Charlottenburg)'
   },
   footerHRB: {
-    de: 'HRB 272631',
-    en: 'HRB 272631'
+    de: 'HRB 272631 B',
+    en: 'HRB 272631 B'
   },
   footerResponsible: {
     de: 'Verantwortlich für den Inhalt gemäß § 18 Abs. 2 MStV:',
