@@ -26,12 +26,48 @@ const PrivacyPolicy = () => {
             
             <div className="prose max-w-none text-gray-700 text-left">
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800">
+                {isGerman ? 'Verantwortlicher' : 'Data Controller'}
+              </h2>
+              <div className="bg-[#fa9de3]/10 p-6 rounded-lg mb-6">
+                <p className="mb-2">
+                  {isGerman
+                    ? 'Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:'
+                    : 'The data controller within the meaning of the General Data Protection Regulation (GDPR) is:'
+                  }
+                </p>
+                <p className="mb-2"><strong>FemRide UG (haftungsbeschränkt)</strong></p>
+                <p className="mb-2">Waldstraße 222A, 12527 Berlin</p>
+                <p className="mb-2">
+                  <strong>E-Mail:</strong> <a href="mailto:privacy@femride.de" className="text-[#fa9de3] hover:underline">privacy@femride.de</a>
+                </p>
+                <p>
+                  <strong>{isGerman ? 'Vertreten durch:' : 'Represented by:'}</strong> Aykut Atli, Dr. Kerstin Wendt
+                </p>
+              </div>
+
+              <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800">
+                {isGerman ? 'Datenschutzbeauftragter' : 'Data Protection Officer'}
+              </h2>
+              <p className="mb-6">
+                {isGerman
+                  ? 'Aufgrund der Größe unseres Unternehmens sind wir derzeit nicht verpflichtet, einen Datenschutzbeauftragten zu bestellen. Bei Fragen zum Datenschutz wenden Sie sich bitte direkt an uns unter privacy@femride.de.'
+                  : 'Due to the size of our company, we are currently not required to appoint a data protection officer. For data protection questions, please contact us directly at privacy@femride.de.'
+                }
+              </p>
+
+              <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800">
                 {isGerman ? 'Einleitung' : 'Introduction'}
               </h2>
               <p className="mb-4">
-                {isGerman 
-                  ? 'Femride (nachfolgend als "wir", "uns" oder "unser" bezeichnet) ist bestrebt, den Schutz Ihrer Privatsphäre zu gewährleisten. Diese Datenschutzrichtlinie erklärt, wie wir Ihre personenbezogenen Daten bei der Nutzung der Femride App und der Femride-Dienste erheben, nutzen, offenlegen, übertragen und speichern.'
-                  : 'Femride (referred to as "we", "us" or "our") is committed to ensuring your privacy is protected. This Privacy Policy explains how we collect, use, disclose, transfer and store your personal data when you use the Femride App and Femride Services.'
+                {isGerman
+                  ? 'Diese Datenschutzerklärung informiert Sie über Art, Umfang und Zweck der Verarbeitung personenbezogener Daten durch uns als Verantwortlichen. Personenbezogene Daten sind alle Daten, die auf Sie persönlich beziehbar sind, z.B. Name, Adresse, E-Mail-Adressen, Nutzerverhalten.'
+                  : 'This privacy policy informs you about the type, scope and purpose of the processing of personal data by us as the controller. Personal data is all data that can be personally related to you, e.g. name, address, email addresses, user behavior.'
+                }
+              </p>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Diese Datenschutzerklärung gilt für unsere Website www.femride.de und die FemRide-App. Für externe Links auf unserer Website können abweichende Datenschutzbestimmungen gelten.'
+                  : 'This privacy policy applies to our website www.femride.de and the FemRide app. Different privacy policies may apply to external links on our website.'
                 }
               </p>
               
@@ -43,14 +79,57 @@ const PrivacyPolicy = () => {
               </p>
               
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">
-                {isGerman ? 'Welche Daten wir erheben' : 'Information We Collect'}
+                {isGerman ? 'Welche Daten wir erheben und verarbeiten' : 'What Data We Collect and Process'}
               </h2>
-              <p className="mb-4">
-                {isGerman
-                  ? 'Wir erheben verschiedene Arten von Informationen, die Sie uns zur Verfügung stellen, und solche, die wir automatisch erheben, wenn Sie die Femride App und die Femride-Dienste nutzen.'
-                  : 'We collect various types of information that you provide to us, and information that we collect automatically when you use the Femride App and Femride Services.'
-                }
-              </p>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'Wartelisten-Anmeldung' : 'Waitlist Registration'}
+              </h3>
+              <div className="bg-gray-50 p-6 rounded-lg mb-6">
+                <p className="mb-2"><strong>{isGerman ? 'Erhobene Daten:' : 'Data collected:'}</strong></p>
+                <ul className="list-disc list-inside mb-4 space-y-1">
+                  <li>{isGerman ? 'E-Mail-Adresse' : 'Email address'}</li>
+                  <li>{isGerman ? 'Nutzertyp (Fahrgast/Fahrerin)' : 'User type (passenger/driver)'}</li>
+                  <li>{isGerman ? 'Zeitpunkt der Anmeldung' : 'Registration timestamp'}</li>
+                  <li>{isGerman ? 'Referral-Code (falls verwendet)' : 'Referral code (if used)'}</li>
+                </ul>
+                <p className="mb-2"><strong>{isGerman ? 'Zweck:' : 'Purpose:'}</strong> {isGerman ? 'Verwaltung der Warteliste, Information über App-Launch' : 'Waitlist management, app launch notifications'}</p>
+                <p className="mb-2"><strong>{isGerman ? 'Rechtsgrundlage:' : 'Legal basis:'}</strong> {isGerman ? 'Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)' : 'Art. 6 para. 1 lit. a GDPR (consent)'}</p>
+                <p><strong>{isGerman ? 'Speicherdauer:' : 'Retention period:'}</strong> {isGerman ? 'Bis zum App-Launch + 2 Jahre oder bis zum Widerruf' : 'Until app launch + 2 years or until withdrawal'}</p>
+              </div>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'Kontaktformular' : 'Contact Form'}
+              </h3>
+              <div className="bg-[#fa9de3]/10 p-6 rounded-lg mb-6">
+                <p className="mb-2"><strong>{isGerman ? 'Erhobene Daten:' : 'Data collected:'}</strong></p>
+                <ul className="list-disc list-inside mb-4 space-y-1">
+                  <li>{isGerman ? 'Name' : 'Name'}</li>
+                  <li>{isGerman ? 'E-Mail-Adresse' : 'Email address'}</li>
+                  <li>{isGerman ? 'Telefonnummer (optional)' : 'Phone number (optional)'}</li>
+                  <li>{isGerman ? 'Nachrichteninhalt' : 'Message content'}</li>
+                </ul>
+                <p className="mb-2"><strong>{isGerman ? 'Zweck:' : 'Purpose:'}</strong> {isGerman ? 'Bearbeitung von Anfragen, Kundenservice' : 'Processing inquiries, customer service'}</p>
+                <p className="mb-2"><strong>{isGerman ? 'Rechtsgrundlage:' : 'Legal basis:'}</strong> {isGerman ? 'Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)' : 'Art. 6 para. 1 lit. f GDPR (legitimate interest)'}</p>
+                <p><strong>{isGerman ? 'Speicherdauer:' : 'Retention period:'}</strong> {isGerman ? '3 Jahre nach Abschluss der Korrespondenz' : '3 years after completion of correspondence'}</p>
+              </div>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'Technische Daten' : 'Technical Data'}
+              </h3>
+              <div className="bg-gray-50 p-6 rounded-lg mb-6">
+                <p className="mb-2"><strong>{isGerman ? 'Automatisch erhobene Daten:' : 'Automatically collected data:'}</strong></p>
+                <ul className="list-disc list-inside mb-4 space-y-1">
+                  <li>{isGerman ? 'IP-Adresse (anonymisiert)' : 'IP address (anonymized)'}</li>
+                  <li>{isGerman ? 'Browser-Typ und -Version' : 'Browser type and version'}</li>
+                  <li>{isGerman ? 'Betriebssystem' : 'Operating system'}</li>
+                  <li>{isGerman ? 'Referrer-URL' : 'Referrer URL'}</li>
+                  <li>{isGerman ? 'Zugriffszeitpunkt' : 'Access time'}</li>
+                </ul>
+                <p className="mb-2"><strong>{isGerman ? 'Zweck:' : 'Purpose:'}</strong> {isGerman ? 'Technische Bereitstellung, Sicherheit, Fehleranalyse' : 'Technical provision, security, error analysis'}</p>
+                <p className="mb-2"><strong>{isGerman ? 'Rechtsgrundlage:' : 'Legal basis:'}</strong> {isGerman ? 'Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)' : 'Art. 6 para. 1 lit. f GDPR (legitimate interest)'}</p>
+                <p><strong>{isGerman ? 'Speicherdauer:' : 'Retention period:'}</strong> {isGerman ? '7 Tage (Server-Logs)' : '7 days (server logs)'}</p>
+              </div>
               
               <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
                 {isGerman ? 'Informationen, die Sie uns zur Verfügung stellen' : 'Information You Provide to Us'}
@@ -435,6 +514,38 @@ const PrivacyPolicy = () => {
                 <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">
                   https://supabase.com/privacy
                 </a>
+              </p>
+
+              <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">
+                {isGerman ? 'Datenübertragung in Drittländer' : 'Data Transfer to Third Countries'}
+              </h2>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Einige der von uns genutzten Dienstleister haben ihren Sitz außerhalb der Europäischen Union oder verarbeiten dort Daten. Dies erfolgt nur, wenn ein angemessenes Datenschutzniveau gewährleistet ist.'
+                  : 'Some of the service providers we use are based outside the European Union or process data there. This only occurs when an adequate level of data protection is ensured.'
+                }
+              </p>
+
+              <div className="bg-gray-50 p-6 rounded-lg mb-6">
+                <h3 className="text-lg font-semibold mb-3">{isGerman ? 'USA-Transfers:' : 'USA Transfers:'}</h3>
+                <ul className="list-disc list-inside space-y-2">
+                  <li>
+                    <strong>Google Analytics:</strong> {isGerman ? 'Übertragung in die USA auf Basis von Standardvertragsklauseln und zusätzlichen Schutzmaßnahmen' : 'Transfer to USA based on standard contractual clauses and additional protective measures'}
+                  </li>
+                  <li>
+                    <strong>Cloudflare:</strong> {isGerman ? 'Globales CDN mit Datenverarbeitung in verschiedenen Regionen, einschließlich EU-Servern' : 'Global CDN with data processing in various regions, including EU servers'}
+                  </li>
+                  <li>
+                    <strong>Resend:</strong> {isGerman ? 'E-Mail-Service mit Servern in der EU und USA' : 'Email service with servers in EU and USA'}
+                  </li>
+                </ul>
+              </div>
+
+              <p className="mb-6">
+                {isGerman
+                  ? 'Sie haben das Recht, eine Kopie der geeigneten Garantien zu erhalten, die für die Übertragung Ihrer Daten in Drittländer getroffen wurden. Kontaktieren Sie uns unter privacy@femride.de.'
+                  : 'You have the right to obtain a copy of the appropriate safeguards taken for the transfer of your data to third countries. Contact us at privacy@femride.de.'
+                }
               </p>
 
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">

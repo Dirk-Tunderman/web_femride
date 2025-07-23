@@ -57,6 +57,17 @@ const CookieConsent = () => {
   const declineCookies = () => {
     localStorage.setItem('femrideCookieConsent', 'false');
     setIsVisible(false);
+    // Ensure no tracking scripts are loaded when declined
+    // Clear any existing analytics data
+    if (typeof window !== 'undefined' && window.gtag) {
+      // Disable Google Analytics if it was previously loaded
+      window.gtag('config', 'G-EZZ2025DS8', {
+        send_page_view: false,
+        anonymize_ip: true,
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false
+      });
+    }
   };
 
   if (!isVisible) return null;
@@ -83,8 +94,8 @@ const CookieConsent = () => {
                 {t('cookieDescription')}
               </p>
               <div className="mt-1">
-                <a 
-                  href="/privacy" 
+                <a
+                  href="/privacy-policy"
                   className="text-sm text-[#fa9de3] hover:underline inline-flex items-center"
                 >
                   {t('cookiePrivacyLink')}

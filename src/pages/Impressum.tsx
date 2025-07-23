@@ -48,13 +48,13 @@ const Impressum = () => {
               </h2>
               <div className="bg-[#fa9de3]/10 p-6 rounded-lg mb-6">
                 <p className="mb-2">
-                  <strong>{isGerman ? 'Telefon:' : 'Phone:'}</strong> +49 (0) 30 12345678
-                </p>
-                <p className="mb-2">
                   <strong>E-Mail:</strong> <a href="mailto:info@femride.de" className="text-[#fa9de3] hover:underline">info@femride.de</a>
                 </p>
                 <p className="mb-2">
                   <strong>{isGerman ? 'Webseite:' : 'Website:'}</strong> <a href="https://femride.de" className="text-[#fa9de3] hover:underline">www.femride.de</a>
+                </p>
+                <p className="mb-2">
+                  <strong>{isGerman ? 'Geschäftszeiten:' : 'Business hours:'}</strong> {isGerman ? 'Montag bis Freitag, 9:00 - 17:00 Uhr' : 'Monday to Friday, 9:00 AM - 5:00 PM'}
                 </p>
               </div>
 
@@ -74,12 +74,50 @@ const Impressum = () => {
               </h2>
               <div className="bg-[#fa9de3]/10 p-6 rounded-lg mb-6">
                 <p className="mb-2">
-                  {isGerman 
+                  {isGerman
                     ? 'Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:'
                     : 'VAT identification number according to § 27 a VAT Tax Act:'
                   }
                 </p>
                 <p><strong>DE123456789</strong> {isGerman ? '(wird beantragt)' : '(application pending)'}</p>
+              </div>
+
+              <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">
+                {isGerman ? 'Aufsichtsbehörde' : 'Supervisory Authority'}
+              </h2>
+              <div className="bg-gray-50 p-6 rounded-lg mb-6">
+                <p className="mb-2">
+                  {isGerman
+                    ? 'Zuständige Aufsichtsbehörde für Datenschutz:'
+                    : 'Competent supervisory authority for data protection:'
+                  }
+                </p>
+                <p className="mb-2">Berliner Beauftragte für Datenschutz und Informationsfreiheit</p>
+                <p className="mb-2">Friedrichstr. 219, 10969 Berlin</p>
+                <p className="mb-2">
+                  <strong>E-Mail:</strong> <a href="mailto:mailbox@datenschutz-berlin.de" className="text-[#fa9de3] hover:underline">mailbox@datenschutz-berlin.de</a>
+                </p>
+                <p>
+                  <strong>Website:</strong> <a href="https://www.datenschutz-berlin.de" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">www.datenschutz-berlin.de</a>
+                </p>
+              </div>
+
+              <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">
+                {isGerman ? 'Berufsrechtliche Regelungen' : 'Professional Regulations'}
+              </h2>
+              <div className="bg-[#fa9de3]/10 p-6 rounded-lg mb-6">
+                <p className="mb-4">
+                  {isGerman
+                    ? 'Als Anbieter von Fahrvermittlungsdienstleistungen unterliegen wir den Bestimmungen des Personenbeförderungsgesetzes (PBefG) und anderen verkehrsrechtlichen Vorschriften.'
+                    : 'As a provider of ride-hailing services, we are subject to the provisions of the Passenger Transport Act (PBefG) and other traffic regulations.'
+                  }
+                </p>
+                <p>
+                  {isGerman
+                    ? 'Weitere Informationen zu den geltenden Bestimmungen finden Sie beim Bundesministerium für Verkehr und digitale Infrastruktur.'
+                    : 'Further information on applicable regulations can be found at the Federal Ministry of Transport and Digital Infrastructure.'
+                  }
+                </p>
               </div>
 
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">

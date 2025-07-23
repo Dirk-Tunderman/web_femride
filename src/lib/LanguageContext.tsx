@@ -636,12 +636,12 @@ export const translations: Translations = {
 
   // Cookie Consent translations
   cookieTitle: {
-    de: 'Website-Erfahrung verbessern',
-    en: 'Improve Your Experience'
+    de: 'Cookie-Einstellungen',
+    en: 'Cookie Settings'
   },
   cookieDescription: {
-    de: 'Wir verwenden Cookies, um deine Erfahrung auf unserer Website zu verbessern und zu verstehen, wie unsere Website genutzt wird. Du kannst diese optional akzeptieren oder ablehnen.',
-    en: 'We use cookies to improve your experience on our website and understand how our website is used. You can optionally accept or decline these.'
+    de: 'Wir verwenden notwendige Cookies für die Funktionalität der Website und optionale Analyse-Cookies (Google Analytics) zur Verbesserung unserer Dienste. Analyse-Cookies werden nur mit Ihrer Zustimmung gesetzt.',
+    en: 'We use necessary cookies for website functionality and optional analytics cookies (Google Analytics) to improve our services. Analytics cookies are only set with your consent.'
   },
   cookieAcceptButton: {
     de: 'Akzeptieren',

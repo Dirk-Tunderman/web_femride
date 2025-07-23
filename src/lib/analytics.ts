@@ -12,7 +12,15 @@ declare global {
 // Check if user has consented to cookies/tracking
 export const hasTrackingConsent = (): boolean => {
   if (typeof window === 'undefined') return false;
-  return localStorage.getItem('femrideCookieConsent') === 'true';
+  const consent = localStorage.getItem('femrideCookieConsent');
+  return consent === 'true';
+};
+
+// Check if user has explicitly declined tracking
+export const hasDeclinedTracking = (): boolean => {
+  if (typeof window === 'undefined') return false;
+  const consent = localStorage.getItem('femrideCookieConsent');
+  return consent === 'false';
 };
 
 // Check if Google Analytics is loaded
@@ -22,7 +30,7 @@ export const isGALoaded = (): boolean => {
 
 // Load Google Analytics dynamically after user consent
 export const loadGoogleAnalytics = (): void => {
-  if (typeof window === 'undefined' || !hasTrackingConsent()) return;
+  if (typeof window === 'undefined' || !hasTrackingConsent() || hasDeclinedTracking()) return;
 
   // Check if already loaded
   if (isGALoaded()) return;
@@ -55,7 +63,7 @@ export const loadGoogleAnalytics = (): void => {
 
 // Track page views (automatically handled by GA4, but useful for SPA routing)
 export const trackPageView = (page_title: string, page_location: string) => {
-  if (!hasTrackingConsent() || !isGALoaded()) return;
+  if (!hasTrackingConsent() || hasDeclinedTracking() || !isGALoaded()) return;
 
   window.gtag('config', 'G-EZZ2025DS8', {
     page_title,
@@ -66,7 +74,7 @@ export const trackPageView = (page_title: string, page_location: string) => {
 
 // Track waitlist signups (critical conversion event)
 export const trackWaitlistSignup = (userType: 'passenger' | 'driver' | 'both', email?: string) => {
-  if (!hasTrackingConsent() || !isGALoaded()) return;
+  if (!hasTrackingConsent() || hasDeclinedTracking() || !isGALoaded()) return;
 
   window.gtag('event', 'waitlist_signup', {
     event_category: 'conversion',
@@ -298,5 +306,6 @@ export default {
   debugAnalytics,
   isGALoaded,
   hasTrackingConsent,
+  hasDeclinedTracking,
   loadGoogleAnalytics
 };
