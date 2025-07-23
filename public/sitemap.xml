@@ -66,6 +66,13 @@
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
+
+  <url>
+    <loc>https://femride.de/impressum</loc>
+    <lastmod>2024-12-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
   
   <!-- Account Management Pages - Lower priority, functional pages -->
   <url>

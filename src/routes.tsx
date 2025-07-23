@@ -5,6 +5,7 @@ import Index from './pages/Index';
 import NotFound from './pages/NotFound';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsConditions from './pages/TermsConditions';
+import Impressum from './pages/Impressum';
 import RidePage from './pages/RidePage';
 import DrivePage from './pages/DrivePage';
 import FleetPage from './pages/FleetPage';
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
   {
     path: '/terms-conditions',
     element: <TermsConditions />,
+  },
+  {
+    path: '/impressum',
+    element: <Impressum />,
   },
   {
     path: '/faq/passengers',

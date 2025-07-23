@@ -278,6 +278,248 @@ const PrivacyPolicy = () => {
               </ul>
               
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">
+                {isGerman ? 'Cookies und ähnliche Technologien' : 'Cookies and Similar Technologies'}
+              </h2>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Unsere Website verwendet Cookies und ähnliche Technologien. Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden, wenn Sie unsere Website besuchen.'
+                  : 'Our website uses cookies and similar technologies. Cookies are small text files that are stored on your device when you visit our website.'
+                }
+              </p>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'Notwendige Cookies' : 'Necessary Cookies'}
+              </h3>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Diese Cookies sind für das Funktionieren der Website erforderlich und können nicht deaktiviert werden. Sie speichern keine persönlich identifizierbaren Informationen.'
+                  : 'These cookies are necessary for the website to function and cannot be disabled. They do not store personally identifiable information.'
+                }
+              </p>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'Analyse-Cookies' : 'Analytics Cookies'}
+              </h3>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Diese Cookies helfen uns zu verstehen, wie Besucher mit unserer Website interagieren, indem sie Informationen anonym sammeln und melden. Diese Cookies werden nur mit Ihrer Einwilligung gesetzt.'
+                  : 'These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. These cookies are only set with your consent.'
+                }
+              </p>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'Cookie-Verwaltung' : 'Cookie Management'}
+              </h3>
+              <p className="mb-6">
+                {isGerman
+                  ? 'Sie können Ihre Cookie-Präferenzen jederzeit über die Cookie-Einstellungen Ihres Browsers verwalten. Beachten Sie, dass das Deaktivieren bestimmter Cookies die Funktionalität unserer Website beeinträchtigen kann.'
+                  : 'You can manage your cookie preferences at any time through your browser\'s cookie settings. Please note that disabling certain cookies may affect the functionality of our website.'
+                }
+              </p>
+
+              <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">
+                {isGerman ? 'Drittanbieter-Services und Tools' : 'Third-Party Services and Tools'}
+              </h2>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'Cloudflare' : 'Cloudflare'}
+              </h3>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Wir nutzen den Service von Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA ("Cloudflare") zur Optimierung und Sicherung unserer Website. Cloudflare fungiert als Content Delivery Network (CDN) und Web Application Firewall (WAF). Dabei werden Ihre IP-Adresse und weitere technische Daten verarbeitet, um die Ladezeiten zu verbessern und Angriffe abzuwehren.'
+                  : 'We use the service of Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA ("Cloudflare") to optimize and secure our website. Cloudflare acts as a Content Delivery Network (CDN) and Web Application Firewall (WAF). Your IP address and other technical data are processed to improve loading times and defend against attacks.'
+                }
+              </p>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse). Unser berechtigtes Interesse liegt in der sicheren und effizienten Bereitstellung unserer Website.'
+                  : 'The legal basis for processing is Art. 6 para. 1 lit. f GDPR (legitimate interest). Our legitimate interest lies in the secure and efficient provision of our website.'
+                }
+              </p>
+              <p className="mb-6">
+                {isGerman
+                  ? 'Weitere Informationen finden Sie in der Datenschutzerklärung von Cloudflare: '
+                  : 'More information can be found in Cloudflare\'s privacy policy: '
+                }
+                <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">
+                  https://www.cloudflare.com/privacypolicy/
+                </a>
+              </p>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'Google Analytics' : 'Google Analytics'}
+              </h3>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Diese Website benutzt Google Analytics, einen Webanalysedienst der Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA ("Google"). Google Analytics verwendet Cookies und ähnliche Technologien, um die Nutzung der Website zu analysieren.'
+                  : 'This website uses Google Analytics, a web analytics service provided by Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA ("Google"). Google Analytics uses cookies and similar technologies to analyze website usage.'
+                }
+              </p>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Die Verarbeitung erfolgt nur nach Ihrer ausdrücklichen Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie die Cookie-Einstellungen in Ihrem Browser ändern.'
+                  : 'Processing only occurs after your explicit consent according to Art. 6 para. 1 lit. a GDPR. You can withdraw your consent at any time by changing the cookie settings in your browser.'
+                }
+              </p>
+              <p className="mb-6">
+                {isGerman
+                  ? 'Weitere Informationen finden Sie in der Datenschutzerklärung von Google: '
+                  : 'More information can be found in Google\'s privacy policy: '
+                }
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">
+                  https://policies.google.com/privacy
+                </a>
+              </p>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'Cookie-Consent-Tool' : 'Cookie Consent Tool'}
+              </h3>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Wir verwenden ein eigenes Cookie-Consent-Tool, um Ihre Einwilligung zur Verwendung von Cookies und ähnlichen Technologien einzuholen. Das Tool speichert Ihre Präferenzen lokal in Ihrem Browser und überträgt keine personenbezogenen Daten an externe Server.'
+                  : 'We use our own cookie consent tool to obtain your consent for the use of cookies and similar technologies. The tool stores your preferences locally in your browser and does not transmit any personal data to external servers.'
+                }
+              </p>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Die Speicherung Ihrer Consent-Präferenzen erfolgt auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO (rechtliche Verpflichtung) zur Erfüllung der Cookie-Richtlinie.'
+                  : 'The storage of your consent preferences is based on Art. 6 para. 1 lit. c GDPR (legal obligation) to comply with the cookie directive.'
+                }
+              </p>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'Resend (E-Mail-Service)' : 'Resend (Email Service)'}
+              </h3>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Für den Versand von E-Mails (z.B. Wartelisten-Bestätigungen) nutzen wir den Service von Resend, Inc. Dabei werden Ihre E-Mail-Adresse und der Nachrichteninhalt an Resend übertragen.'
+                  : 'For sending emails (e.g., waitlist confirmations), we use the service of Resend, Inc. Your email address and message content are transmitted to Resend.'
+                }
+              </p>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung) bzw. Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) bei Wartelisten-Anmeldungen.'
+                  : 'The legal basis is Art. 6 para. 1 lit. b GDPR (contract performance) or Art. 6 para. 1 lit. a GDPR (consent) for waitlist registrations.'
+                }
+              </p>
+              <p className="mb-6">
+                {isGerman
+                  ? 'Weitere Informationen finden Sie in der Datenschutzerklärung von Resend: '
+                  : 'More information can be found in Resend\'s privacy policy: '
+                }
+                <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">
+                  https://resend.com/legal/privacy-policy
+                </a>
+              </p>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'Supabase (Datenbank-Service)' : 'Supabase (Database Service)'}
+              </h3>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Wir nutzen Supabase, Inc. für die Speicherung und Verwaltung von Benutzerdaten (Wartelisten-Anmeldungen). Supabase ist ein Cloud-Datenbank-Service mit Servern in der EU.'
+                  : 'We use Supabase, Inc. for storing and managing user data (waitlist registrations). Supabase is a cloud database service with servers in the EU.'
+                }
+              </p>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) für Wartelisten-Anmeldungen und Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) für technische Speicherung.'
+                  : 'The legal basis is Art. 6 para. 1 lit. a GDPR (consent) for waitlist registrations and Art. 6 para. 1 lit. f GDPR (legitimate interest) for technical storage.'
+                }
+              </p>
+              <p className="mb-6">
+                {isGerman
+                  ? 'Weitere Informationen finden Sie in der Datenschutzerklärung von Supabase: '
+                  : 'More information can be found in Supabase\'s privacy policy: '
+                }
+                <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">
+                  https://supabase.com/privacy
+                </a>
+              </p>
+
+              <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">
+                {isGerman ? 'Ihre Rechte als betroffene Person' : 'Your Rights as a Data Subject'}
+              </h2>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Sie haben folgende Rechte bezüglich Ihrer personenbezogenen Daten:'
+                  : 'You have the following rights regarding your personal data:'
+                }
+              </p>
+
+              <div className="bg-gray-50 p-6 rounded-lg mb-6">
+                <ul className="list-disc list-inside space-y-2">
+                  <li>
+                    <strong>{isGerman ? 'Auskunftsrecht (Art. 15 DSGVO):' : 'Right of access (Art. 15 GDPR):'}</strong>
+                    {isGerman
+                      ? ' Sie können Auskunft über die von uns verarbeiteten personenbezogenen Daten verlangen.'
+                      : ' You can request information about the personal data we process about you.'
+                    }
+                  </li>
+                  <li>
+                    <strong>{isGerman ? 'Berichtigungsrecht (Art. 16 DSGVO):' : 'Right to rectification (Art. 16 GDPR):'}</strong>
+                    {isGerman
+                      ? ' Sie können die Berichtigung unrichtiger Daten verlangen.'
+                      : ' You can request the correction of incorrect data.'
+                    }
+                  </li>
+                  <li>
+                    <strong>{isGerman ? 'Löschungsrecht (Art. 17 DSGVO):' : 'Right to erasure (Art. 17 GDPR):'}</strong>
+                    {isGerman
+                      ? ' Sie können die Löschung Ihrer Daten verlangen, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.'
+                      : ' You can request the deletion of your data, provided there are no legal retention obligations.'
+                    }
+                  </li>
+                  <li>
+                    <strong>{isGerman ? 'Einschränkungsrecht (Art. 18 DSGVO):' : 'Right to restriction (Art. 18 GDPR):'}</strong>
+                    {isGerman
+                      ? ' Sie können die Einschränkung der Verarbeitung verlangen.'
+                      : ' You can request the restriction of processing.'
+                    }
+                  </li>
+                  <li>
+                    <strong>{isGerman ? 'Datenübertragbarkeit (Art. 20 DSGVO):' : 'Data portability (Art. 20 GDPR):'}</strong>
+                    {isGerman
+                      ? ' Sie können die Übertragung Ihrer Daten an einen anderen Anbieter verlangen.'
+                      : ' You can request the transfer of your data to another provider.'
+                    }
+                  </li>
+                  <li>
+                    <strong>{isGerman ? 'Widerspruchsrecht (Art. 21 DSGVO):' : 'Right to object (Art. 21 GDPR):'}</strong>
+                    {isGerman
+                      ? ' Sie können der Verarbeitung Ihrer Daten widersprechen.'
+                      : ' You can object to the processing of your data.'
+                    }
+                  </li>
+                  <li>
+                    <strong>{isGerman ? 'Widerruf der Einwilligung:' : 'Withdrawal of consent:'}</strong>
+                    {isGerman
+                      ? ' Sie können erteilte Einwilligungen jederzeit widerrufen.'
+                      : ' You can withdraw given consents at any time.'
+                    }
+                  </li>
+                </ul>
+              </div>
+
+              <p className="mb-6">
+                {isGerman
+                  ? 'Zur Ausübung Ihrer Rechte kontaktieren Sie uns bitte unter: '
+                  : 'To exercise your rights, please contact us at: '
+                }
+                <a href="mailto:privacy@femride.de" className="text-[#fa9de3] hover:underline">privacy@femride.de</a>
+              </p>
+
+              <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">
+                {isGerman ? 'Beschwerderecht' : 'Right to Lodge a Complaint'}
+              </h2>
+              <p className="mb-6">
+                {isGerman
+                  ? 'Sie haben das Recht, sich bei einer Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten durch uns zu beschweren. Die für uns zuständige Aufsichtsbehörde ist die Berliner Beauftragte für Datenschutz und Informationsfreiheit.'
+                  : 'You have the right to lodge a complaint with a supervisory authority regarding our processing of your personal data. The supervisory authority responsible for us is the Berlin Commissioner for Data Protection and Freedom of Information.'
+                }
+              </p>
+
+              <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">
                 {isGerman ? 'Änderungen dieser Datenschutzrichtlinie' : 'Changes to This Privacy Policy'}
               </h2>
               <p className="mb-8">

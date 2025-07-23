@@ -29,6 +29,9 @@ export const Footer = () => {
             <Link to="/privacy-policy" className="text-gray-300 hover:text-[#fa9de3] transition-colors">
               {t('footerPrivacy')}
             </Link>
+            <Link to="/impressum" className="text-gray-300 hover:text-[#fa9de3] transition-colors">
+              {t('footerImpressum')}
+            </Link>
           </div>
         </div>
         

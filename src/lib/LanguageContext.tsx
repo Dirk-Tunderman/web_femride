@@ -1269,7 +1269,7 @@ export const translations: Translations = {
     en: "The name Aykut is of Turkish origin and means 'auspicious moon'. What could possibly go wrong for a ride-hailing service that wants to ensure greater safety, especially at night?"
   },
   teamKerstinTitle: {
-    de: "Co-Gründerin & Operationsgeschäftsführerin",
+    de: "Co-Gründerin & COO",
     en: "Co-Founder & COO"
   },
   teamKerstinDesc: {
