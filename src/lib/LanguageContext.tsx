@@ -26,7 +26,7 @@ export const translations: Translations = {
   },
   footerImpressum: {
     de: 'Impressum',
-    en: 'Imprint'
+    en: 'Legal Notice'
   },
   footerRights: {
     de: 'Alle Rechte vorbehalten.',

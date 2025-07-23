@@ -56,20 +56,31 @@ const PrivacyPolicy = () => {
               </p>
 
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800">
-                {isGerman ? 'Einleitung' : 'Introduction'}
+                {isGerman ? 'Geltungsbereich und Zweck' : 'Scope and Purpose'}
               </h2>
               <p className="mb-4">
                 {isGerman
-                  ? 'Diese Datenschutzerklärung informiert Sie über Art, Umfang und Zweck der Verarbeitung personenbezogener Daten durch uns als Verantwortlichen. Personenbezogene Daten sind alle Daten, die auf Sie persönlich beziehbar sind, z.B. Name, Adresse, E-Mail-Adressen, Nutzerverhalten.'
-                  : 'This privacy policy informs you about the type, scope and purpose of the processing of personal data by us as the controller. Personal data is all data that can be personally related to you, e.g. name, address, email addresses, user behavior.'
+                  ? 'Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten (nachfolgend kurz „Daten") im Rahmen der Erbringung unserer Leistungen sowie innerhalb unseres Onlineangebotes und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepräsenzen auf (nachfolgend gemeinsam bezeichnet als „Onlineangebot").'
+                  : 'This privacy policy informs you about the nature, scope and purpose of the processing of personal data (hereinafter referred to as "data") within the framework of the provision of our services as well as within our online offering and the websites, functions and content associated with it as well as external online presences (hereinafter collectively referred to as "online offering").'
                 }
               </p>
               <p className="mb-4">
                 {isGerman
-                  ? 'Diese Datenschutzerklärung gilt für unsere Website www.femride.de und die FemRide-App. Für externe Links auf unserer Website können abweichende Datenschutzbestimmungen gelten.'
-                  : 'This privacy policy applies to our website www.femride.de and the FemRide app. Different privacy policies may apply to external links on our website.'
+                  ? 'Im Hinblick auf die verwendeten Begrifflichkeiten, wie z.B. „Verarbeitung" oder „Verantwortlicher" verweisen wir auf die Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO).'
+                  : 'With regard to the terminology used, such as "processing" or "controller", we refer to the definitions in Art. 4 of the General Data Protection Regulation (GDPR).'
                 }
               </p>
+
+              <div className="bg-[#fa9de3]/10 p-6 rounded-lg mb-6">
+                <h3 className="text-lg font-semibold mb-3">{isGerman ? 'Geltungsbereich:' : 'Scope:'}</h3>
+                <ul className="list-disc list-inside space-y-2">
+                  <li>{isGerman ? 'Website: www.femride.de' : 'Website: www.femride.de'}</li>
+                  <li>{isGerman ? 'Zukünftige FemRide-App (in Entwicklung)' : 'Future FemRide app (in development)'}</li>
+                  <li>{isGerman ? 'Wartelisten-Funktionalität' : 'Waitlist functionality'}</li>
+                  <li>{isGerman ? 'Kontaktformulare und E-Mail-Kommunikation' : 'Contact forms and email communication'}</li>
+                  <li>{isGerman ? 'Social Media Verlinkungen' : 'Social media links'}</li>
+                </ul>
+              </div>
               
               <p className="mb-8">
                 {isGerman
@@ -79,23 +90,46 @@ const PrivacyPolicy = () => {
               </p>
               
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">
-                {isGerman ? 'Welche Daten wir erheben und verarbeiten' : 'What Data We Collect and Process'}
+                {isGerman ? 'Kategorien verarbeiteter Daten' : 'Categories of Processed Data'}
               </h2>
+              <p className="mb-6">
+                {isGerman
+                  ? 'Wir verarbeiten personenbezogene Daten nur im Rahmen der gesetzlichen Bestimmungen. Nachfolgend informieren wir Sie über die konkreten Kategorien personenbezogener Daten, die wir verarbeiten, sowie über die Zwecke der Verarbeitung:'
+                  : 'We process personal data only within the framework of legal provisions. Below we inform you about the specific categories of personal data that we process, as well as the purposes of processing:'
+                }
+              </p>
 
               <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
-                {isGerman ? 'Wartelisten-Anmeldung' : 'Waitlist Registration'}
+                {isGerman ? 'Wartelisten-Registrierung (Art. 6 Abs. 1 lit. a DSGVO)' : 'Waitlist Registration (Art. 6 para. 1 lit. a GDPR)'}
               </h3>
               <div className="bg-gray-50 p-6 rounded-lg mb-6">
-                <p className="mb-2"><strong>{isGerman ? 'Erhobene Daten:' : 'Data collected:'}</strong></p>
+                <p className="mb-3">
+                  <strong>{isGerman ? 'Verarbeitungsvorgang:' : 'Processing operation:'}</strong>
+                  {isGerman ? ' Anmeldung zur Warteliste für die FemRide-App' : ' Registration for the FemRide app waitlist'}
+                </p>
+                <p className="mb-2"><strong>{isGerman ? 'Kategorien personenbezogener Daten:' : 'Categories of personal data:'}</strong></p>
                 <ul className="list-disc list-inside mb-4 space-y-1">
-                  <li>{isGerman ? 'E-Mail-Adresse' : 'Email address'}</li>
-                  <li>{isGerman ? 'Nutzertyp (Fahrgast/Fahrerin)' : 'User type (passenger/driver)'}</li>
-                  <li>{isGerman ? 'Zeitpunkt der Anmeldung' : 'Registration timestamp'}</li>
-                  <li>{isGerman ? 'Referral-Code (falls verwendet)' : 'Referral code (if used)'}</li>
+                  <li>{isGerman ? 'Kontaktdaten: E-Mail-Adresse' : 'Contact data: Email address'}</li>
+                  <li>{isGerman ? 'Nutzungsdaten: Nutzertyp (Fahrgast/Fahrerin)' : 'Usage data: User type (passenger/driver)'}</li>
+                  <li>{isGerman ? 'Metadaten: Zeitpunkt der Anmeldung, IP-Adresse (anonymisiert)' : 'Metadata: Registration timestamp, IP address (anonymized)'}</li>
+                  <li>{isGerman ? 'Referral-Daten: Empfehlungscode (falls verwendet)' : 'Referral data: Referral code (if used)'}</li>
                 </ul>
-                <p className="mb-2"><strong>{isGerman ? 'Zweck:' : 'Purpose:'}</strong> {isGerman ? 'Verwaltung der Warteliste, Information über App-Launch' : 'Waitlist management, app launch notifications'}</p>
-                <p className="mb-2"><strong>{isGerman ? 'Rechtsgrundlage:' : 'Legal basis:'}</strong> {isGerman ? 'Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)' : 'Art. 6 para. 1 lit. a GDPR (consent)'}</p>
-                <p><strong>{isGerman ? 'Speicherdauer:' : 'Retention period:'}</strong> {isGerman ? 'Bis zum App-Launch + 2 Jahre oder bis zum Widerruf' : 'Until app launch + 2 years or until withdrawal'}</p>
+                <p className="mb-2">
+                  <strong>{isGerman ? 'Verarbeitungszwecke:' : 'Processing purposes:'}</strong>
+                  {isGerman ? ' Verwaltung der Warteliste, Benachrichtigung über App-Verfügbarkeit, Priorisierung basierend auf Anmeldezeitpunkt' : ' Waitlist management, notification about app availability, prioritization based on registration time'}
+                </p>
+                <p className="mb-2">
+                  <strong>{isGerman ? 'Rechtsgrundlage:' : 'Legal basis:'}</strong>
+                  {isGerman ? ' Art. 6 Abs. 1 lit. a DSGVO (Einwilligung der betroffenen Person)' : ' Art. 6 para. 1 lit. a GDPR (consent of the data subject)'}
+                </p>
+                <p className="mb-2">
+                  <strong>{isGerman ? 'Speicherdauer:' : 'Retention period:'}</strong>
+                  {isGerman ? ' Bis zum App-Launch + 24 Monate oder bis zum Widerruf der Einwilligung' : ' Until app launch + 24 months or until consent withdrawal'}
+                </p>
+                <p>
+                  <strong>{isGerman ? 'Empfänger:' : 'Recipients:'}</strong>
+                  {isGerman ? ' Supabase Inc. (Datenbank-Hosting), Resend Inc. (E-Mail-Versand)' : ' Supabase Inc. (database hosting), Resend Inc. (email delivery)'}
+                </p>
               </div>
 
               <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
@@ -357,6 +391,59 @@ const PrivacyPolicy = () => {
               </ul>
               
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">
+                {isGerman ? 'Rechtsgrundlagen der Verarbeitung' : 'Legal Basis for Processing'}
+              </h2>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Soweit wir für Verarbeitungsvorgänge personenbezogener Daten eine Einwilligung der betroffenen Person einholen, dient Art. 6 Abs. 1 lit. a EU-Datenschutzgrundverordnung (DSGVO) als Rechtsgrundlage für die Verarbeitung personenbezogener Daten.'
+                  : 'Insofar as we obtain consent from the data subject for processing operations of personal data, Art. 6 para. 1 lit. a EU General Data Protection Regulation (GDPR) serves as the legal basis for the processing of personal data.'
+                }
+              </p>
+
+              <div className="bg-gray-50 p-6 rounded-lg mb-6">
+                <h3 className="text-lg font-semibold mb-3">{isGerman ? 'Übersicht der Rechtsgrundlagen:' : 'Overview of Legal Bases:'}</h3>
+                <ul className="list-disc list-inside space-y-2">
+                  <li>
+                    <strong>Art. 6 Abs. 1 lit. a DSGVO:</strong>
+                    {isGerman ? ' Einwilligung (Wartelisten-Anmeldung, Analytics-Cookies)' : ' Consent (waitlist registration, analytics cookies)'}
+                  </li>
+                  <li>
+                    <strong>Art. 6 Abs. 1 lit. b DSGVO:</strong>
+                    {isGerman ? ' Vertragserfüllung (zukünftige App-Nutzung)' : ' Contract performance (future app usage)'}
+                  </li>
+                  <li>
+                    <strong>Art. 6 Abs. 1 lit. c DSGVO:</strong>
+                    {isGerman ? ' Rechtliche Verpflichtung (Aufbewahrungsfristen, Impressumspflicht)' : ' Legal obligation (retention periods, legal notice requirements)'}
+                  </li>
+                  <li>
+                    <strong>Art. 6 Abs. 1 lit. f DSGVO:</strong>
+                    {isGerman ? ' Berechtigte Interessen (Website-Sicherheit, Kontaktanfragen, technische Bereitstellung)' : ' Legitimate interests (website security, contact inquiries, technical provision)'}
+                  </li>
+                </ul>
+              </div>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'Berechtigte Interessen (Art. 6 Abs. 1 lit. f DSGVO)' : 'Legitimate Interests (Art. 6 para. 1 lit. f GDPR)'}
+              </h3>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Ist die Verarbeitung zur Wahrung unserer oder der berechtigten Interessen eines Dritten erforderlich und überwiegen diese Interessen die Interessen oder Grundrechte und Grundfreiheiten der betroffenen Person nicht, so dient Art. 6 Abs. 1 lit. f DSGVO als Rechtsgrundlage für die Verarbeitung.'
+                  : 'If processing is necessary to protect our legitimate interests or those of a third party and these interests do not override the interests or fundamental rights and freedoms of the data subject, Art. 6 para. 1 lit. f GDPR serves as the legal basis for processing.'
+                }
+              </p>
+
+              <div className="bg-[#fa9de3]/10 p-6 rounded-lg mb-6">
+                <p className="mb-2"><strong>{isGerman ? 'Unsere berechtigten Interessen umfassen:' : 'Our legitimate interests include:'}</strong></p>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>{isGerman ? 'Gewährleistung der IT-Sicherheit und des Betriebs der Website' : 'Ensuring IT security and website operation'}</li>
+                  <li>{isGerman ? 'Bearbeitung von Kundenanfragen und Kommunikation' : 'Processing customer inquiries and communication'}</li>
+                  <li>{isGerman ? 'Verbesserung unserer Dienstleistungen und Nutzererfahrung' : 'Improving our services and user experience'}</li>
+                  <li>{isGerman ? 'Schutz vor Missbrauch und betrügerischen Aktivitäten' : 'Protection against abuse and fraudulent activities'}</li>
+                  <li>{isGerman ? 'Erfüllung regulatorischer Anforderungen im Mobilitätssektor' : 'Meeting regulatory requirements in the mobility sector'}</li>
+                </ul>
+              </div>
+
+              <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">
                 {isGerman ? 'Cookies und ähnliche Technologien' : 'Cookies and Similar Technologies'}
               </h2>
               <p className="mb-4">
@@ -584,6 +671,53 @@ const PrivacyPolicy = () => {
                 </a>
               </p>
 
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'jsDelivr CDN (Schriftarten)' : 'jsDelivr CDN (Fonts)'}
+              </h3>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Wir nutzen jsDelivr CDN für das Laden von Webschriftarten (Gilroy Font). Dabei wird Ihre IP-Adresse an die Server von jsDelivr übertragen, um die Schriftdateien bereitzustellen.'
+                  : 'We use jsDelivr CDN for loading web fonts (Gilroy Font). Your IP address is transmitted to jsDelivr servers to provide the font files.'
+                }
+              </p>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) zur einheitlichen Darstellung der Website.'
+                  : 'The legal basis is Art. 6 para. 1 lit. f GDPR (legitimate interest) for consistent website presentation.'
+                }
+              </p>
+              <p className="mb-6">
+                {isGerman
+                  ? 'Weitere Informationen finden Sie in der Datenschutzerklärung von jsDelivr: '
+                  : 'More information can be found in jsDelivr\'s privacy policy: '
+                }
+                <a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">
+                  https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net
+                </a>
+              </p>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'Social Media Plattformen (Weiterleitung)' : 'Social Media Platforms (Redirect)'}
+              </h3>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Unsere Website enthält Funktionen zum Teilen von Inhalten auf sozialen Medien (WhatsApp, Facebook, LinkedIn, X/Twitter, Threads). Diese Funktionen leiten Sie direkt zu den jeweiligen Plattformen weiter, ohne dass Daten an diese übertragen werden, bevor Sie die Weiterleitung bestätigen.'
+                  : 'Our website contains functions for sharing content on social media (WhatsApp, Facebook, LinkedIn, X/Twitter, Threads). These functions redirect you directly to the respective platforms without transmitting data to them before you confirm the redirect.'
+                }
+              </p>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) zur Bereitstellung von Sharing-Funktionen.'
+                  : 'The legal basis is Art. 6 para. 1 lit. f GDPR (legitimate interest) for providing sharing functions.'
+                }
+              </p>
+              <p className="mb-6">
+                {isGerman
+                  ? 'Hinweis: Sobald Sie auf eine Weiterleitung klicken, gelten die Datenschutzbestimmungen der jeweiligen Plattform.'
+                  : 'Note: Once you click on a redirect, the privacy policies of the respective platform apply.'
+                }
+              </p>
+
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">
                 {isGerman ? 'Speicherdauer und Löschung' : 'Retention Period and Deletion'}
               </h2>
@@ -648,6 +782,15 @@ const PrivacyPolicy = () => {
                   </li>
                   <li>
                     <strong>Resend:</strong> {isGerman ? 'E-Mail-Service mit Servern in der EU und USA' : 'Email service with servers in EU and USA'}
+                  </li>
+                  <li>
+                    <strong>EmailJS:</strong> {isGerman ? 'E-Mail-Service mit Servern in verschiedenen Regionen' : 'Email service with servers in various regions'}
+                  </li>
+                  <li>
+                    <strong>Vercel:</strong> {isGerman ? 'Hosting-Service mit globaler Infrastruktur, einschließlich EU-Servern' : 'Hosting service with global infrastructure, including EU servers'}
+                  </li>
+                  <li>
+                    <strong>jsDelivr CDN:</strong> {isGerman ? 'Globales CDN für Schriftarten mit Servern weltweit' : 'Global CDN for fonts with servers worldwide'}
                   </li>
                 </ul>
               </div>
