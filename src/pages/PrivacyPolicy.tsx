@@ -149,6 +149,30 @@ const PrivacyPolicy = () => {
               </div>
 
               <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'E-Mail-Kommunikation' : 'Email Communication'}
+              </h3>
+              <div className="bg-gray-50 p-6 rounded-lg mb-6">
+                <p className="mb-4">
+                  {isGerman
+                    ? 'Wenn Sie uns per E-Mail kontaktieren, verarbeiten wir Ihre personenbezogenen Daten nur, soweit an der Verarbeitung ein berechtigtes Interesse besteht (Art. 6 Abs. 1 lit. f DSGVO), Sie in die Datenverarbeitung eingewilligt haben (Art. 6 Abs. 1 lit. a DSGVO), die Verarbeitung für die Anbahnung, Begründung, inhaltliche Ausgestaltung oder Änderung eines Rechtsverhältnisses zwischen Ihnen und uns erforderlich sind (Art. 6 Abs. 1 lit. b DSGVO) oder eine sonstige Rechtsnorm die Verarbeitung gestattet.'
+                    : 'When you contact us by email, we process your personal data only insofar as there is a legitimate interest in the processing (Art. 6 para. 1 lit. f GDPR), you have consented to the data processing (Art. 6 para. 1 lit. a GDPR), the processing is necessary for the initiation, establishment, content design or modification of a legal relationship between you and us (Art. 6 para. 1 lit. b GDPR) or another legal norm permits the processing.'
+                  }
+                </p>
+                <p className="mb-4">
+                  {isGerman
+                    ? 'Ihre personenbezogenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt. Zwingende gesetzliche Bestimmungen – insbesondere steuer- und handelsrechtliche Aufbewahrungsfristen – bleiben unberührt.'
+                    : 'Your personal data remains with us until you request deletion, withdraw your consent to storage, or the purpose for data storage no longer applies. Mandatory legal provisions – particularly tax and commercial law retention periods – remain unaffected.'
+                  }
+                </p>
+                <p>
+                  {isGerman
+                    ? 'Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Ihnen steht außerdem ein Recht auf Widerspruch, auf Datenübertragbarkeit und ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.'
+                    : 'You have the right at any time to receive free information about the origin, recipients and purpose of your stored personal data. You also have a right to object, to data portability and a right to lodge a complaint with the competent supervisory authority.'
+                  }
+                </p>
+              </div>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
                 {isGerman ? 'Technische Daten' : 'Technical Data'}
               </h3>
               <div className="bg-gray-50 p-6 rounded-lg mb-6">
@@ -1074,6 +1098,93 @@ const PrivacyPolicy = () => {
                 {isGerman
                   ? 'Sie haben das Recht, sich bei einer Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten durch uns zu beschweren. Die für uns zuständige Aufsichtsbehörde ist die Berliner Beauftragte für Datenschutz und Informationsfreiheit.'
                   : 'You have the right to lodge a complaint with a supervisory authority regarding our processing of your personal data. The supervisory authority responsible for us is the Berlin Commissioner for Data Protection and Freedom of Information.'
+                }
+              </p>
+
+              <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">
+                {isGerman ? 'Unsere Social-Media-Auftritte' : 'Our Social Media Presence'}
+              </h2>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Diese Datenschutzerklärung gilt für folgende Social-Media-Auftritte:'
+                  : 'This privacy policy applies to the following social media presences:'
+                }
+              </p>
+
+              <div className="bg-[#fa9de3]/10 p-6 rounded-lg mb-6">
+                <ul className="list-disc list-inside space-y-2">
+                  <li>
+                    <strong>Instagram:</strong>
+                    <a href="https://www.instagram.com/femride_de" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline ml-2">
+                      https://www.instagram.com/femride_de
+                    </a>
+                  </li>
+                  <li>
+                    <strong>LinkedIn:</strong>
+                    <a href="https://www.linkedin.com/company/femridedeutschland/" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline ml-2">
+                      https://www.linkedin.com/company/femridedeutschland/
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'Datenverarbeitung durch soziale Netzwerke' : 'Data Processing by Social Networks'}
+              </h3>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Wir unterhalten öffentlich zugängliche Profile in sozialen Netzwerken. Soziale Netzwerke wie Instagram, LinkedIn etc. können Ihr Nutzerverhalten in der Regel umfassend analysieren, wenn Sie deren Website oder eine Website mit integrierten Social-Media-Inhalten besuchen.'
+                  : 'We maintain publicly accessible profiles on social networks. Social networks like Instagram, LinkedIn etc. can usually comprehensively analyze your user behavior when you visit their website or a website with integrated social media content.'
+                }
+              </p>
+
+              <p className="mb-4">
+                {isGerman
+                  ? 'Durch den Besuch unserer Social-Media-Präsenzen werden zahlreiche datenschutzrelevante Verarbeitungsvorgänge ausgelöst:'
+                  : 'Visiting our social media presence triggers numerous data protection-relevant processing operations:'
+                }
+              </p>
+
+              <div className="bg-gray-50 p-6 rounded-lg mb-6">
+                <ul className="list-disc list-inside space-y-3">
+                  <li>
+                    {isGerman
+                      ? 'Wenn Sie in Ihrem Social-Media-Account eingeloggt sind und unsere Social-Media-Präsenz besuchen, kann der Betreiber des Social-Media-Portals diesen Besuch Ihrem Benutzerkonto zuordnen.'
+                      : 'If you are logged into your social media account and visit our social media presence, the operator of the social media portal can assign this visit to your user account.'
+                    }
+                  </li>
+                  <li>
+                    {isGerman
+                      ? 'Ihre personenbezogenen Daten können unter Umständen aber auch dann erfasst werden, wenn Sie nicht eingeloggt sind oder keinen Account beim jeweiligen Social-Media-Portal besitzen.'
+                      : 'Your personal data may also be collected if you are not logged in or do not have an account with the respective social media portal.'
+                    }
+                  </li>
+                  <li>
+                    {isGerman
+                      ? 'Mit Hilfe der so erfassten Daten können die Betreiber der Social-Media-Portale Nutzerprofile erstellen, in denen Ihre Präferenzen und Interessen hinterlegt sind.'
+                      : 'With the help of the data collected in this way, the operators of the social media portals can create user profiles in which your preferences and interests are stored.'
+                    }
+                  </li>
+                </ul>
+              </div>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'Rechtsgrundlage für Social Media' : 'Legal Basis for Social Media'}
+              </h3>
+              <p className="mb-6">
+                {isGerman
+                  ? 'Unsere Social-Media-Auftritte sollen eine möglichst umfassende Präsenz im Internet gewährleisten. Hierbei handelt es sich um ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO. Die von den sozialen Netzwerken initiierten Analyseprozesse beruhen ggf. auf abweichenden Rechtsgrundlagen, die von den Betreibern der sozialen Netzwerke anzugeben sind.'
+                  : 'Our social media presence is intended to ensure the most comprehensive presence possible on the Internet. This constitutes a legitimate interest within the meaning of Art. 6 para. 1 lit. f GDPR. The analysis processes initiated by the social networks may be based on different legal bases that must be specified by the operators of the social networks.'
+                }
+              </p>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'Verantwortlicher und Geltendmachung von Rechten' : 'Controller and Assertion of Rights'}
+              </h3>
+              <p className="mb-6">
+                {isGerman
+                  ? 'Wenn Sie einen unserer Social-Media-Auftritte besuchen, sind wir gemeinsam mit dem Betreiber der Social-Media-Plattform für die bei diesem Besuch ausgelösten Datenverarbeitungsvorgänge verantwortlich. Sie können Ihre Rechte grundsätzlich sowohl gegenüber uns als auch gegenüber dem Betreiber des jeweiligen Social-Media-Portals geltend machen.'
+                  : 'When you visit one of our social media presences, we are jointly responsible with the operator of the social media platform for the data processing operations triggered by this visit. You can generally assert your rights both towards us and towards the operator of the respective social media portal.'
                 }
               </p>
 
