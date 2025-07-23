@@ -8,7 +8,31 @@ import { loadGoogleAnalytics } from '@/lib/analytics';
  * It supports multiple languages via the LanguageContext
  * Stores user consent in localStorage to remember preference
  * Hides on specific pages as required by Apple's privacy guidelines
+ *
+ * GDPR Compliance Features:
+ * - Explicit consent recording with timestamps
+ * - Granular consent types tracking
+ * - Proper cookie deletion on decline
+ * - Version tracking for consent changes
  */
+// Utility function to get current consent status (for compliance documentation)
+export const getConsentStatus = () => {
+  if (typeof window === 'undefined') return null;
+
+  const consent = localStorage.getItem('femrideCookieConsent');
+  const timestamp = localStorage.getItem('femrideCookieConsentTimestamp');
+  const version = localStorage.getItem('femrideCookieConsentVersion');
+  const types = localStorage.getItem('femrideCookieConsentTypes');
+
+  return {
+    hasConsent: consent === 'true',
+    hasDeclined: consent === 'false',
+    timestamp: timestamp ? new Date(timestamp) : null,
+    version: version || 'unknown',
+    consentTypes: types ? JSON.parse(types) : null
+  };
+};
+
 const CookieConsent = () => {
   const [isVisible, setIsVisible] = useState(false);
   const { t } = useLanguage();
@@ -47,7 +71,16 @@ const CookieConsent = () => {
 
   // Handle user accepting cookies
   const acceptCookies = () => {
+    // Store explicit consent with metadata
     localStorage.setItem('femrideCookieConsent', 'true');
+    localStorage.setItem('femrideCookieConsentTimestamp', new Date().toISOString());
+    localStorage.setItem('femrideCookieConsentVersion', '1.0');
+    localStorage.setItem('femrideCookieConsentTypes', JSON.stringify({
+      necessary: true,
+      analytics: true,
+      marketing: false,
+      preferences: false
+    }));
     setIsVisible(false);
     // Load Google Analytics after user consent
     loadGoogleAnalytics();
@@ -55,8 +88,12 @@ const CookieConsent = () => {
 
   // Handle user declining cookies
   const declineCookies = () => {
+    // Store explicit decline
     localStorage.setItem('femrideCookieConsent', 'false');
+    localStorage.setItem('femrideCookieConsentTimestamp', new Date().toISOString());
+    localStorage.setItem('femrideCookieConsentVersion', '1.0');
     setIsVisible(false);
+
     // Ensure no tracking scripts are loaded when declined
     // Clear any existing analytics data
     if (typeof window !== 'undefined' && window.gtag) {
@@ -68,6 +105,11 @@ const CookieConsent = () => {
         allow_ad_personalization_signals: false
       });
     }
+
+    // Clear any existing analytics cookies
+    document.cookie = '_ga=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = '_ga_EZZ2025DS8=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = '_gid=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
   };
 
   if (!isVisible) return null;

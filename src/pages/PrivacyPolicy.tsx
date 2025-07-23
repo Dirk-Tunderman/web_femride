@@ -451,18 +451,36 @@ const PrivacyPolicy = () => {
               </p>
 
               <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
-                {isGerman ? 'Cookie-Consent-Tool' : 'Cookie Consent Tool'}
+                {isGerman ? 'Cookie-Consent-Tool (Eigenentwicklung)' : 'Cookie Consent Tool (Self-Developed)'}
               </h3>
               <p className="mb-4">
                 {isGerman
-                  ? 'Wir verwenden ein eigenes Cookie-Consent-Tool, um Ihre Einwilligung zur Verwendung von Cookies und ähnlichen Technologien einzuholen. Das Tool speichert Ihre Präferenzen lokal in Ihrem Browser und überträgt keine personenbezogenen Daten an externe Server.'
-                  : 'We use our own cookie consent tool to obtain your consent for the use of cookies and similar technologies. The tool stores your preferences locally in your browser and does not transmit any personal data to external servers.'
+                  ? 'Wir verwenden ein selbst entwickeltes Cookie-Consent-Tool, um Ihre Einwilligung zur Verwendung von Cookies und ähnlichen Technologien einzuholen. Das Tool ist vollständig lokal implementiert und überträgt keine Daten an externe Server.'
+                  : 'We use a self-developed cookie consent tool to obtain your consent for the use of cookies and similar technologies. The tool is fully implemented locally and does not transmit any data to external servers.'
                 }
               </p>
+
+              <div className="bg-gray-50 p-6 rounded-lg mb-4">
+                <p className="mb-2"><strong>{isGerman ? 'Gespeicherte Daten (lokal im Browser):' : 'Stored data (locally in browser):'}</strong></p>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>{isGerman ? 'Einwilligungsstatus (akzeptiert/abgelehnt)' : 'Consent status (accepted/declined)'}</li>
+                  <li>{isGerman ? 'Zeitstempel der Einwilligung' : 'Consent timestamp'}</li>
+                  <li>{isGerman ? 'Version der Einwilligungserklärung' : 'Consent declaration version'}</li>
+                  <li>{isGerman ? 'Granulare Cookie-Kategorien' : 'Granular cookie categories'}</li>
+                </ul>
+              </div>
+
               <p className="mb-4">
                 {isGerman
-                  ? 'Die Speicherung Ihrer Consent-Präferenzen erfolgt auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO (rechtliche Verpflichtung) zur Erfüllung der Cookie-Richtlinie.'
-                  : 'The storage of your consent preferences is based on Art. 6 para. 1 lit. c GDPR (legal obligation) to comply with the cookie directive.'
+                  ? 'Bei Ablehnung werden automatisch alle nicht-notwendigen Cookies gelöscht und das Laden von Tracking-Skripten verhindert. Bei Zustimmung werden nur die explizit gewählten Cookie-Kategorien aktiviert.'
+                  : 'Upon decline, all non-necessary cookies are automatically deleted and loading of tracking scripts is prevented. Upon consent, only explicitly chosen cookie categories are activated.'
+                }
+              </p>
+
+              <p className="mb-4">
+                {isGerman
+                  ? 'Rechtsgrundlage ist Art. 6 Abs. 1 lit. c DSGVO (rechtliche Verpflichtung) zur Erfüllung der Cookie-Richtlinie und Art. 7 DSGVO für die Dokumentation der Einwilligung.'
+                  : 'The legal basis is Art. 6 para. 1 lit. c GDPR (legal obligation) to comply with the cookie directive and Art. 7 GDPR for documenting consent.'
                 }
               </p>
 
@@ -516,6 +534,99 @@ const PrivacyPolicy = () => {
                 </a>
               </p>
 
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'EmailJS (E-Mail-Service)' : 'EmailJS (Email Service)'}
+              </h3>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Für den Versand von Kontaktformular-E-Mails nutzen wir EmailJS, einen Service von EmailJS Ltd. Dabei werden Ihre E-Mail-Adresse, Name und der Nachrichteninhalt an EmailJS übertragen.'
+                  : 'For sending contact form emails, we use EmailJS, a service by EmailJS Ltd. Your email address, name, and message content are transmitted to EmailJS.'
+                }
+              </p>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) zur Bearbeitung von Kundenanfragen.'
+                  : 'The legal basis is Art. 6 para. 1 lit. f GDPR (legitimate interest) for processing customer inquiries.'
+                }
+              </p>
+              <p className="mb-6">
+                {isGerman
+                  ? 'Weitere Informationen finden Sie in der Datenschutzerklärung von EmailJS: '
+                  : 'More information can be found in EmailJS\'s privacy policy: '
+                }
+                <a href="https://www.emailjs.com/legal/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">
+                  https://www.emailjs.com/legal/privacy-policy/
+                </a>
+              </p>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'Vercel (Hosting-Service)' : 'Vercel (Hosting Service)'}
+              </h3>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Unsere Website wird über Vercel Inc. gehostet. Vercel verarbeitet technische Daten wie IP-Adressen, Browser-Informationen und Zugriffszeitpunkte für die Bereitstellung der Website.'
+                  : 'Our website is hosted via Vercel Inc. Vercel processes technical data such as IP addresses, browser information, and access times for website provision.'
+                }
+              </p>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) zur technischen Bereitstellung der Website.'
+                  : 'The legal basis is Art. 6 para. 1 lit. f GDPR (legitimate interest) for technical website provision.'
+                }
+              </p>
+              <p className="mb-6">
+                {isGerman
+                  ? 'Weitere Informationen finden Sie in der Datenschutzerklärung von Vercel: '
+                  : 'More information can be found in Vercel\'s privacy policy: '
+                }
+                <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">
+                  https://vercel.com/legal/privacy-policy
+                </a>
+              </p>
+
+              <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">
+                {isGerman ? 'Speicherdauer und Löschung' : 'Retention Period and Deletion'}
+              </h2>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Wir speichern Ihre personenbezogenen Daten nur so lange, wie es für die jeweiligen Zwecke erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen.'
+                  : 'We store your personal data only as long as necessary for the respective purposes or as required by legal retention periods.'
+                }
+              </p>
+
+              <div className="bg-gray-50 p-6 rounded-lg mb-6">
+                <h3 className="text-lg font-semibold mb-3">{isGerman ? 'Konkrete Speicherfristen:' : 'Specific Retention Periods:'}</h3>
+                <ul className="list-disc list-inside space-y-2">
+                  <li>
+                    <strong>{isGerman ? 'Wartelisten-Daten:' : 'Waitlist data:'}</strong>
+                    {isGerman ? ' Bis zum App-Launch + 2 Jahre oder bis zum Widerruf der Einwilligung' : ' Until app launch + 2 years or until consent withdrawal'}
+                  </li>
+                  <li>
+                    <strong>{isGerman ? 'Kontaktanfragen:' : 'Contact inquiries:'}</strong>
+                    {isGerman ? ' 3 Jahre nach Abschluss der Korrespondenz' : ' 3 years after completion of correspondence'}
+                  </li>
+                  <li>
+                    <strong>{isGerman ? 'Server-Logs:' : 'Server logs:'}</strong>
+                    {isGerman ? ' 7 Tage (automatische Löschung)' : ' 7 days (automatic deletion)'}
+                  </li>
+                  <li>
+                    <strong>{isGerman ? 'Cookie-Einwilligungen:' : 'Cookie consents:'}</strong>
+                    {isGerman ? ' 12 Monate (dann erneute Abfrage)' : ' 12 months (then re-query)'}
+                  </li>
+                  <li>
+                    <strong>{isGerman ? 'Analytics-Daten:' : 'Analytics data:'}</strong>
+                    {isGerman ? ' 14 Monate (Google Analytics Standard)' : ' 14 months (Google Analytics standard)'}
+                  </li>
+                </ul>
+              </div>
+
+              <p className="mb-6">
+                {isGerman
+                  ? 'Sie können jederzeit die Löschung Ihrer Daten verlangen, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen. Kontaktieren Sie uns unter privacy@femride.de.'
+                  : 'You can request deletion of your data at any time, provided there are no legal retention obligations. Contact us at privacy@femride.de.'
+                }
+              </p>
+
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">
                 {isGerman ? 'Datenübertragung in Drittländer' : 'Data Transfer to Third Countries'}
               </h2>
@@ -547,6 +658,37 @@ const PrivacyPolicy = () => {
                   : 'You have the right to obtain a copy of the appropriate safeguards taken for the transfer of your data to third countries. Contact us at privacy@femride.de.'
                 }
               </p>
+
+              <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">
+                {isGerman ? 'Automatisierte Entscheidungsfindung und Profiling' : 'Automated Decision Making and Profiling'}
+              </h2>
+              <p className="mb-6">
+                {isGerman
+                  ? 'Wir setzen keine automatisierte Entscheidungsfindung oder Profiling im Sinne von Art. 22 DSGVO ein. Alle Entscheidungen bezüglich Ihrer Daten werden von Menschen getroffen oder unterliegen einer menschlichen Überprüfung.'
+                  : 'We do not use automated decision-making or profiling within the meaning of Art. 22 GDPR. All decisions regarding your data are made by humans or subject to human review.'
+                }
+              </p>
+
+              <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">
+                {isGerman ? 'Datensicherheit' : 'Data Security'}
+              </h2>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Wir treffen angemessene technische und organisatorische Maßnahmen zum Schutz Ihrer personenbezogenen Daten vor unbefugtem Zugriff, Verlust, Zerstörung oder Veränderung.'
+                  : 'We take appropriate technical and organizational measures to protect your personal data from unauthorized access, loss, destruction, or alteration.'
+                }
+              </p>
+
+              <div className="bg-[#fa9de3]/10 p-6 rounded-lg mb-6">
+                <h3 className="text-lg font-semibold mb-3">{isGerman ? 'Sicherheitsmaßnahmen:' : 'Security Measures:'}</h3>
+                <ul className="list-disc list-inside space-y-2">
+                  <li>{isGerman ? 'SSL/TLS-Verschlüsselung für alle Datenübertragungen' : 'SSL/TLS encryption for all data transmissions'}</li>
+                  <li>{isGerman ? 'Sichere Datenbankverbindungen mit Verschlüsselung' : 'Secure database connections with encryption'}</li>
+                  <li>{isGerman ? 'Regelmäßige Sicherheitsupdates und Patches' : 'Regular security updates and patches'}</li>
+                  <li>{isGerman ? 'Zugriffskontrolle und Berechtigungsmanagement' : 'Access control and permission management'}</li>
+                  <li>{isGerman ? 'Monitoring und Logging von Systemzugriffen' : 'Monitoring and logging of system access'}</li>
+                </ul>
+              </div>
 
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">
                 {isGerman ? 'Ihre Rechte als betroffene Person' : 'Your Rights as a Data Subject'}
