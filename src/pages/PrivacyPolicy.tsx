@@ -750,6 +750,106 @@ const PrivacyPolicy = () => {
               </p>
 
               <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'Instagram (Social Media Integration)' : 'Instagram (Social Media Integration)'}
+              </h3>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Unsere Website enthält Verlinkungen zu unserem Instagram-Profil. Instagram ist ein Service der Meta Platforms Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland.'
+                  : 'Our website contains links to our Instagram profile. Instagram is a service of Meta Platforms Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Ireland.'
+                }
+              </p>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) zur Bereitstellung von Social Media Verlinkungen.'
+                  : 'The legal basis is Art. 6 para. 1 lit. f GDPR (legitimate interest) for providing social media links.'
+                }
+              </p>
+              <p className="mb-6">
+                {isGerman
+                  ? 'Weitere Informationen finden Sie in der Datenschutzerklärung von Instagram: '
+                  : 'More information can be found in Instagram\'s privacy policy: '
+                }
+                <a href="https://help.instagram.com/519522125107875" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">
+                  https://help.instagram.com/519522125107875
+                </a>
+              </p>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'LinkedIn (Social Media Integration)' : 'LinkedIn (Social Media Integration)'}
+              </h3>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Unsere Website enthält Verlinkungen zu unserem LinkedIn-Profil und Sharing-Funktionen. LinkedIn ist ein Service der LinkedIn Ireland Unlimited Company, Wilton Place, Dublin 2, Irland.'
+                  : 'Our website contains links to our LinkedIn profile and sharing functions. LinkedIn is a service of LinkedIn Ireland Unlimited Company, Wilton Place, Dublin 2, Ireland.'
+                }
+              </p>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) zur Bereitstellung von Social Media Funktionen.'
+                  : 'The legal basis is Art. 6 para. 1 lit. f GDPR (legitimate interest) for providing social media functions.'
+                }
+              </p>
+              <p className="mb-6">
+                {isGerman
+                  ? 'Weitere Informationen finden Sie in der Datenschutzerklärung von LinkedIn: '
+                  : 'More information can be found in LinkedIn\'s privacy policy: '
+                }
+                <a href="https://www.linkedin.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">
+                  https://www.linkedin.com/legal/privacy-policy
+                </a>
+              </p>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'Lovable CDN (Bild-Hosting)' : 'Lovable CDN (Image Hosting)'}
+              </h3>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Für das Hosting von Bildern und statischen Inhalten nutzen wir den Lovable CDN-Service. Dabei werden technische Daten wie IP-Adressen an die Lovable-Server übertragen, um die Bilder bereitzustellen.'
+                  : 'For hosting images and static content, we use the Lovable CDN service. Technical data such as IP addresses are transmitted to Lovable servers to provide the images.'
+                }
+              </p>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) zur technischen Bereitstellung von Website-Inhalten.'
+                  : 'The legal basis is Art. 6 para. 1 lit. f GDPR (legitimate interest) for technical provision of website content.'
+                }
+              </p>
+              <p className="mb-6">
+                {isGerman
+                  ? 'Weitere Informationen finden Sie in der Datenschutzerklärung von Lovable: '
+                  : 'More information can be found in Lovable\'s privacy policy: '
+                }
+                <a href="https://lovable.dev/privacy" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">
+                  https://lovable.dev/privacy
+                </a>
+              </p>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'Google Drive (Interne Dokumentenverwaltung)' : 'Google Drive (Internal Document Management)'}
+              </h3>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Für die interne Verwaltung von Geschäftsdokumenten nutzen wir Google Drive, einen Service der Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Google Drive wird ausschließlich für interne Zwecke verwendet und verarbeitet keine Website-Besucherdaten.'
+                  : 'For internal management of business documents, we use Google Drive, a service of Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Google Drive is used exclusively for internal purposes and does not process website visitor data.'
+                }
+              </p>
+              <p className="mb-4">
+                {isGerman
+                  ? 'Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) zur internen Geschäftsabwicklung.'
+                  : 'The legal basis is Art. 6 para. 1 lit. f GDPR (legitimate interest) for internal business operations.'
+                }
+              </p>
+              <p className="mb-6">
+                {isGerman
+                  ? 'Weitere Informationen finden Sie in der Datenschutzerklärung von Google: '
+                  : 'More information can be found in Google\'s privacy policy: '
+                }
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">
+                  https://policies.google.com/privacy
+                </a>
+              </p>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
                 {isGerman ? 'Entwicklungstools (nur Entwicklungsumgebung)' : 'Development Tools (Development Environment Only)'}
               </h3>
               <p className="mb-4">
@@ -841,6 +941,18 @@ const PrivacyPolicy = () => {
                   </li>
                   <li>
                     <strong>Supabase:</strong> {isGerman ? 'Datenbank-Service mit EU-Servern (JavaScript-Client-Bibliothek)' : 'Database service with EU servers (JavaScript client library)'}
+                  </li>
+                  <li>
+                    <strong>Instagram (Meta):</strong> {isGerman ? 'Social Media Verlinkungen (Irland/USA)' : 'Social media links (Ireland/USA)'}
+                  </li>
+                  <li>
+                    <strong>LinkedIn:</strong> {isGerman ? 'Social Media Verlinkungen und Sharing (Irland/USA)' : 'Social media links and sharing (Ireland/USA)'}
+                  </li>
+                  <li>
+                    <strong>Google Drive:</strong> {isGerman ? 'Interne Dokumentenverwaltung (USA)' : 'Internal document management (USA)'}
+                  </li>
+                  <li>
+                    <strong>Lovable CDN:</strong> {isGerman ? 'Bild-Hosting und statische Inhalte' : 'Image hosting and static content'}
                   </li>
                 </ul>
               </div>
