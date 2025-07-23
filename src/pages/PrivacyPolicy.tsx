@@ -513,14 +513,24 @@ const PrivacyPolicy = () => {
               </p>
 
               <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
-                {isGerman ? 'Google Analytics' : 'Google Analytics'}
+                {isGerman ? 'Google Analytics 4 & Google Tag Manager' : 'Google Analytics 4 & Google Tag Manager'}
               </h3>
               <p className="mb-4">
                 {isGerman
-                  ? 'Diese Website benutzt Google Analytics, einen Webanalysedienst der Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA ("Google"). Google Analytics verwendet Cookies und ähnliche Technologien, um die Nutzung der Website zu analysieren.'
-                  : 'This website uses Google Analytics, a web analytics service provided by Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA ("Google"). Google Analytics uses cookies and similar technologies to analyze website usage.'
+                  ? 'Diese Website benutzt Google Analytics 4, einen Webanalysedienst der Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA ("Google"). Google Analytics verwendet Cookies und ähnliche Technologien, um die Nutzung der Website zu analysieren. Das Tracking-Script wird über Google Tag Manager (gtag.js) geladen.'
+                  : 'This website uses Google Analytics 4, a web analytics service provided by Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA ("Google"). Google Analytics uses cookies and similar technologies to analyze website usage. The tracking script is loaded via Google Tag Manager (gtag.js).'
                 }
               </p>
+
+              <div className="bg-gray-50 p-6 rounded-lg mb-4">
+                <p className="mb-2"><strong>{isGerman ? 'Verwendete Google-Services:' : 'Google Services Used:'}</strong></p>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>Google Analytics 4 (Tracking-ID: G-EZZ2025DS8)</li>
+                  <li>Google Tag Manager (gtag.js)</li>
+                  <li>{isGerman ? 'Google-Server für Script-Bereitstellung' : 'Google servers for script delivery'}</li>
+                </ul>
+              </div>
+
               <p className="mb-4">
                 {isGerman
                   ? 'Die Verarbeitung erfolgt nur nach Ihrer ausdrücklichen Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie die Cookie-Einstellungen in Ihrem Browser ändern.'
@@ -597,14 +607,25 @@ const PrivacyPolicy = () => {
               </p>
 
               <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
-                {isGerman ? 'Supabase (Datenbank-Service)' : 'Supabase (Database Service)'}
+                {isGerman ? 'Supabase (Datenbank-Service & JavaScript-Client)' : 'Supabase (Database Service & JavaScript Client)'}
               </h3>
               <p className="mb-4">
                 {isGerman
-                  ? 'Wir nutzen Supabase, Inc. für die Speicherung und Verwaltung von Benutzerdaten (Wartelisten-Anmeldungen). Supabase ist ein Cloud-Datenbank-Service mit Servern in der EU.'
-                  : 'We use Supabase, Inc. for storing and managing user data (waitlist registrations). Supabase is a cloud database service with servers in the EU.'
+                  ? 'Wir nutzen Supabase, Inc. für die Speicherung und Verwaltung von Benutzerdaten (Wartelisten-Anmeldungen). Supabase ist ein Cloud-Datenbank-Service mit Servern in der EU. Die Verbindung erfolgt über die Supabase JavaScript-Client-Bibliothek.'
+                  : 'We use Supabase, Inc. for storing and managing user data (waitlist registrations). Supabase is a cloud database service with servers in the EU. Connection is established via the Supabase JavaScript client library.'
                 }
               </p>
+
+              <div className="bg-gray-50 p-6 rounded-lg mb-4">
+                <p className="mb-2"><strong>{isGerman ? 'Verwendete Supabase-Services:' : 'Supabase Services Used:'}</strong></p>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>{isGerman ? 'PostgreSQL-Datenbank (EU-Server)' : 'PostgreSQL database (EU servers)'}</li>
+                  <li>{isGerman ? 'Supabase JavaScript-Client (@supabase/supabase-js)' : 'Supabase JavaScript client (@supabase/supabase-js)'}</li>
+                  <li>{isGerman ? 'API-Endpunkte für Datenoperationen' : 'API endpoints for data operations'}</li>
+                  <li>{isGerman ? 'RPC-Funktionen für Wartelisten-Verwaltung' : 'RPC functions for waitlist management'}</li>
+                </ul>
+              </div>
+
               <p className="mb-4">
                 {isGerman
                   ? 'Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) für Wartelisten-Anmeldungen und Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) für technische Speicherung.'
@@ -622,14 +643,24 @@ const PrivacyPolicy = () => {
               </p>
 
               <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
-                {isGerman ? 'EmailJS (E-Mail-Service)' : 'EmailJS (Email Service)'}
+                {isGerman ? 'EmailJS (E-Mail-Service & Browser-Bibliothek)' : 'EmailJS (Email Service & Browser Library)'}
               </h3>
               <p className="mb-4">
                 {isGerman
-                  ? 'Für den Versand von Kontaktformular-E-Mails nutzen wir EmailJS, einen Service von EmailJS Ltd. Dabei werden Ihre E-Mail-Adresse, Name und der Nachrichteninhalt an EmailJS übertragen.'
-                  : 'For sending contact form emails, we use EmailJS, a service by EmailJS Ltd. Your email address, name, and message content are transmitted to EmailJS.'
+                  ? 'Für den Versand von Kontaktformular-E-Mails nutzen wir EmailJS, einen Service von EmailJS Ltd. Die Integration erfolgt über die EmailJS Browser-Bibliothek (@emailjs/browser). Dabei werden Ihre E-Mail-Adresse, Name und der Nachrichteninhalt an EmailJS übertragen.'
+                  : 'For sending contact form emails, we use EmailJS, a service by EmailJS Ltd. Integration is done via the EmailJS browser library (@emailjs/browser). Your email address, name, and message content are transmitted to EmailJS.'
                 }
               </p>
+
+              <div className="bg-[#fa9de3]/10 p-6 rounded-lg mb-4">
+                <p className="mb-2"><strong>{isGerman ? 'Verwendete EmailJS-Komponenten:' : 'EmailJS Components Used:'}</strong></p>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>{isGerman ? 'EmailJS Browser-Bibliothek (@emailjs/browser)' : 'EmailJS browser library (@emailjs/browser)'}</li>
+                  <li>{isGerman ? 'EmailJS API-Endpunkte' : 'EmailJS API endpoints'}</li>
+                  <li>{isGerman ? 'E-Mail-Templates und Service-Konfiguration' : 'Email templates and service configuration'}</li>
+                </ul>
+              </div>
+
               <p className="mb-4">
                 {isGerman
                   ? 'Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) zur Bearbeitung von Kundenanfragen.'
@@ -718,6 +749,22 @@ const PrivacyPolicy = () => {
                 }
               </p>
 
+              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">
+                {isGerman ? 'Entwicklungstools (nur Entwicklungsumgebung)' : 'Development Tools (Development Environment Only)'}
+              </h3>
+              <p className="mb-4">
+                {isGerman
+                  ? 'In der Entwicklungsumgebung verwenden wir das Lovable Tagger Tool zur Verbesserung der Entwicklererfahrung. Dieses Tool ist nur in der Entwicklungsphase aktiv und wird nicht in der Produktionsumgebung geladen.'
+                  : 'In the development environment, we use the Lovable Tagger tool to improve the developer experience. This tool is only active during development and is not loaded in the production environment.'
+                }
+              </p>
+              <p className="mb-6">
+                {isGerman
+                  ? 'Hinweis: Dieses Tool verarbeitet keine Benutzerdaten und ist für Website-Besucher nicht sichtbar oder aktiv.'
+                  : 'Note: This tool does not process user data and is not visible or active for website visitors.'
+                }
+              </p>
+
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">
                 {isGerman ? 'Speicherdauer und Löschung' : 'Retention Period and Deletion'}
               </h2>
@@ -772,10 +819,10 @@ const PrivacyPolicy = () => {
               </p>
 
               <div className="bg-gray-50 p-6 rounded-lg mb-6">
-                <h3 className="text-lg font-semibold mb-3">{isGerman ? 'USA-Transfers:' : 'USA Transfers:'}</h3>
+                <h3 className="text-lg font-semibold mb-3">{isGerman ? 'Internationale Datenübertragungen:' : 'International Data Transfers:'}</h3>
                 <ul className="list-disc list-inside space-y-2">
                   <li>
-                    <strong>Google Analytics:</strong> {isGerman ? 'Übertragung in die USA auf Basis von Standardvertragsklauseln und zusätzlichen Schutzmaßnahmen' : 'Transfer to USA based on standard contractual clauses and additional protective measures'}
+                    <strong>Google Analytics 4 & Tag Manager:</strong> {isGerman ? 'Übertragung in die USA auf Basis von Standardvertragsklauseln und zusätzlichen Schutzmaßnahmen (gtag.js von googletagmanager.com)' : 'Transfer to USA based on standard contractual clauses and additional protective measures (gtag.js from googletagmanager.com)'}
                   </li>
                   <li>
                     <strong>Cloudflare:</strong> {isGerman ? 'Globales CDN mit Datenverarbeitung in verschiedenen Regionen, einschließlich EU-Servern' : 'Global CDN with data processing in various regions, including EU servers'}
@@ -784,13 +831,16 @@ const PrivacyPolicy = () => {
                     <strong>Resend:</strong> {isGerman ? 'E-Mail-Service mit Servern in der EU und USA' : 'Email service with servers in EU and USA'}
                   </li>
                   <li>
-                    <strong>EmailJS:</strong> {isGerman ? 'E-Mail-Service mit Servern in verschiedenen Regionen' : 'Email service with servers in various regions'}
+                    <strong>EmailJS:</strong> {isGerman ? 'E-Mail-Service mit Servern in verschiedenen Regionen (Browser-Bibliothek)' : 'Email service with servers in various regions (browser library)'}
                   </li>
                   <li>
                     <strong>Vercel:</strong> {isGerman ? 'Hosting-Service mit globaler Infrastruktur, einschließlich EU-Servern' : 'Hosting service with global infrastructure, including EU servers'}
                   </li>
                   <li>
-                    <strong>jsDelivr CDN:</strong> {isGerman ? 'Globales CDN für Schriftarten mit Servern weltweit' : 'Global CDN for fonts with servers worldwide'}
+                    <strong>jsDelivr CDN:</strong> {isGerman ? 'Globales CDN für Schriftarten mit Servern weltweit (Gilroy Font)' : 'Global CDN for fonts with servers worldwide (Gilroy Font)'}
+                  </li>
+                  <li>
+                    <strong>Supabase:</strong> {isGerman ? 'Datenbank-Service mit EU-Servern (JavaScript-Client-Bibliothek)' : 'Database service with EU servers (JavaScript client library)'}
                   </li>
                 </ul>
               </div>

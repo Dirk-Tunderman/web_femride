@@ -39,15 +39,19 @@ const Impressum = () => {
               </h2>
               <div className="bg-[#fa9de3]/10 p-6 rounded-lg mb-6">
                 <p className="mb-3"><strong>FemRide UG (haftungsbeschränkt)</strong></p>
-                <p className="mb-2"><strong>{isGerman ? 'Anschrift:' : 'Address:'}</strong></p>
                 <p className="mb-1">Waldstraße 222A</p>
-                <p className="mb-1">12527 Berlin</p>
-                <p className="mb-3">Deutschland</p>
+                <p className="mb-3">12527 Berlin</p>
+                <p className="mb-2">
+                  <strong>{isGerman ? 'Handelsregister:' : 'Commercial register:'}</strong> HRB 272631 B
+                </p>
+                <p className="mb-2">
+                  <strong>{isGerman ? 'Registergericht:' : 'Register court:'}</strong> Amtsgericht Berlin (Charlottenburg)
+                </p>
                 <p className="mb-2">
                   <strong>{isGerman ? 'Rechtsform:' : 'Legal form:'}</strong>
                   {isGerman ? ' Unternehmergesellschaft (haftungsbeschränkt)' : ' Limited liability company (UG)'}
                 </p>
-                <p className="mb-2">
+                <p>
                   <strong>{isGerman ? 'Gegenstand des Unternehmens:' : 'Business purpose:'}</strong>
                   {isGerman ? ' Entwicklung und Betrieb einer Fahrvermittlungsplattform für Frauen' : ' Development and operation of a ride-hailing platform for women'}
                 </p>
@@ -65,6 +69,9 @@ const Impressum = () => {
                 {isGerman ? 'Kontakt' : 'Contact'}
               </h2>
               <div className="bg-[#fa9de3]/10 p-6 rounded-lg mb-6">
+                <p className="mb-2">
+                  <strong>{isGerman ? 'Telefon:' : 'Phone:'}</strong> +49 157 58195608
+                </p>
                 <p className="mb-2">
                   <strong>E-Mail:</strong> <a href="mailto:info@femride.de" className="text-[#fa9de3] hover:underline">info@femride.de</a>
                 </p>
@@ -97,7 +104,7 @@ const Impressum = () => {
                     : 'VAT identification number according to § 27 a VAT Tax Act:'
                   }
                 </p>
-                <p><strong>DE123456789</strong> {isGerman ? '(wird beantragt)' : '(application pending)'}</p>
+                <p><strong>DE999999999</strong></p>
               </div>
 
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800 border-l-4 border-[#fa9de3] pl-4">
