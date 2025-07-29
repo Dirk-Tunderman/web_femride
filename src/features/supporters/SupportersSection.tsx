@@ -32,12 +32,6 @@ const SupportersSection = () => {
 
   const baseSupporters = [
     {
-      name: 'Veloxforce',
-      logo: '/supporters/veloxforce-logo-text (1).svg',
-      url: 'https://www.veloxforce.ai/',
-      description: 'AI Automation Partner'
-    },
-    {
       name: 'JAM FM',
       logo: '/supporters/jam-fm-logo.svg',
       url: 'https://www.jam.fm/',
@@ -62,6 +56,12 @@ const SupportersSection = () => {
       description: 'Business Development Partner'
     },
     {
+      name: 'Veloxforce',
+      logo: '/supporters/veloxforce-logo-text (1).svg',
+      url: 'https://www.veloxforce.ai/',
+      description: 'AI Automation Partner'
+    },
+    {
       name: 'IHK Berlin',
       logo: '/supporters/ihk-logo.svg',
       url: 'https://www.ihk.de/berlin/',
@@ -72,16 +72,34 @@ const SupportersSection = () => {
       logo: '/supporters/eid.svg',
       url: 'https://www.eiturbanmobility.eu/',
       description: 'Mobility Innovation Partner'
+    },
+    {
+      name: 'Viral House',
+      logo: '/supporters/Viral House logo.png',
+      url: '#',
+      description: 'Marketing Partner'
+    },
+    {
+      name: 'FIBE 2026',
+      logo: '/supporters/FIBE 2026.png',
+      url: '#',
+      description: 'Event Partner'
+    },
+    {
+      name: 'Silverstein',
+      logo: '/supporters/silverstein.png',
+      url: '#',
+      description: 'Business Partner'
+    },
+    {
+      name: 'Berliner Taxi',
+      logo: '/supporters/Berliner_taxi.png',
+      url: '#',
+      description: 'Transportation Partner'
     }
   ];
 
-  // Create a long list by repeating the supporters 4 times
-  const supporters = [
-    ...baseSupporters,
-    ...baseSupporters,
-    ...baseSupporters,
-    ...baseSupporters
-  ];
+
 
   return (
     <section 
@@ -105,39 +123,41 @@ const SupportersSection = () => {
           </h2>
         </div>
         
-        {/* Simple infinite carousel */}
+        {/* Simple infinite carousel - no reset for 5+ minutes */}
         <div className={`relative overflow-hidden transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-          <div className="flex animate-scroll-simple">
-            {/* Render the long supporters list (24 logos total) */}
-            {supporters.map((supporter, index) => (
-              <div
-                key={`${supporter.name}-${index}`}
-                className="flex-shrink-0 mx-4 md:mx-8"
-              >
-                <a
-                  href={supporter.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block p-4 md:p-8 rounded-xl md:rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 hover:border-[#fa9de3]/40 transition-all duration-300 hover:shadow-lg hover:shadow-[#fa9de3]/20 hover:scale-105 group"
-                  title={`${supporter.name} - ${supporter.description}`}
+          <div className="flex animate-scroll-infinite">
+            {/* Show each supporter exactly 3 times before reset */}
+            {Array.from({ length: 3 }, (_, setIndex) =>
+              baseSupporters.map((supporter, index) => (
+                <div
+                  key={`set-${setIndex}-${supporter.name}-${index}`}
+                  className="flex-shrink-0 mx-4 md:mx-8"
                 >
-                  <div className="flex items-center justify-center h-16 w-24 md:h-24 md:w-40">
-                    <img
-                      src={supporter.logo}
-                      alt={`${supporter.name} logo`}
-                      className={`${
-                        supporter.name === 'Veloxforce'
-                          ? 'max-h-20 md:max-h-32'
-                          : supporter.name === 'VALI ESMT'
-                            ? 'max-h-14 md:max-h-24'
-                            : 'max-h-12 md:max-h-20'
-                      } max-w-full object-contain transition-all duration-300 group-hover:scale-110`}
-                      loading="lazy"
-                    />
-                  </div>
-                </a>
-              </div>
-            ))}
+                  <a
+                    href={supporter.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-4 md:p-8 rounded-xl md:rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 hover:border-[#fa9de3]/40 transition-all duration-300 hover:shadow-lg hover:shadow-[#fa9de3]/20 hover:scale-105 group"
+                    title={`${supporter.name} - ${supporter.description}`}
+                  >
+                    <div className="flex items-center justify-center h-16 w-24 md:h-24 md:w-40">
+                      <img
+                        src={supporter.logo}
+                        alt={`${supporter.name} logo`}
+                        className={`${
+                          supporter.name === 'Veloxforce'
+                            ? 'max-h-20 md:max-h-32'
+                            : supporter.name === 'VALI ESMT'
+                              ? 'max-h-14 md:max-h-24'
+                              : 'max-h-12 md:max-h-20'
+                        } max-w-full object-contain transition-all duration-300 group-hover:scale-110`}
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                </div>
+              ))
+            )}
           </div>
         </div>
       </div>

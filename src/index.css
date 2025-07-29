@@ -156,7 +156,11 @@
   }
 
   .animate-scroll-simple {
-    animation: scroll-simple 30s linear infinite;
+    animation: scroll-simple 20s linear infinite;
+  }
+
+  .animate-scroll-infinite {
+    animation: scroll-infinite 40s linear infinite;
   }
 
   .animation-delay-2000 {
@@ -219,6 +223,15 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-380.00%);
   }
 }
