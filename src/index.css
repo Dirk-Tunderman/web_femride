@@ -136,6 +136,13 @@
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-[#fa9de3] to-[#a3adf4];
   }
+
+  /* Prevent text flickering in accordion animations */
+  [data-radix-accordion-content] {
+    will-change: height;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
 }
 
 @layer utilities {

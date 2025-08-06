@@ -528,6 +528,34 @@ export const translations: Translations = {
     en: 'Our app offers live tracking, an emergency button, and secure communication between drivers and passengers. Additionally, we use a modern system to verify that both passengers and drivers are women, guaranteeing the safety of FemRide users.'
   },
 
+  // Additional Passenger FAQs - For Users
+  faqPassengerQ5: {
+    de: 'Warum dauert meine Verifizierung länger als üblich?',
+    en: 'Why is my verification taking longer than usual?'
+  },
+  faqPassengerA5: {
+    de: 'Deutsche Dokumente erfordern eine manuelle Überprüfung aus Sicherheitsgründen. Dies stellt sicher, dass nur Frauen Zugang zur FemRide-Plattform haben. Die Überprüfung dauert normalerweise 24-48 Stunden.',
+    en: 'German documents require manual review for safety reasons. This ensures only women can access FemRide\'s platform. Review typically takes 24-48 hours.'
+  },
+  faqPassengerQ6: {
+    de: 'Kann ich die App nutzen, während ich auf die Verifizierung warte?',
+    en: 'Can I use the app while waiting for verification?'
+  },
+  faqPassengerA6: {
+    de: 'Ja! Du kannst alle App-Funktionen erkunden, außer Fahrten zu buchen, bis die Verifizierung abgeschlossen ist.',
+    en: 'Yes! You can explore all app features except booking rides until verification is complete.'
+  },
+  faqPassengerQ7: {
+    de: 'Was passiert, wenn ich abgelehnt werde?',
+    en: 'What if I\'m declined?'
+  },
+  faqPassengerA7: {
+    de: 'Falls du glaubst, dass dies ein Fehler ist, kontaktiere den Support unter support@femride.de. Unser Team kann die Entscheidung überprüfen.',
+    en: 'If you believe this is an error, contact support at support@femride.de. Our team can review the decision.'
+  },
+
+
+
   // Driver FAQs
   faqDriverQ1: {
     de: 'Wie kann ich Fahrerin bei FemRide werden?',

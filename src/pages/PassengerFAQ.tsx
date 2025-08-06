@@ -40,6 +40,13 @@ const PassengerFAQ = () => {
             </h1>
 
             <div className="space-y-6">
+              {/* General Questions Section */}
+              <div className="mb-8">
+                <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-[#fa9de3] pb-2">
+                  Allgemeine Fragen / General Questions
+                </h2>
+              </div>
+
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-1" className="border-b border-gray-200">
                   <AccordionTrigger className="text-lg font-medium py-4 hover:no-underline">
@@ -76,15 +83,60 @@ const PassengerFAQ = () => {
                     {t('faqPassengerA4')}
                   </AccordionContent>
                 </AccordionItem>
+              </Accordion>
 
+              {/* Verification & Account Section */}
+              <div className="mt-12 mb-8">
+                <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-[#fa9de3] pb-2">
+                  Verifizierung & Konto / Verification & Account
+                </h2>
+              </div>
+
+              <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-5" className="border-b border-gray-200">
+                  <AccordionTrigger className="text-lg font-medium py-4 hover:no-underline">
+                    {t('faqPassengerQ5')}
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-4 text-gray-600">
+                    {t('faqPassengerA5')}
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-6" className="border-b border-gray-200">
+                  <AccordionTrigger className="text-lg font-medium py-4 hover:no-underline">
+                    {t('faqPassengerQ6')}
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-4 text-gray-600">
+                    {t('faqPassengerA6')}
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-7" className="border-b border-gray-200">
+                  <AccordionTrigger className="text-lg font-medium py-4 hover:no-underline">
+                    {t('faqPassengerQ7')}
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-4 text-gray-600">
+                    {t('faqPassengerA7')}
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+
+              {/* Account Management Section */}
+              <div className="mt-12 mb-8">
+                <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-[#fa9de3] pb-2">
+                  Kontoverwaltung / Account Management
+                </h2>
+              </div>
+
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-8" className="border-b border-gray-200">
                   <AccordionTrigger className="text-lg font-medium py-4 hover:no-underline">
                     How can I delete my passenger account?
                   </AccordionTrigger>
                   <AccordionContent className="pb-4 text-gray-600">
                     <p>If you wish to delete your FemRide passenger account, you can submit a deletion request through our dedicated form. Please note that this action is permanent and cannot be undone.</p>
-                    <Link 
-                      to="/delete-passenger-account" 
+                    <Link
+                      to="/delete-passenger-account"
                       className="text-[#fa9de3] hover:text-[#e989cc] font-medium mt-2 inline-block"
                     >
                       Click here to delete your passenger account →
