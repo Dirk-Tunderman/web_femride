@@ -13,8 +13,8 @@ const HeroSection = () => {
     <div id="hero" className="relative min-h-[90vh] flex items-center justify-center">
       {/* Hero background with the woman in car image */}
       <div className="absolute inset-0 w-full h-full">
-        <img 
-          src="/lovable-uploads/ff943406-64f5-4630-b5c0-89871fbad977.png" 
+        <img
+          src="/lovable-uploads/hero_image_femride.jpg"
           alt="Woman in car with flowers"
           className="w-full h-full object-cover"
         />

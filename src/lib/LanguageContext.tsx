@@ -1240,38 +1240,14 @@ export const translations: Translations = {
     en: "Text copied! Instagram opening - just paste!"
   },
 
-  // User type selection translations
-  userTypeLabel: {
-    de: "Ich möchte mich anmelden als:",
-    en: "I want to join as:"
+  // Simplified waiting list translations (passenger-only)
+  applyAsDriver: {
+    de: 'Bewerben',
+    en: 'Apply'
   },
-  userTypePassenger: {
-    de: "🚗 Fahrgast (suche Fahrten)",
-    en: "🚗 Passenger (looking for rides)"
-  },
-  userTypeDriver: {
-    de: "👩‍💼 Fahrerin (möchte für FemRide fahren)",
-    en: "👩‍💼 Driver (want to drive for FemRide)"
-  },
-  userTypePassengerShort: {
-    de: "Fahrgast",
-    en: "Passenger"
-  },
-  userTypeDriverShort: {
-    de: "Fahrerin",
-    en: "Driver"
-  },
-  driverReferralBonus: {
-    de: "Fahrerinnen: +10 Plätze für Fahrerinnen, +2 Plätze für Fahrgäste",
-    en: "Drivers: +10 places for drivers, +2 places for passengers"
-  },
-  passengerReferralBonus: {
-    de: "Fahrgäste: +10 Plätze für Fahrerinnen, +2 Plätze für Fahrgäste",
-    en: "Passengers: +10 places for drivers, +2 places for passengers"
-  },
-  bothWaitlistsInfo: {
-    de: "💡 Du kannst dich sowohl als Fahrerin als auch als Fahrgast anmelden!",
-    en: "💡 You can sign up for both driver and passenger waitlists!"
+  waitingListReferralBonus: {
+    de: '🎁 Teile deinen Referral-Code und erhalte Bonusplätze!',
+    en: '🎁 Share your referral code and get bonus places!'
   },
   alreadyOnOtherList: {
     de: "Du bist bereits auf der {otherType}-Warteliste angemeldet.",

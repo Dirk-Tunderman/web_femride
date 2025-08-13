@@ -71,8 +71,8 @@ const ServicesSection = () => {
       description: t('servicesDesc3'),
       buttonText: t('servicesButton3'),
       color: "#a3adf4",
-      imageSrc: "/lovable-uploads/f6Ms9JPuWeBNQ-6f-Tx3u.png",
-      imageAlt: "Women smiling in car with passengers",
+      imageSrc: "/lovable-uploads/flottenpartner_werden.png",
+      imageAlt: "Fleet partner services",
       route: "/fleet"
     },
   ];

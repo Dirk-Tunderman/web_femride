@@ -10,16 +10,16 @@ import { addToWaitingList, checkEmailInOtherWaitlist } from '@/lib/supabase';
 import { useLanguage } from '@/lib/LanguageContext';
 import { Shield, ChevronDown, ChevronUp } from 'lucide-react';
 import SocialShare from '@/components/SocialShare';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+// RadioGroup removed - waiting list is passenger-only now
 import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
 import { trackWaitlistSignup, trackFormInteraction, trackReferralUsage } from '@/lib/analytics';
 
-// Define form schema with Zod
+// Define form schema with Zod - Only passengers can apply via waiting list
 const formSchema = z.object({
   email: z.string().email('Please enter a valid email address'),
   referralCode: z.string().optional(),
-  userType: z.enum(['passenger', 'driver']),
+  userType: z.enum(['passenger']), // Only passenger option available
   dsgvoAccepted: z.boolean().refine(val => val === true, {
     message: 'You must accept the privacy policy'
   }),
@@ -32,15 +32,13 @@ interface WaitingListFormProps {
   referralCode?: string;
   simplified?: boolean; // For popup version
   onSignupSuccess?: () => void; // Callback for successful signup
-  defaultUserType?: 'passenger' | 'driver'; // Default user type based on page context
 }
 
 const WaitingListForm: React.FC<WaitingListFormProps> = ({
   className = '',
   referralCode: initialReferralCode,
   simplified = false,
-  onSignupSuccess,
-  defaultUserType = 'passenger'
+  onSignupSuccess
 }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showReferralSuccess, setShowReferralSuccess] = useState(false);
@@ -57,7 +55,7 @@ const WaitingListForm: React.FC<WaitingListFormProps> = ({
     defaultValues: {
       email: '',
       referralCode: initialReferralCode || '',
-      userType: defaultUserType,
+      userType: 'passenger', // Always passenger for waiting list
       dsgvoAccepted: false,
     },
   });
@@ -88,11 +86,11 @@ const WaitingListForm: React.FC<WaitingListFormProps> = ({
         // Mark user as signed up to disable exit-intent popup
         localStorage.setItem('femrideSignedUp', 'true');
 
-        // Show verification message with additional info if on both lists
+        // Show verification message with additional info if on driver list
         let description = 'Please check your email to verify your account and confirm your position.';
         if (otherWaitlistCheck.exists) {
-          const otherType = data.userType === 'driver' ? 'passenger' : 'driver';
-          const otherTypeText = otherType === 'driver' ? t('userTypeDriverShort') : t('userTypePassengerShort');
+          // Since waiting list is passenger-only now, if they exist on other list, it must be driver list
+          const otherTypeText = t('userTypeDriverShort');
           description += ` ${t('alreadyOnOtherList').replace('{otherType}', otherTypeText.toLowerCase())}`;
         }
 
@@ -196,92 +194,15 @@ const WaitingListForm: React.FC<WaitingListFormProps> = ({
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           <div className="flex flex-col gap-4">
             {/* User Type Selection - always show */}
-            <FormField
-              control={form.control}
-              name="userType"
-              render={({ field }) => (
-                <FormItem>
-                  <div className="mb-3">
-                    <Label className="text-sm font-medium text-gray-700">
-                      {t('userTypeLabel')}
-                    </Label>
-                  </div>
-                  <FormControl>
-                    <RadioGroup
-                      onValueChange={field.onChange}
-                      value={field.value}
-                      className={simplified ? "grid grid-cols-2 gap-2" : "grid grid-cols-1 gap-3"}
-                    >
-                      <label
-                        className={`flex items-center space-x-3 ${simplified ? 'p-3' : 'p-4'} border-2 rounded-xl transition-all duration-200 cursor-pointer ${
-                          field.value === 'passenger'
-                            ? 'border-[#fa9de3] bg-[#fa9de3]/5'
-                            : 'border-gray-200 hover:border-[#fa9de3]'
-                        }`}
-                      >
-                        <RadioGroupItem
-                          value="passenger"
-                          id="passenger"
-                          className="sr-only"
-                        />
-                        <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all duration-200 ${
-                          field.value === 'passenger'
-                            ? 'border-[#fa9de3] bg-[#fa9de3]'
-                            : 'border-gray-300'
-                        }`}>
-                          {field.value === 'passenger' && (
-                            <div className="w-2 h-2 rounded-full bg-white"></div>
-                          )}
-                        </div>
-                        <span className="flex-1 text-sm font-medium">
-                          {simplified ? t('userTypePassengerShort') : t('userTypePassenger')}
-                        </span>
-                      </label>
-                      <label
-                        className={`flex items-center space-x-3 ${simplified ? 'p-3' : 'p-4'} border-2 rounded-xl transition-all duration-200 cursor-pointer ${
-                          field.value === 'driver'
-                            ? 'border-[#a3adf4] bg-[#a3adf4]/5'
-                            : 'border-gray-200 hover:border-[#a3adf4]'
-                        }`}
-                      >
-                        <RadioGroupItem
-                          value="driver"
-                          id="driver"
-                          className="sr-only"
-                        />
-                        <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all duration-200 ${
-                          field.value === 'driver'
-                            ? 'border-[#a3adf4] bg-[#a3adf4]'
-                            : 'border-gray-300'
-                        }`}>
-                          {field.value === 'driver' && (
-                            <div className="w-2 h-2 rounded-full bg-white"></div>
-                          )}
-                        </div>
-                        <span className="flex-1 text-sm font-medium">
-                          {simplified ? t('userTypeDriverShort') : t('userTypeDriver')}
-                        </span>
-                      </label>
-                    </RadioGroup>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+            {/* Hidden field to always set userType as passenger */}
+            <input type="hidden" {...form.register('userType')} value="passenger" />
 
-            {/* Referral bonus info and both waitlists info - only show if not simplified */}
+            {/* Referral bonus info */}
             {!simplified && (
-              <div className="space-y-2">
-                <div className="text-center p-3 bg-gradient-to-r from-[#fa9de3]/10 to-[#a3adf4]/10 rounded-lg">
-                  <p className="text-sm text-gray-600">
-                    {form.watch('userType') === 'driver' ? t('driverReferralBonus') : t('passengerReferralBonus')}
-                  </p>
-                </div>
-                <div className="text-center p-2 bg-blue-50 rounded-lg">
-                  <p className="text-xs text-blue-700">
-                    {t('bothWaitlistsInfo')}
-                  </p>
-                </div>
+              <div className="text-center p-3 bg-gradient-to-r from-[#fa9de3]/10 to-[#a3adf4]/10 rounded-lg">
+                <p className="text-sm text-gray-600">
+                  {t('waitingListReferralBonus')}
+                </p>
               </div>
             )}
 
