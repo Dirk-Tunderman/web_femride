@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../shared/Navbar';
 import HeroSection from '../features/hero/HeroSection';
+import JobBanner from '../components/JobAdvertisement';
 import ServicesSection from '../features/services/ServicesSection';
 import AboutSection from '../features/about/AboutSection';
 import TeamSection from '../features/team/TeamSection';
@@ -57,6 +58,7 @@ const Index = () => {
       <Navbar />
       <main className="flex-1">
         <HeroSection />
+        <JobBanner />
         <ServicesSection />
         <AboutSection />
         <TeamSection />

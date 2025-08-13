@@ -73,6 +73,44 @@ export const translations: Translations = {
     en: 'Coming soon to Google Play & App Store'
   },
 
+  // Job Advertisement Section
+  jobAdHeader: {
+    de: 'WIR STELLEN EIN',
+    en: 'NOW HIRING'
+  },
+  jobAdTitle: {
+    de: 'Fahrerinnen gesucht',
+    en: 'Female Drivers Wanted'
+  },
+  jobAdOnlyWomen: {
+    de: 'Nur für Frauen • Only for Women',
+    en: 'Only for Women • Nur für Frauen'
+  },
+  jobAdLocation: {
+    de: 'Berlin',
+    en: 'Berlin'
+  },
+  jobAdType: {
+    de: 'Vollzeit, Teilzeit',
+    en: 'Full-time, Part-time'
+  },
+  jobAdRequirement: {
+    de: 'Mit P-Schein',
+    en: 'With P-License'
+  },
+  jobAdDescription: {
+    de: 'Werde Teil von FemRide und fahre für Europas erste Ride-Hailing-App nur für Frauen. Flexible Arbeitszeiten, faire Bezahlung und transparente Konditionen.',
+    en: 'Join FemRide and drive for Europe\'s first ride-hailing app exclusively for women. Flexible working hours, fair pay and transparent conditions.'
+  },
+  jobAdButton: {
+    de: 'Jetzt bewerben',
+    en: 'Apply now'
+  },
+  jobAdRequirements: {
+    de: 'Gültiger Personenbeförderungsschein (P-Schein)',
+    en: 'Valid passenger transport license (P-license)'
+  },
+
   // Services Section
   servicesTitle: {
     de: 'Was wir anbieten',
