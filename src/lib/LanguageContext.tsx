@@ -114,6 +114,62 @@ export const translations: Translations = {
     de: 'Jetzt Fahrerin werden',
     en: 'Become a driver now'
   },
+  driverEmailSubject: {
+    de: 'Interesse an FemRide Fahrerin Position',
+    en: 'Interest in FemRide Driver Position'
+  },
+  driverEmailBody: {
+    de: 'Hallo FemRide Team,\n\nich bin interessiert daran, als Fahrerin bei FemRide zu arbeiten. Bitte kontaktiert mich für weitere Informationen über den Bewerbungsprozess.\n\nVielen Dank!\n\nMit freundlichen Grüßen',
+    en: 'Hello FemRide Team,\n\nI am interested in becoming a driver with FemRide. Please contact me for more information about the application process.\n\nThank you!\n\nBest regards'
+  },
+  driverRedirectTitle: {
+    de: 'E-Mail wird geöffnet...',
+    en: 'Opening email...'
+  },
+  driverRedirectMessage: {
+    de: 'Wir öffnen dein E-Mail-Programm mit einer vorausgefüllten Nachricht an unser Team.',
+    en: 'We are opening your email client with a pre-filled message to our team.'
+  },
+  driverRedirectNote: {
+    de: 'Du wirst in Kürze zur Startseite weitergeleitet.',
+    en: 'You will be redirected to the homepage shortly.'
+  },
+  driverFormMessageLabel: {
+    de: 'Nachricht',
+    en: 'Message'
+  },
+  driverFormMessagePlaceholder: {
+    de: 'Erzähle uns, warum du Fahrerin bei FemRide werden möchtest...',
+    en: 'Tell us why you want to become a driver with FemRide...'
+  },
+  driverApplicationEmailSubject: {
+    de: 'Neue Fahrerbewerbung - FemRide',
+    en: 'New Driver Application - FemRide'
+  },
+  driverApplicationSuccessTitle: {
+    de: 'Bewerbung gesendet!',
+    en: 'Application Sent!'
+  },
+  driverApplicationSuccessDesc: {
+    de: 'Vielen Dank für dein Interesse! Wir werden deine Bewerbung prüfen und uns in Kürze bei dir melden.',
+    en: 'Thank you for your interest! We will review your application and get back to you soon.'
+  },
+  driverApplicationErrorTitle: {
+    de: 'Fehler beim Senden',
+    en: 'Sending Failed'
+  },
+  driverApplicationErrorDesc: {
+    de: 'Es gab einen Fehler beim Senden deiner Bewerbung. Bitte versuche es später erneut.',
+    en: 'There was an error sending your application. Please try again later.'
+  },
+  driverFormSubmitting: {
+    de: 'Wird gesendet...',
+    en: 'Sending...'
+  },
+  driverFormSubmit: {
+    de: 'Bewerbung senden',
+    en: 'Send Application'
+  },
   servicesHeader3: {
     de: 'FÜR UNTERNEHMEN',
     en: 'FOR BUSINESSES'
@@ -711,6 +767,10 @@ export const translations: Translations = {
   },
 
   // Driver Page Translations
+  backToHome: {
+    de: 'Zurück zur Startseite',
+    en: 'Back to Home'
+  },
   forDrivers: {
     de: 'FÜR FAHRERINNEN',
     en: 'FOR DRIVERS'
@@ -771,34 +831,7 @@ export const translations: Translations = {
     de: 'Warum möchtest du FemRide Fahrerin werden?',
     en: 'Why do you want to become a FemRide driver?'
   },
-  driverFormSubmit: {
-    de: 'Bewerbung absenden',
-    en: 'Submit Application'
-  },
-  driverFormSubmitting: {
-    de: 'Wird gesendet...',
-    en: 'Submitting...'
-  },
-  driverApplicationSuccessTitle: {
-    de: 'Bewerbung erfolgreich eingereicht',
-    en: 'Application Successfully Submitted'
-  },
-  driverApplicationSuccessDesc: {
-    de: 'Vielen Dank für deine Bewerbung. Wir werden uns in Kürze bei dir melden.',
-    en: 'Thank you for your application. We will contact you shortly.'
-  },
-  driverApplicationErrorTitle: {
-    de: 'Fehler beim Senden',
-    en: 'Error Submitting Application'
-  },
-  driverApplicationErrorDesc: {
-    de: 'Es gab ein Problem beim Senden deiner Bewerbung. Bitte versuche es später erneut.',
-    en: 'There was a problem submitting your application. Please try again later.'
-  },
-  driverApplicationEmailSubject: {
-    en: "FemRide Driver Application",
-    de: "FemRide Fahrerbewerbung",
-  },
+
 
   // Fleet Manager Application Form
   fleetFormTitle: {
@@ -1319,6 +1352,18 @@ export const translations: Translations = {
   teamDavidFun: {
     de: "David ist von FemRides Mission zutiefst überzeugt und ist erst kürzlich von einem kleinen bayerischen Dorf in die pulsierende Stadt Berlin gezogen. Das nennen wir volles Engagement!",
     en: "David is deeply convinced of FemRide's mission and just recently moved from a small Bavarian village to the buzzling city of Berlin. We call that full engagement!"
+  },
+  teamMelanieTitle: {
+    de: "CMO",
+    en: "CMO"
+  },
+  teamMelanieDesc: {
+    de: "Melanie hat einen Background in Social Media und Marketing Management und bringt über 14 Jahre Erfahrung als Selbstständige ins FemRide-Team ein. Durch ihre eigene Rolle als Mutter weiß sie, wie herausfordernd sichere und flexible Mobilität mit Kind sein kann – und setzt sich daher besonders für Lösungen ein, die Müttern und Kindern das Leben erleichtern.",
+    en: "Melanie has a background in Social Media and Marketing Management and brings over 14 years of experience as a freelancer to the FemRide team. Through her own role as a mother, she knows how challenging safe and flexible mobility with children can be – and therefore advocates especially for solutions that make life easier for mothers and children."
+  },
+  teamMelanieFun: {
+    de: "Melanie ist nach Barcelona ausgewandert und hat sich ein persönliches Ziel gesetzt: FemRide nicht nur in Deutschland, sondern auch international – am liebsten in ihrer Wahlheimat – auf die Straße zu bringen. In Spanien gibt es schon viel mehr weibliche Fahrerinnen als hier in Deutschland. :)",
+    en: "Melanie has moved to Barcelona and has set herself a personal goal: to bring FemRide not only to Germany, but also internationally – preferably to her adopted home. In Spain, there are already many more female drivers than here in Germany. :)"
   },
   teamJoinTitle: {
     de: "Komm in unser Team",

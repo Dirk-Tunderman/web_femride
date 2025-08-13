@@ -62,6 +62,15 @@ const TeamSection = () => {
       funFact: t('teamDavidFun'),
       image: "/lovable-uploads/david_teamsec.jpg",
       alt: "David Eberle - Operations Manager"
+    },
+    {
+      id: 4,
+      name: "Melanie Soler",
+      title: t('teamMelanieTitle'),
+      description: t('teamMelanieDesc'),
+      funFact: t('teamMelanieFun'),
+      image: "/lovable-uploads/melanie_car.JPG",
+      alt: "Melanie Soler - CMO"
     }
   ];
 
@@ -109,7 +118,7 @@ const TeamSection = () => {
         </div>
 
         {/* Team members grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-16">
           {teamMembers.map((member, index) => (
             <div
               key={member.id}

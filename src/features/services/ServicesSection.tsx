@@ -1,5 +1,5 @@
+import React, { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { useEffect, useState, useRef } from "react";
 import { ChevronRight } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { useNavigate } from "react-router-dom";
@@ -145,7 +145,7 @@ const ServicesSection = () => {
 
                 {/* Text content overlay */}
                 <div className="relative z-10 p-8 flex flex-col h-[500px]">
-                  <h3 className="text-2xl font-bold mb-4 text-white">{card.title}</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-white">{card.header}</h3>
                   <p className="text-white/90 mb-6 flex-grow">
                     {card.description}
                   </p>
@@ -155,10 +155,13 @@ const ServicesSection = () => {
                     <Button
                       className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-semibold text-sm px-5 py-4 h-auto w-full shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group"
                       onClick={() => {
-                        // For ride and drive cards (id 1 and 2), scroll to waitlist
+                        // For ride card (id 1), scroll to waitlist
+                        // For drive card (id 2), navigate to drive page
                         // For fleet card (id 3), navigate to fleet page
-                        if (card.id === 1 || card.id === 2) {
+                        if (card.id === 1) {
                           scrollToWaitingList();
+                        } else if (card.id === 2) {
+                          navigate('/drive');
                         } else {
                           navigate(card.route);
                         }
